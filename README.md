@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Old-Time Bubble Map
 
-## Getting Started
+Zoomable bubble map of old-time fiddle tunes from Slippery-Hill.
 
-First, run the development server:
+## Development
+
+Needs Node 22 (`.nvmrc`). Copy the two Supabase env vars below into `.env.local`, then:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm ci
+npm run dev        # http://localhost:3000
+npm run lint
+npm run typecheck
+npm test
+npm run build
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Data scripts: `npm run crawl` scrapes Slippery-Hill into `data/raw/`, `npm run build:data` writes `data/recordings.json`, `npm run suggest` proposes keywords for unmatched tunes.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## CI
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+`.github/workflows/ci.yml` runs lint, typecheck, tests and a production build on every push to `main` and every pull request.
 
-## Learn More
+## Deploy
 
-To learn more about Next.js, take a look at the following resources:
+Any Next.js host (Vercel recommended). Set `NEXT_PUBLIC_SUPABASE_URL` and `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` in the host's env settings, then add the production URL to Supabase as described below.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Feedback backend (Supabase)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Visitors send feedback from the Key panel's "?" button or a recording's "Report a problem" link. Rows land in `public.feedback`; admins read them at `/admin/feedback`.
 
-## Deploy on Vercel
+- Schema and RLS: `supabase/migrations/`. Apply with `supabase db push --linked`.
+- Auth settings: `supabase/config.toml` (sign-ups off). Apply with `supabase config push --project-ref ziolwnqefoiumrtmwqox`.
+- Env: `NEXT_PUBLIC_SUPABASE_URL`, `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY` in `.env.local`. The secret key is never needed by the app.
+- DB types: `supabase gen types typescript --linked --schema public > src/lib/supabase/database.types.ts`.
+- Sign in: `/admin/login` takes email and password. Needs the Email provider on (Authentication > Sign In / Providers) with sign-ups off. Set a password in the SQL editor: `update auth.users set encrypted_password = crypt('…', gen_salt('bf')) where email = '…';`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Adding an admin (sign-ups are off, so create the user first in the dashboard: Authentication > Users > Add user):
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```sql
+insert into public.admins (user_id) select id from auth.users where email = 'someone@example.com';
+```
+
+Going to production: add the site URL to `site_url` and `additional_redirect_urls` in `supabase/config.toml` (e.g. `https://example.com/**`) and push the config.

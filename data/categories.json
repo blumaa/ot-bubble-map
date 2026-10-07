@@ -1,0 +1,2751 @@
+{
+ "categories": [
+  {
+   "name": "Animals",
+   "emoji": "🐾",
+   "children": [
+    {
+     "name": "Barnyard Birds",
+     "children": [
+      {
+       "word": "duck"
+      },
+      {
+       "word": "goose",
+       "match": [
+        "goose",
+        "geese"
+       ]
+      },
+      {
+       "word": "chicken"
+      },
+      {
+       "word": "hen"
+      },
+      {
+       "word": "rooster"
+      },
+      {
+       "word": "turkey"
+      }
+     ]
+    },
+    {
+     "name": "Wild Birds",
+     "children": [
+      {
+       "word": "bird"
+      },
+      {
+       "word": "crow"
+      },
+      {
+       "word": "owl"
+      },
+      {
+       "word": "mockingbird"
+      },
+      {
+       "word": "whippoorwill"
+      },
+      {
+       "word": "buzzard"
+      },
+      {
+       "word": "eagle"
+      },
+      {
+       "word": "jaybird"
+      },
+      {
+       "word": "blackbird"
+      },
+      {
+       "word": "nest"
+      }
+     ]
+    },
+    {
+     "name": "Horses & Mules",
+     "children": [
+      {
+       "word": "mule"
+      },
+      {
+       "word": "horse"
+      },
+      {
+       "word": "pony",
+       "match": [
+        "pony",
+        "ponies"
+       ]
+      },
+      {
+       "word": "mare"
+      },
+      {
+       "word": "yearling"
+      }
+     ]
+    },
+    {
+     "name": "Livestock",
+     "children": [
+      {
+       "word": "cow"
+      },
+      {
+       "word": "bull"
+      },
+      {
+       "word": "calf"
+      },
+      {
+       "word": "dogies",
+       "match": [
+        "dogies",
+        "doggies"
+       ]
+      },
+      {
+       "word": "pig"
+      },
+      {
+       "word": "hog"
+      },
+      {
+       "word": "sow"
+      },
+      {
+       "word": "sheep"
+      },
+      {
+       "word": "lamb"
+      },
+      {
+       "word": "goat"
+      }
+     ]
+    },
+    {
+     "name": "Dogs & Cats",
+     "children": [
+      {
+       "word": "dog"
+      },
+      {
+       "word": "hound"
+      },
+      {
+       "word": "cat"
+      }
+     ]
+    },
+    {
+     "name": "Wild Animals",
+     "children": [
+      {
+       "word": "possum",
+       "match": [
+        "possum",
+        "possums",
+        "opossum"
+       ]
+      },
+      {
+       "word": "raccoon",
+       "match": [
+        "raccoon",
+        "raccoons",
+        "coon",
+        "coons"
+       ]
+      },
+      {
+       "word": "rabbit"
+      },
+      {
+       "word": "squirrel"
+      },
+      {
+       "word": "fox",
+       "match": [
+        "fox",
+        "foxes"
+       ]
+      },
+      {
+       "word": "bear"
+      },
+      {
+       "word": "wolf",
+       "match": [
+        "wolf",
+        "wolves"
+       ]
+      },
+      {
+       "word": "deer"
+      },
+      {
+       "word": "buck"
+      },
+      {
+       "word": "buffalo"
+      },
+      {
+       "word": "monkey"
+      },
+      {
+       "word": "mouse",
+       "match": [
+        "mouse",
+        "mice"
+       ]
+      },
+      {
+       "word": "rat",
+       "match": [
+        "rat",
+        "rats"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Bugs, Fish & Frogs",
+     "children": [
+      {
+       "word": "frog"
+      },
+      {
+       "word": "snake"
+      },
+      {
+       "word": "fish",
+       "match": [
+        "fish",
+        "fishes"
+       ]
+      },
+      {
+       "word": "catfish"
+      },
+      {
+       "word": "bee"
+      },
+      {
+       "word": "grasshopper"
+      }
+     ]
+    },
+    {
+     "word": "other",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "People",
+   "emoji": "🧑",
+   "children": [
+    {
+     "name": "Names",
+     "children": [
+      {
+       "name": "Women",
+       "children": [
+        {
+         "word": "jenny"
+        },
+        {
+         "word": "sal",
+         "match": [
+          "sal",
+          "sally"
+         ]
+        },
+        {
+         "word": "sally ann",
+         "match": [
+          "sally ann",
+          "sallie ann",
+          "sally anne"
+         ]
+        },
+        {
+         "word": "cindy"
+        },
+        {
+         "word": "liza",
+         "match": [
+          "liza",
+          "eliza",
+          "liza jane"
+         ]
+        },
+        {
+         "word": "molly"
+        },
+        {
+         "word": "polly"
+        },
+        {
+         "word": "betsy"
+        },
+        {
+         "word": "nancy"
+        },
+        {
+         "word": "susan",
+         "match": [
+          "susan",
+          "susanna",
+          "susannah",
+          "sue"
+         ]
+        },
+        {
+         "word": "mary"
+        },
+        {
+         "word": "kate",
+         "match": [
+          "kate",
+          "katy",
+          "katie"
+         ]
+        },
+        {
+         "word": "dinah"
+        },
+        {
+         "word": "lucy"
+        },
+        {
+         "word": "rosie",
+         "match": [
+          "rosie"
+         ]
+        },
+        {
+         "word": "jane"
+        },
+        {
+         "word": "nellie"
+        },
+        {
+         "word": "maggie"
+        },
+        {
+         "word": "betty"
+        },
+        {
+         "word": "kitty"
+        },
+        {
+         "word": "lulu"
+        },
+        {
+         "word": "dolly"
+        },
+        {
+         "word": "frankie"
+        },
+        {
+         "word": "lou"
+        },
+        {
+         "word": "ida"
+        },
+        {
+         "word": "sadie"
+        },
+        {
+         "word": "belle",
+         "match": [
+          "belle"
+         ]
+        },
+        {
+         "word": "annie",
+         "match": [
+          "annie",
+          "ann"
+         ]
+        },
+        {
+         "word": "emma"
+        },
+        {
+         "word": "hattie"
+        },
+        {
+         "word": "susie",
+         "match": [
+          "susie",
+          "suzie",
+          "susy"
+         ]
+        }
+       ]
+      },
+      {
+       "name": "Men",
+       "children": [
+        {
+         "word": "johnny"
+        },
+        {
+         "word": "john"
+        },
+        {
+         "word": "joe"
+        },
+        {
+         "word": "billy"
+        },
+        {
+         "word": "jack"
+        },
+        {
+         "word": "jim"
+        },
+        {
+         "word": "bob"
+        },
+        {
+         "word": "tom"
+        },
+        {
+         "word": "sam"
+        },
+        {
+         "word": "dan"
+        },
+        {
+         "word": "charlie"
+        },
+        {
+         "word": "henry"
+        },
+        {
+         "word": "george"
+        },
+        {
+         "word": "jimmy",
+         "match": [
+          "jimmy",
+          "jimmie",
+          "jimmy's"
+         ]
+        },
+        {
+         "word": "bill"
+        },
+        {
+         "word": "peter"
+        },
+        {
+         "word": "mike"
+        },
+        {
+         "word": "jake"
+        },
+        {
+         "word": "willie",
+         "match": [
+          "willie",
+          "willy"
+         ]
+        },
+        {
+         "word": "paddy"
+        },
+        {
+         "word": "dick"
+        },
+        {
+         "word": "rufus"
+        }
+       ]
+      },
+      {
+       "name": "Surnames",
+       "children": [
+        {
+         "word": "smith"
+        },
+        {
+         "word": "johnson"
+        },
+        {
+         "word": "parker"
+        },
+        {
+         "word": "callahan"
+        },
+        {
+         "word": "mccoy"
+        },
+        {
+         "word": "jones"
+        },
+        {
+         "word": "other",
+         "match": []
+        }
+       ]
+      },
+      {
+       "name": "Famous People",
+       "children": [
+        {
+         "word": "napoleon",
+         "match": [
+          "napoleon",
+          "bonaparte"
+         ]
+        },
+        {
+         "word": "lee"
+        },
+        {
+         "word": "jenny lind",
+         "match": [
+          "jenny lind"
+         ]
+        },
+        {
+         "word": "other",
+         "match": []
+        }
+       ]
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Characters",
+     "children": [
+      {
+       "name": "Folks",
+       "children": [
+        {
+         "word": "girl",
+         "match": [
+          "girl",
+          "girls"
+         ]
+        },
+        {
+         "word": "boy",
+         "match": [
+          "boy",
+          "boys"
+         ]
+        },
+        {
+         "word": "lady",
+         "match": [
+          "lady",
+          "ladies"
+         ]
+        },
+        {
+         "word": "woman",
+         "match": [
+          "woman",
+          "women"
+         ]
+        },
+        {
+         "word": "man",
+         "match": [
+          "man",
+          "men"
+         ]
+        },
+        {
+         "word": "miss"
+        },
+        {
+         "word": "maid",
+         "match": [
+          "maid",
+          "maiden"
+         ]
+        },
+        {
+         "word": "folks",
+         "match": [
+          "folks",
+          "folk"
+         ]
+        },
+        {
+         "word": "friend",
+         "match": [
+          "friend",
+          "friends"
+         ]
+        },
+        {
+         "word": "buddy"
+        },
+        {
+         "word": "stranger"
+        }
+       ]
+      },
+      {
+       "name": "Trades",
+       "children": [
+        {
+         "word": "cowboy"
+        },
+        {
+         "word": "fiddler"
+        },
+        {
+         "word": "sailor"
+        },
+        {
+         "word": "preacher"
+        },
+        {
+         "word": "farmer"
+        },
+        {
+         "word": "miner"
+        },
+        {
+         "word": "wagoner"
+        },
+        {
+         "word": "doctor"
+        },
+        {
+         "word": "judge"
+        },
+        {
+         "word": "miller"
+        }
+       ]
+      },
+      {
+       "name": "Soldiers & Rulers",
+       "children": [
+        {
+         "word": "soldier"
+        },
+        {
+         "word": "captain"
+        },
+        {
+         "word": "colonel"
+        },
+        {
+         "word": "general"
+        },
+        {
+         "word": "king"
+        },
+        {
+         "word": "indian"
+        }
+       ]
+      },
+      {
+       "name": "Rounders & Drifters",
+       "children": [
+        {
+         "word": "hobo"
+        },
+        {
+         "word": "tramp"
+        },
+        {
+         "word": "rambler",
+         "match": [
+          "rambler",
+          "rambling",
+          "ramblin"
+         ]
+        },
+        {
+         "word": "gambler"
+        },
+        {
+         "word": "drunkard"
+        },
+        {
+         "word": "prisoner",
+         "match": [
+          "prisoner",
+          "prison"
+         ]
+        },
+        {
+         "word": "bully"
+        }
+       ]
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Family",
+     "children": [
+      {
+       "word": "mother",
+       "match": [
+        "mother",
+        "mothers",
+        "mama",
+        "mamma",
+        "mammy"
+       ]
+      },
+      {
+       "word": "daddy",
+       "match": [
+        "daddy",
+        "dad",
+        "papa",
+        "father"
+       ]
+      },
+      {
+       "word": "wife"
+      },
+      {
+       "word": "child",
+       "match": [
+        "child",
+        "children"
+       ]
+      },
+      {
+       "word": "brother"
+      },
+      {
+       "word": "baby"
+      },
+      {
+       "word": "uncle"
+      },
+      {
+       "word": "aunt",
+       "match": [
+        "aunt",
+        "aunts",
+        "auntie",
+        "aunty"
+       ]
+      },
+      {
+       "word": "granny",
+       "match": [
+        "granny",
+        "grannie",
+        "grandma",
+        "grandmother",
+        "grandpa",
+        "granddad",
+        "grandfather"
+       ]
+      },
+      {
+       "word": "orphan"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Sweethearts",
+     "children": [
+      {
+       "word": "sweetheart",
+       "match": [
+        "sweetheart",
+        "sweethearts"
+       ]
+      },
+      {
+       "word": "darling",
+       "match": [
+        "darling",
+        "darlin",
+        "darlings"
+       ]
+      },
+      {
+       "word": "lover",
+       "match": [
+        "lover",
+        "lovers"
+       ]
+      },
+      {
+       "word": "pal"
+      },
+      {
+       "word": "gal",
+       "match": [
+        "gal",
+        "gals"
+       ]
+      },
+      {
+       "word": "baby",
+       "match": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Places",
+   "emoji": "🗺️",
+   "children": [
+    {
+     "name": "Southern States",
+     "children": [
+      {
+       "word": "kentucky"
+      },
+      {
+       "word": "tennessee"
+      },
+      {
+       "word": "virginia"
+      },
+      {
+       "word": "west virginia"
+      },
+      {
+       "word": "carolina"
+      },
+      {
+       "word": "georgia"
+      },
+      {
+       "word": "alabama"
+      },
+      {
+       "word": "mississippi"
+      },
+      {
+       "word": "arkansas"
+      },
+      {
+       "word": "louisiana"
+      }
+     ]
+    },
+    {
+     "name": "Other States",
+     "children": [
+      {
+       "word": "missouri"
+      },
+      {
+       "word": "texas"
+      },
+      {
+       "word": "ohio"
+      },
+      {
+       "word": "indiana"
+      },
+      {
+       "word": "oklahoma"
+      },
+      {
+       "word": "california"
+      },
+      {
+       "word": "arizona"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Regions",
+     "children": [
+      {
+       "word": "dixie"
+      },
+      {
+       "word": "cumberland"
+      },
+      {
+       "word": "shenandoah"
+      },
+      {
+       "word": "west",
+       "match": [
+        "west",
+        "western"
+       ]
+      },
+      {
+       "word": "south",
+       "match": [
+        "south",
+        "southern",
+        "southland"
+       ]
+      },
+      {
+       "word": "country"
+      },
+      {
+       "word": "world"
+      },
+      {
+       "word": "land",
+       "match": [
+        "land",
+        "lands"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Cities",
+     "children": [
+      {
+       "word": "new orleans"
+      },
+      {
+       "word": "memphis"
+      },
+      {
+       "word": "nashville"
+      },
+      {
+       "word": "richmond"
+      },
+      {
+       "word": "atlanta"
+      },
+      {
+       "word": "birmingham"
+      },
+      {
+       "word": "charleston"
+      },
+      {
+       "word": "chicago"
+      },
+      {
+       "word": "city"
+      }
+     ]
+    },
+    {
+     "name": "Towns & Counties",
+     "children": [
+      {
+       "word": "county"
+      },
+      {
+       "word": "town",
+       "match": [
+        "town",
+        "towns",
+        "township"
+       ]
+      },
+      {
+       "word": "village"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Rivers & Waters",
+     "children": [
+      {
+       "word": "river"
+      },
+      {
+       "word": "creek"
+      },
+      {
+       "word": "sea",
+       "match": [
+        "sea",
+        "seas",
+        "ocean",
+        "waves",
+        "water",
+        "waters",
+        "waterfall"
+       ]
+      },
+      {
+       "word": "island",
+       "match": [
+        "island",
+        "isle"
+       ]
+      },
+      {
+       "word": "bayou"
+      },
+      {
+       "word": "rio"
+      },
+      {
+       "word": "sandy"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Hills & Hollows",
+     "children": [
+      {
+       "word": "mountain"
+      },
+      {
+       "word": "hill"
+      },
+      {
+       "word": "valley"
+      },
+      {
+       "word": "gap"
+      },
+      {
+       "word": "ridge"
+      },
+      {
+       "word": "prairie"
+      }
+     ]
+    },
+    {
+     "name": "Roads & Buildings",
+     "children": [
+      {
+       "word": "barn"
+      },
+      {
+       "word": "mill"
+      },
+      {
+       "word": "lane"
+      },
+      {
+       "word": "street"
+      },
+      {
+       "word": "farm"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Abroad",
+     "children": [
+      {
+       "word": "ireland",
+       "match": [
+        "ireland",
+        "irish"
+       ]
+      },
+      {
+       "word": "scotland",
+       "match": [
+        "scotland",
+        "scotch",
+        "scottish"
+       ]
+      },
+      {
+       "word": "spain",
+       "match": [
+        "spain",
+        "spanish"
+       ]
+      },
+      {
+       "word": "mexico",
+       "match": [
+        "mexico",
+        "mexican"
+       ]
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "word": "other",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "Words",
+   "emoji": "🔤",
+   "children": [
+    {
+     "name": "Colors",
+     "children": [
+      {
+       "word": "blue",
+       "match": [
+        "blue"
+       ]
+      },
+      {
+       "word": "red"
+      },
+      {
+       "word": "black"
+      },
+      {
+       "word": "brown"
+      },
+      {
+       "word": "white"
+      },
+      {
+       "word": "green"
+      },
+      {
+       "word": "yellow"
+      },
+      {
+       "word": "golden",
+       "match": [
+        "golden",
+        "gold"
+       ]
+      },
+      {
+       "word": "grey",
+       "match": [
+        "grey",
+        "gray"
+       ]
+      },
+      {
+       "word": "silver"
+      }
+     ],
+     "kind": "modifier"
+    },
+    {
+     "name": "Descriptions",
+     "children": [
+      {
+       "word": "old",
+       "match": [
+        "old",
+        "olden"
+       ]
+      },
+      {
+       "word": "little",
+       "match": [
+        "little",
+        "lil"
+       ]
+      },
+      {
+       "word": "big"
+      },
+      {
+       "word": "great"
+      },
+      {
+       "word": "grand"
+      },
+      {
+       "word": "pretty"
+      },
+      {
+       "word": "beautiful"
+      },
+      {
+       "word": "young"
+      },
+      {
+       "word": "poor"
+      },
+      {
+       "word": "dark",
+       "match": [
+        "dark",
+        "darkness"
+       ]
+      },
+      {
+       "word": "light"
+      },
+      {
+       "word": "hot"
+      },
+      {
+       "word": "high"
+      },
+      {
+       "word": "good",
+       "match": [
+        "good",
+        "best",
+        "better"
+       ]
+      },
+      {
+       "word": "bad",
+       "match": [
+        "bad",
+        "wrong"
+       ]
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ],
+     "kind": "modifier"
+    },
+    {
+     "name": "Numbers",
+     "children": [
+      {
+       "word": "one",
+       "match": [
+        "one"
+       ]
+      },
+      {
+       "word": "two",
+       "match": [
+        "two"
+       ]
+      },
+      {
+       "word": "three",
+       "match": [
+        "three"
+       ]
+      },
+      {
+       "word": "four",
+       "match": [
+        "four"
+       ]
+      },
+      {
+       "word": "five",
+       "match": [
+        "five"
+       ]
+      },
+      {
+       "word": "six",
+       "match": [
+        "six"
+       ]
+      },
+      {
+       "word": "seven",
+       "match": [
+        "seven"
+       ]
+      },
+      {
+       "word": "eight",
+       "match": [
+        "eight"
+       ]
+      },
+      {
+       "word": "nine",
+       "match": [
+        "nine"
+       ]
+      },
+      {
+       "word": "ten",
+       "match": [
+        "ten"
+       ]
+      },
+      {
+       "word": "twelve",
+       "match": [
+        "twelve"
+       ]
+      },
+      {
+       "word": "twenty",
+       "match": [
+        "twenty"
+       ]
+      },
+      {
+       "word": "forty",
+       "match": [
+        "forty"
+       ]
+      },
+      {
+       "word": "fifty",
+       "match": [
+        "fifty"
+       ]
+      },
+      {
+       "word": "hundred",
+       "match": [
+        "hundred"
+       ]
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ],
+     "kind": "modifier"
+    },
+    {
+     "name": "Time",
+     "children": [
+      {
+       "word": "time",
+       "match": [
+        "time",
+        "times"
+       ]
+      },
+      {
+       "word": "day",
+       "match": [
+        "day",
+        "days"
+       ]
+      },
+      {
+       "word": "year",
+       "match": [
+        "year",
+        "years"
+       ]
+      },
+      {
+       "word": "ago"
+      },
+      {
+       "word": "forever",
+       "match": [
+        "forever",
+        "always"
+       ]
+      },
+      {
+       "word": "last"
+      },
+      {
+       "word": "new"
+      },
+      {
+       "word": "again"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ],
+     "kind": "modifier"
+    },
+    {
+     "name": "Languages",
+     "children": [
+      {
+       "word": "spanish",
+       "match": []
+      },
+      {
+       "word": "french",
+       "match": []
+      },
+      {
+       "word": "hawaiian",
+       "match": []
+      },
+      {
+       "word": "german",
+       "match": []
+      },
+      {
+       "word": "gaelic",
+       "match": []
+      },
+      {
+       "word": "portuguese",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Phrases",
+     "children": [
+      {
+       "word": "i",
+       "match": [
+        "i",
+        "i'm",
+        "i'll",
+        "i've",
+        "i'd"
+       ]
+      },
+      {
+       "word": "you",
+       "match": [
+        "you",
+        "you're",
+        "you'll",
+        "your",
+        "yours",
+        "ya"
+       ]
+      },
+      {
+       "word": "me",
+       "match": [
+        "me",
+        "my",
+        "mine"
+       ]
+      },
+      {
+       "word": "he",
+       "match": [
+        "he",
+        "he's",
+        "him",
+        "his"
+       ]
+      },
+      {
+       "word": "she",
+       "match": [
+        "she",
+        "she's",
+        "her",
+        "hers"
+       ]
+      },
+      {
+       "word": "we",
+       "match": [
+        "we",
+        "we're",
+        "we'll",
+        "us",
+        "our"
+       ]
+      },
+      {
+       "word": "they",
+       "match": [
+        "they",
+        "they're",
+        "them",
+        "their"
+       ]
+      },
+      {
+       "word": "it",
+       "match": [
+        "it",
+        "it's"
+       ]
+      },
+      {
+       "word": "don't",
+       "match": [
+        "don't",
+        "doesn't",
+        "didn't",
+        "ain't",
+        "can't",
+        "won't",
+        "wouldn't",
+        "couldn't",
+        "shouldn't",
+        "isn't",
+        "wasn't",
+        "not",
+        "never",
+        "no",
+        "nobody",
+        "nothing"
+       ]
+      },
+      {
+       "word": "questions",
+       "match": [
+        "why",
+        "what",
+        "when",
+        "where",
+        "how",
+        "who",
+        "which"
+       ]
+      },
+      {
+       "word": "let",
+       "match": [
+        "let",
+        "let's"
+       ]
+      },
+      {
+       "word": "somebody",
+       "match": [
+        "somebody",
+        "someone",
+        "anybody",
+        "everybody",
+        "everyone"
+       ]
+      },
+      {
+       "word": "there",
+       "match": [
+        "there",
+        "here",
+        "this",
+        "that",
+        "these",
+        "those"
+       ]
+      },
+      {
+       "word": "sayings",
+       "match": []
+      }
+     ],
+     "kind": "function"
+    }
+   ]
+  },
+  {
+   "name": "Feelings",
+   "emoji": "💭",
+   "children": [
+    {
+     "name": "Love",
+     "children": [
+      {
+       "word": "love"
+      },
+      {
+       "word": "sweet",
+       "kind": "modifier"
+      },
+      {
+       "word": "kiss",
+       "match": [
+        "kiss",
+        "kisses"
+       ]
+      },
+      {
+       "word": "heart",
+       "match": [
+        "heart",
+        "hearts",
+        "heartache"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Sorrow",
+     "children": [
+      {
+       "word": "lonesome",
+       "match": [
+        "lonesome",
+        "lonely",
+        "lone"
+       ],
+       "kind": "modifier"
+      },
+      {
+       "word": "trouble",
+       "match": [
+        "trouble",
+        "troubles"
+       ]
+      },
+      {
+       "word": "weary",
+       "kind": "modifier"
+      },
+      {
+       "word": "sorry",
+       "kind": "modifier"
+      },
+      {
+       "word": "goodbye",
+       "match": [
+        "goodbye",
+        "farewell",
+        "good bye"
+       ]
+      },
+      {
+       "word": "cry",
+       "match": [
+        "cry",
+        "crying",
+        "tears"
+       ]
+      },
+      {
+       "word": "broken",
+       "kind": "modifier"
+      },
+      {
+       "word": "alone",
+       "kind": "modifier"
+      },
+      {
+       "word": "lost",
+       "kind": "modifier"
+      },
+      {
+       "word": "blind",
+       "kind": "modifier"
+      }
+     ]
+    },
+    {
+     "name": "Joy & Wildness",
+     "children": [
+      {
+       "word": "happy",
+       "kind": "modifier"
+      },
+      {
+       "word": "smile",
+       "match": [
+        "smile",
+        "smiles",
+        "smiling"
+       ]
+      },
+      {
+       "word": "wonder",
+       "match": [
+        "wonder",
+        "wonderful"
+       ]
+      },
+      {
+       "word": "crazy",
+       "kind": "modifier"
+      },
+      {
+       "word": "wild",
+       "kind": "modifier"
+      }
+     ]
+    },
+    {
+     "name": "Dreams & Memories",
+     "children": [
+      {
+       "word": "dream",
+       "match": [
+        "dream",
+        "dreams",
+        "dreaming"
+       ]
+      },
+      {
+       "word": "memories",
+       "match": [
+        "memory",
+        "memories",
+        "remember"
+       ]
+      }
+     ]
+    },
+    {
+     "word": "other",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "Faith",
+   "emoji": "⛪",
+   "children": [
+    {
+     "name": "Heaven & Hell",
+     "children": [
+      {
+       "word": "heaven",
+       "match": [
+        "heaven",
+        "heavenly"
+       ]
+      },
+      {
+       "word": "glory"
+      },
+      {
+       "word": "angel",
+       "match": [
+        "angel",
+        "angels"
+       ]
+      },
+      {
+       "word": "hell"
+      },
+      {
+       "word": "devil"
+      }
+     ]
+    },
+    {
+     "name": "Holy Names",
+     "children": [
+      {
+       "word": "jesus"
+      },
+      {
+       "word": "lord"
+      },
+      {
+       "word": "god"
+      },
+      {
+       "word": "saviour",
+       "match": [
+        "saviour",
+        "savior"
+       ]
+      },
+      {
+       "word": "hallelujah"
+      },
+      {
+       "word": "saint",
+       "match": [
+        "saint",
+        "st"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Church & Worship",
+     "children": [
+      {
+       "word": "church"
+      },
+      {
+       "word": "prayer",
+       "match": [
+        "prayer",
+        "pray"
+       ]
+      },
+      {
+       "word": "hymn"
+      },
+      {
+       "word": "religion"
+      },
+      {
+       "word": "soul",
+       "match": [
+        "soul",
+        "souls"
+       ]
+      },
+      {
+       "word": "cross"
+      },
+      {
+       "word": "christmas"
+      }
+     ]
+    },
+    {
+     "word": "other",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "Nature",
+   "emoji": "🌿",
+   "children": [
+    {
+     "name": "Sun, Moon & Stars",
+     "children": [
+      {
+       "word": "moon",
+       "match": [
+        "moon",
+        "moonlight"
+       ]
+      },
+      {
+       "word": "star",
+       "match": [
+        "star",
+        "stars"
+       ]
+      },
+      {
+       "word": "sun",
+       "match": [
+        "sun",
+        "sunny",
+        "sunshine"
+       ]
+      },
+      {
+       "word": "sunset"
+      },
+      {
+       "word": "sky",
+       "match": [
+        "sky",
+        "skies"
+       ]
+      },
+      {
+       "word": "rainbow"
+      }
+     ]
+    },
+    {
+     "name": "Weather",
+     "children": [
+      {
+       "word": "rain"
+      },
+      {
+       "word": "snow"
+      },
+      {
+       "word": "wind"
+      },
+      {
+       "word": "cloud",
+       "match": [
+        "cloud",
+        "clouds"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Night & Seasons",
+     "children": [
+      {
+       "word": "night",
+       "match": [
+        "night",
+        "nights",
+        "tonight",
+        "midnight"
+       ]
+      },
+      {
+       "word": "morning"
+      },
+      {
+       "word": "summer"
+      },
+      {
+       "word": "winter"
+      },
+      {
+       "word": "spring"
+      }
+     ]
+    },
+    {
+     "name": "Plants",
+     "children": [
+      {
+       "word": "corn"
+      },
+      {
+       "word": "cotton"
+      },
+      {
+       "word": "flower",
+       "match": [
+        "flower",
+        "flowers",
+        "blossom",
+        "blossoms"
+       ]
+      },
+      {
+       "word": "tree",
+       "match": [
+        "tree",
+        "trees"
+       ]
+      },
+      {
+       "word": "pine"
+      },
+      {
+       "word": "willow"
+      },
+      {
+       "word": "rose",
+       "match": [
+        "rose",
+        "roses"
+       ]
+      },
+      {
+       "word": "leaf",
+       "match": [
+        "leaf",
+        "leaves"
+       ]
+      },
+      {
+       "word": "bloom",
+       "match": [
+        "bloom",
+        "blooming"
+       ]
+      },
+      {
+       "word": "vine",
+       "match": [
+        "vine",
+        "vines"
+       ]
+      },
+      {
+       "word": "ivy"
+      },
+      {
+       "word": "daisy"
+      },
+      {
+       "word": "lilac",
+       "match": [
+        "lilac",
+        "lilacs"
+       ]
+      },
+      {
+       "word": "acorn",
+       "match": [
+        "acorn",
+        "acorns"
+       ]
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "word": "other",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "Food & Drink",
+   "emoji": "🥧",
+   "children": [
+    {
+     "name": "Food",
+     "children": [
+      {
+       "word": "apple",
+       "match": [
+        "apple",
+        "apples"
+       ]
+      },
+      {
+       "word": "tater",
+       "match": [
+        "tater",
+        "taters",
+        "potato",
+        "potatoes"
+       ]
+      },
+      {
+       "word": "sugar"
+      },
+      {
+       "word": "honey"
+      },
+      {
+       "word": "pie"
+      },
+      {
+       "word": "candy"
+      },
+      {
+       "word": "blackberry",
+       "match": [
+        "blackberry",
+        "blackberries"
+       ]
+      },
+      {
+       "word": "cabbage"
+      },
+      {
+       "word": "bread"
+      },
+      {
+       "word": "biscuit",
+       "match": [
+        "biscuit",
+        "biscuits"
+       ]
+      },
+      {
+       "word": "cake",
+       "match": [
+        "cake",
+        "cakes"
+       ]
+      },
+      {
+       "word": "peach",
+       "match": [
+        "peach",
+        "peaches"
+       ]
+      },
+      {
+       "word": "molasses"
+      },
+      {
+       "word": "beans"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Drink",
+     "children": [
+      {
+       "word": "whiskey",
+       "match": [
+        "whiskey",
+        "whisky"
+       ]
+      },
+      {
+       "word": "licker",
+       "match": [
+        "licker",
+        "liquor"
+       ]
+      },
+      {
+       "word": "cider"
+      },
+      {
+       "word": "rye"
+      },
+      {
+       "word": "drunk",
+       "match": [
+        "drunk",
+        "drink",
+        "drinking"
+       ]
+      },
+      {
+       "word": "coffee"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Travel",
+   "emoji": "🚂",
+   "children": [
+    {
+     "name": "Rails",
+     "children": [
+      {
+       "word": "train",
+       "match": [
+        "train",
+        "trains"
+       ]
+      },
+      {
+       "word": "railroad",
+       "match": [
+        "railroad",
+        "railway"
+       ]
+      },
+      {
+       "word": "wreck"
+      }
+     ]
+    },
+    {
+     "name": "Roads & Rivers",
+     "children": [
+      {
+       "word": "road"
+      },
+      {
+       "word": "highway"
+      },
+      {
+       "word": "trail"
+      },
+      {
+       "word": "wagon"
+      },
+      {
+       "word": "ship",
+       "match": [
+        "ship",
+        "ships",
+        "sailing"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "On The Move",
+     "children": [
+      {
+       "word": "ride",
+       "match": [
+        "ride",
+        "riding"
+       ]
+      },
+      {
+       "word": "walk",
+       "match": [
+        "walk",
+        "walking",
+        "walkin"
+       ]
+      },
+      {
+       "word": "miles",
+       "match": [
+        "mile",
+        "miles"
+       ]
+      },
+      {
+       "word": "trip"
+      },
+      {
+       "word": "bound"
+      },
+      {
+       "word": "roll",
+       "match": [
+        "roll",
+        "rolling"
+       ]
+      },
+      {
+       "word": "going",
+       "match": [
+        "going",
+        "goin",
+        "gone"
+       ]
+      },
+      {
+       "word": "doing",
+       "match": []
+      },
+      {
+       "word": "work",
+       "match": []
+      }
+     ]
+    },
+    {
+     "word": "other",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "Home & Things",
+   "emoji": "🏠",
+   "children": [
+    {
+     "name": "Home",
+     "children": [
+      {
+       "word": "home"
+      },
+      {
+       "word": "house"
+      },
+      {
+       "word": "cabin"
+      },
+      {
+       "word": "door"
+      },
+      {
+       "word": "window"
+      },
+      {
+       "word": "gate"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Things",
+     "children": [
+      {
+       "word": "shoe",
+       "match": [
+        "shoe",
+        "shoes"
+       ]
+      },
+      {
+       "word": "bell",
+       "match": [
+        "bell",
+        "bells"
+       ]
+      },
+      {
+       "word": "letter",
+       "match": [
+        "letter",
+        "letters"
+       ]
+      },
+      {
+       "word": "chair"
+      },
+      {
+       "word": "bottle"
+      },
+      {
+       "word": "picture"
+      },
+      {
+       "word": "saddle"
+      },
+      {
+       "word": "money",
+       "match": [
+        "money",
+        "dollar",
+        "dollars",
+        "cent",
+        "cents"
+       ]
+      },
+      {
+       "word": "ball"
+      },
+      {
+       "word": "paint"
+      },
+      {
+       "word": "bed"
+      },
+      {
+       "word": "fire"
+      },
+      {
+       "word": "stone",
+       "match": [
+        "stone",
+        "stones"
+       ]
+      },
+      {
+       "word": "sand"
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Body",
+     "children": [
+      {
+       "word": "foot",
+       "match": [
+        "foot",
+        "feet"
+       ]
+      },
+      {
+       "word": "head"
+      },
+      {
+       "word": "eyes",
+       "match": [
+        "eye",
+        "eyes",
+        "eyed"
+       ]
+      },
+      {
+       "word": "hand",
+       "match": [
+        "hand",
+        "hands"
+       ]
+      },
+      {
+       "word": "arms",
+       "match": [
+        "arm",
+        "arms"
+       ]
+      },
+      {
+       "word": "other",
+       "match": []
+      }
+     ],
+     "kind": "modifier"
+    }
+   ]
+  },
+  {
+   "name": "Music & Dance",
+   "emoji": "🎻",
+   "children": [
+    {
+     "name": "Instruments",
+     "children": [
+      {
+       "word": "fiddle"
+      },
+      {
+       "word": "banjo"
+      },
+      {
+       "word": "guitar"
+      },
+      {
+       "word": "bow"
+      },
+      {
+       "word": "band"
+      }
+     ]
+    },
+    {
+     "name": "Singing & Talk",
+     "children": [
+      {
+       "word": "yodel",
+       "match": [
+        "yodel",
+        "yodeling",
+        "yodelling"
+       ]
+      },
+      {
+       "word": "sing",
+       "match": [
+        "sing",
+        "singing",
+        "singer"
+       ]
+      },
+      {
+       "word": "talk",
+       "match": [
+        "talk",
+        "talking",
+        "talkin"
+       ]
+      },
+      {
+       "word": "tune",
+       "match": [
+        "tune",
+        "tunes"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Rhythm",
+     "children": [
+      {
+       "word": "swing",
+       "match": [
+        "swing"
+       ]
+      },
+      {
+       "word": "shuffle"
+      },
+      {
+       "word": "rock",
+       "match": [
+        "rock",
+        "rocking",
+        "rockin"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Dance Tunes",
+     "children": [
+      {
+       "word": "reel",
+       "match": [
+        "reel",
+        "reels"
+       ]
+      },
+      {
+       "word": "jig",
+       "match": [
+        "jig",
+        "jigs"
+       ]
+      },
+      {
+       "word": "hornpipe",
+       "match": [
+        "hornpipe",
+        "hornpipes"
+       ]
+      },
+      {
+       "word": "breakdown",
+       "match": [
+        "breakdown",
+        "breakdowns"
+       ]
+      },
+      {
+       "word": "hoedown",
+       "match": [
+        "hoedown",
+        "hoe down"
+       ]
+      },
+      {
+       "word": "stomp"
+      },
+      {
+       "word": "clog"
+      },
+      {
+       "word": "dance",
+       "match": [
+        "dance",
+        "dancing"
+       ]
+      },
+      {
+       "word": "rag",
+       "match": [
+        "rag",
+        "rags",
+        "ragtime"
+       ]
+      },
+      {
+       "word": "blues",
+       "match": [
+        "blues"
+       ]
+      }
+     ],
+     "kind": "form"
+    },
+    {
+     "name": "Couple Dances",
+     "children": [
+      {
+       "word": "waltz",
+       "match": [
+        "waltz",
+        "waltzes",
+        "valse",
+        "vals"
+       ]
+      },
+      {
+       "word": "polka",
+       "match": [
+        "polka",
+        "polkas"
+       ]
+      },
+      {
+       "word": "schottische",
+       "match": [
+        "schottische",
+        "schottisches",
+        "schottish"
+       ]
+      },
+      {
+       "word": "two step",
+       "match": [
+        "two step",
+        "one step",
+        "step"
+       ]
+      },
+      {
+       "word": "quadrille"
+      },
+      {
+       "word": "cotillion"
+      }
+     ],
+     "kind": "form"
+    },
+    {
+     "name": "Marches",
+     "children": [
+      {
+       "word": "march",
+       "match": [
+        "march",
+        "marches",
+        "retreat",
+        "quickstep"
+       ]
+      }
+     ],
+     "kind": "form"
+    },
+    {
+     "name": "Songs & Pieces",
+     "children": [
+      {
+       "word": "song",
+       "match": [
+        "song",
+        "songs"
+       ]
+      },
+      {
+       "word": "serenade",
+       "match": [
+        "serenade"
+       ]
+      },
+      {
+       "word": "lullaby",
+       "match": [
+        "lullaby"
+       ]
+      },
+      {
+       "word": "medley",
+       "match": [
+        "medley"
+       ]
+      },
+      {
+       "word": "intro",
+       "match": [
+        "intro",
+        "introduction",
+        "theme"
+       ]
+      },
+      {
+       "word": "unnamed",
+       "match": [
+        "unnamed",
+        "untitled",
+        "unknown"
+       ]
+      },
+      {
+       "word": "skits & stories",
+       "match": []
+      }
+     ],
+     "kind": "form"
+    },
+    {
+     "word": "other",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "Life & Death",
+   "emoji": "⚰️",
+   "children": [
+    {
+     "word": "death",
+     "match": [
+      "death",
+      "dead",
+      "die",
+      "dying"
+     ]
+    },
+    {
+     "word": "grave",
+     "match": [
+      "grave",
+      "graves",
+      "graveyard"
+     ]
+    },
+    {
+     "word": "murder",
+     "match": [
+      "murder",
+      "murdered"
+     ]
+    },
+    {
+     "word": "blood",
+     "match": [
+      "blood",
+      "bloody"
+     ]
+    },
+    {
+     "word": "jail",
+     "match": [
+      "jail",
+      "jailhouse"
+     ]
+    },
+    {
+     "word": "wedding",
+     "match": [
+      "wedding",
+      "married",
+      "marry",
+      "marrying"
+     ]
+    },
+    {
+     "word": "courting",
+     "match": [
+      "courting",
+      "courtin",
+      "court"
+     ]
+    },
+    {
+     "word": "born"
+    },
+    {
+     "word": "war",
+     "match": [
+      "war",
+      "battle"
+     ]
+    },
+    {
+     "word": "old age",
+     "match": [
+      "old age",
+      "old and grey",
+      "growing old"
+     ]
+    },
+    {
+     "word": "life",
+     "match": [
+      "life",
+      "live",
+      "living",
+      "alive"
+     ]
+    },
+    {
+     "word": "other",
+     "match": []
+    }
+   ]
+  }
+ ]
+}

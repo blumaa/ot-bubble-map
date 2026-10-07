@@ -1,26 +1,176 @@
 @import "tailwindcss";
 
+/*
+ * Brand tokens. Every color in the app comes from here, so light and dark mode swap in one place.
+ * Bubble hues share one lightness/chroma ladder (--l-*, --c-*), so all twelve groups read as one family
+ * and each shade means the same role in every group.
+ */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --canvas: oklch(0.955 0.012 80);
+  --paper: oklch(0.99 0.006 85);
+  --ink: oklch(0.24 0.02 55);
+  --muted: oklch(0.46 0.022 60);
+  --line: oklch(0.24 0.02 55 / 0.12);
+  --accent: oklch(0.52 0.13 45);
+  --on-accent: oklch(0.99 0.006 85);
+  --danger: oklch(0.5 0.17 25);
+  --glass: oklch(0.99 0.006 85 / 0.66);
+  --glass-edge: oklch(1 0 0 / 0.7);
+  --edge: oklch(1 0 0 / 0.75);
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --l-50: 0.965;
+  --l-100: 0.93;
+  --l-200: 0.875;
+  --l-300: 0.81;
+  --l-400: 0.735;
+  --c-50: 0.022;
+  --c-100: 0.045;
+  --c-200: 0.075;
+  --c-300: 0.1;
+  --c-400: 0.125;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --canvas: oklch(0.15 0.012 60);
+    --paper: oklch(0.19 0.012 60);
+    --ink: oklch(0.95 0.01 85);
+    --muted: oklch(0.76 0.016 80);
+    --line: oklch(1 0 0 / 0.12);
+    --accent: oklch(0.78 0.12 65);
+    --on-accent: oklch(0.2 0.02 55);
+    --danger: oklch(0.75 0.14 25);
+    --glass: oklch(0.21 0.012 60 / 0.62);
+    --glass-edge: oklch(1 0 0 / 0.1);
+    --edge: oklch(0 0 0 / 0.35);
+
+    --l-50: 0.24;
+    --l-100: 0.29;
+    --l-200: 0.35;
+    --l-300: 0.42;
+    --l-400: 0.5;
+    --c-50: 0.03;
+    --c-100: 0.045;
+    --c-200: 0.06;
+    --c-300: 0.08;
+    --c-400: 0.1;
   }
 }
 
+@theme inline {
+  --font-sans: var(--font-instrument-sans);
+  --font-serif: var(--font-fraunces);
+
+  --color-canvas: var(--canvas);
+  --color-paper: var(--paper);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--on-accent);
+  --color-danger: var(--danger);
+  --color-glass: var(--glass);
+  --color-glass-edge: var(--glass-edge);
+  --color-edge: var(--edge);
+
+  /* Twelve group hues, by oklch hue angle, in palette.ts order. */
+  --color-ochre-50: oklch(var(--l-50) var(--c-50) 70);
+  --color-ochre-100: oklch(var(--l-100) var(--c-100) 70);
+  --color-ochre-200: oklch(var(--l-200) var(--c-200) 70);
+  --color-ochre-300: oklch(var(--l-300) var(--c-300) 70);
+  --color-ochre-400: oklch(var(--l-400) var(--c-400) 70);
+  --color-blush-50: oklch(var(--l-50) var(--c-50) 15);
+  --color-blush-100: oklch(var(--l-100) var(--c-100) 15);
+  --color-blush-200: oklch(var(--l-200) var(--c-200) 15);
+  --color-blush-300: oklch(var(--l-300) var(--c-300) 15);
+  --color-blush-400: oklch(var(--l-400) var(--c-400) 15);
+  --color-river-50: oklch(var(--l-50) var(--c-50) 235);
+  --color-river-100: oklch(var(--l-100) var(--c-100) 235);
+  --color-river-200: oklch(var(--l-200) var(--c-200) 235);
+  --color-river-300: oklch(var(--l-300) var(--c-300) 235);
+  --color-river-400: oklch(var(--l-400) var(--c-400) 235);
+  --color-straw-50: oklch(var(--l-50) var(--c-50) 98);
+  --color-straw-100: oklch(var(--l-100) var(--c-100) 98);
+  --color-straw-200: oklch(var(--l-200) var(--c-200) 98);
+  --color-straw-300: oklch(var(--l-300) var(--c-300) 98);
+  --color-straw-400: oklch(var(--l-400) var(--c-400) 98);
+  --color-orchid-50: oklch(var(--l-50) var(--c-50) 345);
+  --color-orchid-100: oklch(var(--l-100) var(--c-100) 345);
+  --color-orchid-200: oklch(var(--l-200) var(--c-200) 345);
+  --color-orchid-300: oklch(var(--l-300) var(--c-300) 345);
+  --color-orchid-400: oklch(var(--l-400) var(--c-400) 345);
+  --color-plum-50: oklch(var(--l-50) var(--c-50) 300);
+  --color-plum-100: oklch(var(--l-100) var(--c-100) 300);
+  --color-plum-200: oklch(var(--l-200) var(--c-200) 300);
+  --color-plum-300: oklch(var(--l-300) var(--c-300) 300);
+  --color-plum-400: oklch(var(--l-400) var(--c-400) 300);
+  --color-fern-50: oklch(var(--l-50) var(--c-50) 150);
+  --color-fern-100: oklch(var(--l-100) var(--c-100) 150);
+  --color-fern-200: oklch(var(--l-200) var(--c-200) 150);
+  --color-fern-300: oklch(var(--l-300) var(--c-300) 150);
+  --color-fern-400: oklch(var(--l-400) var(--c-400) 150);
+  --color-peach-50: oklch(var(--l-50) var(--c-50) 42);
+  --color-peach-100: oklch(var(--l-100) var(--c-100) 42);
+  --color-peach-200: oklch(var(--l-200) var(--c-200) 42);
+  --color-peach-300: oklch(var(--l-300) var(--c-300) 42);
+  --color-peach-400: oklch(var(--l-400) var(--c-400) 42);
+  --color-lake-50: oklch(var(--l-50) var(--c-50) 205);
+  --color-lake-100: oklch(var(--l-100) var(--c-100) 205);
+  --color-lake-200: oklch(var(--l-200) var(--c-200) 205);
+  --color-lake-300: oklch(var(--l-300) var(--c-300) 205);
+  --color-lake-400: oklch(var(--l-400) var(--c-400) 205);
+  --color-moss-50: oklch(var(--l-50) var(--c-50) 125);
+  --color-moss-100: oklch(var(--l-100) var(--c-100) 125);
+  --color-moss-200: oklch(var(--l-200) var(--c-200) 125);
+  --color-moss-300: oklch(var(--l-300) var(--c-300) 125);
+  --color-moss-400: oklch(var(--l-400) var(--c-400) 125);
+  --color-denim-50: oklch(var(--l-50) var(--c-50) 268);
+  --color-denim-100: oklch(var(--l-100) var(--c-100) 268);
+  --color-denim-200: oklch(var(--l-200) var(--c-200) 268);
+  --color-denim-300: oklch(var(--l-300) var(--c-300) 268);
+  --color-denim-400: oklch(var(--l-400) var(--c-400) 268);
+  --color-pine-50: oklch(var(--l-50) var(--c-50) 178);
+  --color-pine-100: oklch(var(--l-100) var(--c-100) 178);
+  --color-pine-200: oklch(var(--l-200) var(--c-200) 178);
+  --color-pine-300: oklch(var(--l-300) var(--c-300) 178);
+  --color-pine-400: oklch(var(--l-400) var(--c-400) 178);
+}
+
+/* Frosted surface for everything floating over the map. */
+@utility glass {
+  @apply border border-glass-edge bg-glass text-ink shadow-[0_12px_40px_-12px_oklch(0.2_0.02_55/0.35)] ring-1 ring-line backdrop-blur-xl backdrop-saturate-150;
+}
+
+/* Text field on a glass surface. */
+@utility field {
+  @apply w-full rounded-xl border border-line bg-paper/70 px-3 py-2 text-[15px] text-ink transition-colors placeholder:text-muted hover:border-ink/25 focus-visible:border-accent focus-visible:outline-none focus-visible:ring-3 focus-visible:ring-accent/25;
+}
+
+/* Label above a field. */
+@utility field-label {
+  @apply mb-1 block text-xs font-semibold tracking-wide text-muted uppercase;
+}
+
+/* Main call to action. */
+@utility button-primary {
+  @apply rounded-full bg-accent px-4 py-2 text-center font-semibold text-on-accent shadow-sm transition hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent active:scale-[0.98] disabled:opacity-60 motion-reduce:transition-none;
+}
+
+/* Small quiet button: icon buttons, header actions. */
+@utility button-ghost {
+  @apply rounded-full px-2.5 py-1 text-sm font-medium text-muted transition-colors hover:bg-ink/8 hover:text-ink focus-visible:outline-2 focus-visible:outline-accent motion-reduce:transition-none;
+}
+
+/* Inline text link. */
+@utility link {
+  @apply font-medium text-accent underline decoration-accent/40 underline-offset-3 transition-colors hover:decoration-accent;
+}
+
+/* Display type: Fraunces with its soft, rounded terminals. */
+@utility font-display {
+  @apply font-serif tracking-tight [font-variation-settings:'SOFT'_100,'opsz'_72];
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  @apply bg-canvas font-sans text-ink;
 }
