@@ -2,6 +2,7 @@ import categoriesData from "../../data/categories.json";
 import curated from "../../data/curated.json";
 import recordings from "../../data/recordings.json";
 import { BubbleMap } from "@/components/BubbleMap";
+import { SiteFooter } from "@/components/SiteFooter";
 import type { Group } from "@/lib/keywords";
 import { LAYOUT_SIZE, packLayout } from "@/lib/layout";
 import { buildHierarchy, groupTunes } from "@/lib/tunes";
@@ -14,6 +15,7 @@ export default function Home() {
   return (
     <main className="font-sans">
       <BubbleMap nodes={nodes} />
+      <SiteFooter />
     </main>
   );
 }
