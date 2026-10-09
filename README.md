@@ -4,7 +4,7 @@ Zoomable bubble map of old-time fiddle tunes from Slippery-Hill.
 
 ## Development
 
-Needs Node 22 (`.nvmrc`). Copy the two Supabase env vars below into `.env.local`, then:
+Needs Node 22 (`.tool-versions`, for asdf). Copy the two Supabase env vars below into `.env.local`, then:
 
 ```bash
 npm ci
