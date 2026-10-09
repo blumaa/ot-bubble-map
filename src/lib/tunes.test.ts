@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import type { Group } from "./keywords";
-import { buildHierarchy, groupTunes, recordingDetails, recordingLabel, tuneUrl, type BubbleNode } from "./tunes";
+import { buildHierarchy, groupTunes, UNSORTED_PATH, recordingDetails, recordingLabel, tuneUrl, type BubbleNode } from "./tunes";
 import type { Recording } from "./types";
 
 const rec = (tune: string, tuneSlug: string, url: string, artist = "A"): Recording => ({
@@ -143,12 +143,13 @@ describe("buildHierarchy", () => {
     expect(leaves.find((t) => t.slug === "lone")).not.toHaveProperty("alsoIn");
   });
 
-  it("lists the form keywords a title matches as forms, filed one included, in taxonomy order", () => {
+  it("lists the form keywords a title matches as forms, in taxonomy order", () => {
     const filed = buildHierarchy(
       groupTunes([rec("Duck Reel", "duck-reel", "https://s/1"), rec("Waltz Reel", "waltz-reel", "https://s/2"), rec("Lone Duck", "lone", "https://s/3")]),
       [
         { name: "Animals", children: [{ word: "duck" }] },
         { name: "Music", kind: "form", children: [{ word: "waltz" }, { word: "reel" }] },
+        { name: "Unsorted", children: [] },
       ],
     );
     const leaves: BubbleNode[] = [];
@@ -159,11 +160,57 @@ describe("buildHierarchy", () => {
     expect(leaves.find((t) => t.slug === "lone")).not.toHaveProperty("forms");
   });
 
+  it("never files a tune under a form keyword: forms are a filter, not a subject", () => {
+    const filed = buildHierarchy(
+      groupTunes([rec("Duck Reel", "duck-reel", "https://s/1"), rec("Abbott's Reel", "abbott", "https://s/2")]),
+      [
+        { name: "Music", kind: "form", children: [{ word: "reel" }] },
+        { name: "Animals", children: [{ word: "duck" }] },
+        { name: "Unsorted", children: [] },
+      ],
+    );
+    expect(tree(filed)).toEqual([
+      "Old-Time Tunes",
+      "root",
+      [
+        ["Animals", "group", [["duck", "keyword", ["Duck Reel"]]]],
+        ["Unsorted", "group", ["Abbott's Reel"]],
+      ],
+    ]);
+  });
+
   it("tags keywords with their taxonomy path, so alsoIn can find them", () => {
     expect(root.children![0].children![0].children![0]).toMatchObject({ kind: "keyword", name: "duck", path: "Animals/Birds/duck" });
   });
 
-  it("refuses to leave a tune off the map, naming the tunes no keyword matches", () => {
+  it("files a tune nothing matches in the Unsorted group, so it stays on the map", () => {
+    const withUnsorted: Group[] = [...taxonomy, { name: "Unsorted", children: [] }];
+    const root = buildHierarchy(groupTunes([rec("Smoky Mokes", "smoky-mokes", "https://s/1")]), withUnsorted);
+    expect(tree(root)).toEqual(["Old-Time Tunes", "root", [["Unsorted", "group", ["Smoky Mokes"]]]]);
+    expect(UNSORTED_PATH).toBe("Unsorted");
+  });
+
+  it("files a tune in a group whose match terms it fits, as a tune beside the keyword bubbles", () => {
+    const birds: Group[] = [{ name: "Animals", children: [{ name: "Birds", match: ["bird"], children: [{ word: "duck" }, { word: "owl" }] }] }];
+    const filed = buildHierarchy(groupTunes([rec("Bird Song", "bird-song", "https://s/1"), rec("Duck River", "duck-river", "https://s/2")]), birds);
+    expect(tree(filed.children![0])).toEqual(["Animals", "group", [["Birds", "group", [["duck", "keyword", ["Duck River"]], "Bird Song"]]]]);
+    expect(filed.children![0].children![0]).toMatchObject({ path: "Animals/Birds" });
+  });
+
+  it("prefers a keyword over its group when a title fits both: specific beats general", () => {
+    const birds: Group[] = [{ name: "Animals", children: [{ name: "Birds", match: ["bird"], children: [{ word: "owl" }] }] }];
+    const filed = buildHierarchy(groupTunes([rec("Owl Bird", "owl-bird", "https://s/1")]), birds);
+    expect(tree(filed.children![0])).toEqual(["Animals", "group", [["owl", "keyword", ["Owl Bird"]]]]);
+    expect(filed.children![0].children![0].children![0].alsoIn).toEqual(["Animals/Birds"]);
+  });
+
+  it("keeps a group that holds tunes of its own even when it has one other child", () => {
+    const birds: Group[] = [{ name: "Animals", children: [{ name: "Birds", match: ["bird"], children: [{ word: "owl" }] }] }];
+    const filed = buildHierarchy(groupTunes([rec("Bird Song", "bird-song", "https://s/1"), rec("Hoot Owl", "hoot", "https://s/2")]), birds);
+    expect(tree(filed.children![0])).toEqual(["Animals", "group", [["Birds", "group", [["owl", "keyword", ["Hoot Owl"]], "Bird Song"]]]]);
+  });
+
+  it("refuses an unmatched tune when the taxonomy has no Unsorted keyword, naming the tune", () => {
     expect(() => buildHierarchy(groupTunes([rec("Smoky Mokes", "smoky-mokes", "https://s/1")]), taxonomy)).toThrow(/smoky-mokes/);
   });
 });
@@ -177,7 +224,13 @@ describe("buildHierarchy curated placements", () => {
     expect(root.children![0].children!.map((k) => [k.name, k.children!.map((t) => t.name)])).toEqual([["other", ["Chadwick", "Sally Goodin"]]]);
   });
 
-  it("rejects a curated path that names no keyword", () => {
+  it("files a curated tune directly in a group when its path names the group", () => {
+    const root = buildHierarchy(tunes, taxonomy, { chadwick: "People/Surnames" });
+    const surnames = root.children![0].children!.find((c) => c.name === "Surnames")!;
+    expect(surnames.children!.map((c) => c.name)).toEqual(["Chadwick"]);
+  });
+
+  it("rejects a curated path that names no group or keyword", () => {
     expect(() => buildHierarchy(tunes, taxonomy, { chadwick: "People/surnames" })).toThrow(/People\/surnames/);
   });
 });

@@ -5,7 +5,7 @@
  */
 import { readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
-import { keywordEntries, matchTerms, type Group } from "../../src/lib/keywords";
+import { matchTerms, taxonomyEntries, type Group } from "../../src/lib/keywords";
 import { groupTunes } from "../../src/lib/tunes";
 import type { Recording } from "../../src/lib/types";
 import { suggestKeywords } from "./suggestKeywords";
@@ -18,7 +18,7 @@ const minCount = minArg > -1 ? Number(process.argv[minArg + 1]) : 3;
 
 const recordings = readJson<Recording[]>("recordings.json");
 const { categories } = readJson<{ categories: Group[] }>("categories.json");
-const known = keywordEntries(categories).flatMap((e) => matchTerms(e.keyword));
+const known = taxonomyEntries(categories).flatMap((e) => matchTerms(e.node));
 
 const suggestions = suggestKeywords(
   groupTunes(recordings).map((t) => t.name),

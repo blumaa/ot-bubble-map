@@ -5,6 +5,7 @@ import type { Circle, LaidOutNode, View } from "@/lib/layout";
 import { popoverPlacement } from "@/lib/navigation";
 import { FeedbackDialog } from "./FeedbackDialog";
 import { RecordingFacts } from "./RecordingFacts";
+import { useDrag } from "./useDrag";
 import { recordingLabel, tuneUrl } from "@/lib/tunes";
 import type { Recording } from "@/lib/types";
 
@@ -17,9 +18,10 @@ interface Props {
   onClose: () => void;
 }
 
-/** Details and Slippery-Hill links for one recording, placed next to its bubble. */
+/** Details and Slippery-Hill links for one recording, placed next to its bubble. Drag the header to move it. */
 export function RecordingPopover({ tune, recording, anchor, view, onClose }: Props) {
   const ref = useRef<HTMLDivElement>(null);
+  const { style, handle } = useDrag(ref);
   const titleId = useId();
   const [size, setSize] = useState<{ width: number; height: number } | null>(null);
 
@@ -45,11 +47,11 @@ export function RecordingPopover({ tune, recording, anchor, view, onClose }: Pro
       onKeyDown={(e) => {
         if (e.key === "Escape") onClose();
       }}
-      style={{ left: position.left, top: position.top }}
+      style={{ left: position.left, top: position.top, ...style }}
       className="glass absolute w-80 max-w-[calc(100%-1rem)] rounded-3xl p-5 text-base outline-none data-[measured=false]:invisible"
       data-measured={size !== null}
     >
-      <div className="flex items-start justify-between gap-2">
+      <div {...handle} className="-m-5 mb-0 flex cursor-grab touch-none select-none items-start justify-between gap-2 p-5 pb-0 active:cursor-grabbing">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wide text-muted">{tune.name}</p>
           <h2 id={titleId} className="font-display text-xl font-semibold leading-snug">

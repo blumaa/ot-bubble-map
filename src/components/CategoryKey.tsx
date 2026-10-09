@@ -4,6 +4,8 @@ import Link from "next/link";
 import { useDeferredValue, useEffect, useId, useMemo, useRef, useState } from "react";
 import type { FacetOption, Filter } from "@/lib/filter";
 import { FeedbackDialog } from "./FeedbackDialog";
+import { useDrag } from "./useDrag";
+import { useWide } from "./useWide";
 import { contextPath, countLabel, nodeCount, plural } from "@/lib/label";
 import type { LaidOutNode } from "@/lib/layout";
 import { searchNodes } from "@/lib/navigation";
@@ -97,11 +99,19 @@ function FacetSelect({ label, all, options, value, onChange }: { label: string; 
   );
 }
 
-/** Floating key: music key and tune form filters, search, and a group > keyword > tune tree. Choosing a row zooms the map there. */
+/**
+ * Floating key: music key and tune form filters, search, and a group > keyword > tune tree. Choosing a row zooms the map
+ * there. Phones get it docked at the bottom and closed; wide screens get it top left and open. Drag the header to move it.
+ */
 export function CategoryKey({ nodes, byId, keyOptions, formOptions, filter, onFilter, matches, reveal, ...rest }: Props) {
   const tree: Tree = { ...rest, matches };
   const treeRef = useRef<HTMLUListElement>(null);
-  const [open, setOpen] = useState(true);
+  // Null until the user toggles it: then it follows the layout.
+  const [toggled, setToggled] = useState<boolean | null>(null);
+  const wide = useWide();
+  const open = toggled ?? wide;
+  const panel = useRef<HTMLElement>(null);
+  const { style, handle } = useDrag(panel);
   const [query, setQuery] = useState("");
   const deferredQuery = useDeferredValue(query);
   const results = useMemo(
@@ -117,8 +127,13 @@ export function CategoryKey({ nodes, byId, keyOptions, formOptions, filter, onFi
   }, [reveal]);
 
   return (
-    <aside className="glass absolute left-3 top-16 flex max-h-[calc(100%-5rem)] w-80 max-w-[calc(100%-1.5rem)] flex-col overflow-hidden rounded-3xl text-[15px]">
-      <header className="flex items-start justify-between gap-2 px-4 pb-3 pt-4">
+    <aside
+      ref={panel}
+      style={style}
+      className="glass pointer-events-auto flex max-h-[55dvh] w-full flex-col overflow-hidden rounded-3xl text-[15px] md:fixed md:left-3 md:top-3 md:max-h-[calc(100dvh-4.5rem)] md:w-80"
+    >
+      <header {...handle} className="relative flex cursor-grab touch-none select-none items-start justify-between gap-2 px-4 pb-3 pt-4 active:cursor-grabbing">
+        <span aria-hidden className="absolute left-1/2 top-1.5 h-1 w-10 -translate-x-1/2 rounded-full bg-ink/20" />
         <div>
           <h1 className="font-display text-xl font-semibold leading-tight">{SITE_NAME}</h1>
           <p className="mt-0.5 text-sm text-muted">
@@ -132,7 +147,7 @@ export function CategoryKey({ nodes, byId, keyOptions, formOptions, filter, onFi
           <FeedbackDialog triggerLabel="Send feedback" triggerClassName="button-ghost">
             ?
           </FeedbackDialog>
-          <button type="button" onClick={() => setOpen((o) => !o)} aria-expanded={open} className="button-ghost">
+          <button type="button" onClick={() => setToggled(!open)} aria-expanded={open} className="button-ghost">
             {open ? "Hide" : "Key"}
           </button>
         </div>

@@ -6,7 +6,6 @@ const PALETTE = [
   ["fill-ochre-50", "fill-ochre-100", "fill-ochre-200", "fill-ochre-300", "fill-ochre-400"], // Animals
   ["fill-blush-50", "fill-blush-100", "fill-blush-200", "fill-blush-300", "fill-blush-400"], // People
   ["fill-river-50", "fill-river-100", "fill-river-200", "fill-river-300", "fill-river-400"], // Places
-  ["fill-straw-50", "fill-straw-100", "fill-straw-200", "fill-straw-300", "fill-straw-400"], // Words
   ["fill-orchid-50", "fill-orchid-100", "fill-orchid-200", "fill-orchid-300", "fill-orchid-400"], // Feelings
   ["fill-plum-50", "fill-plum-100", "fill-plum-200", "fill-plum-300", "fill-plum-400"], // Faith
   ["fill-fern-50", "fill-fern-100", "fill-fern-200", "fill-fern-300", "fill-fern-400"], // Nature
@@ -15,6 +14,7 @@ const PALETTE = [
   ["fill-moss-50", "fill-moss-100", "fill-moss-200", "fill-moss-300", "fill-moss-400"], // Home & Things
   ["fill-denim-50", "fill-denim-100", "fill-denim-200", "fill-denim-300", "fill-denim-400"], // Music & Dance
   ["fill-pine-50", "fill-pine-100", "fill-pine-200", "fill-pine-300", "fill-pine-400"], // Life & Death
+  ["fill-straw-50", "fill-straw-100", "fill-straw-200", "fill-straw-300", "fill-straw-400"], // Unsorted
 ];
 
 type Shaded = Pick<LaidOutNode, "kind" | "depth" | "category">;

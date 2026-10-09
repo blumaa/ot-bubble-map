@@ -5,7 +5,11 @@
    "emoji": "🐾",
    "children": [
     {
-     "name": "Barnyard Birds",
+     "name": "Birds",
+     "match": [
+      "bird",
+      "birds"
+     ],
      "children": [
       {
        "word": "duck"
@@ -28,14 +32,6 @@
       },
       {
        "word": "turkey"
-      }
-     ]
-    },
-    {
-     "name": "Wild Birds",
-     "children": [
-      {
-       "word": "bird"
       },
       {
        "word": "crow"
@@ -62,7 +58,56 @@
        "word": "blackbird"
       },
       {
-       "word": "nest"
+       "word": "bluebird",
+       "match": []
+      },
+      {
+       "word": "budgie",
+       "match": []
+      },
+      {
+       "word": "canary",
+       "match": []
+      },
+      {
+       "word": "cuckoo",
+       "match": []
+      },
+      {
+       "word": "dove",
+       "match": []
+      },
+      {
+       "word": "drake",
+       "match": []
+      },
+      {
+       "word": "hummingbird",
+       "match": []
+      },
+      {
+       "word": "nightingale",
+       "match": []
+      },
+      {
+       "word": "peacock",
+       "match": []
+      },
+      {
+       "word": "redwing",
+       "match": []
+      },
+      {
+       "word": "robin",
+       "match": []
+      },
+      {
+       "word": "snowbird",
+       "match": []
+      },
+      {
+       "word": "sparrow",
+       "match": []
       }
      ]
     },
@@ -126,6 +171,26 @@
       },
       {
        "word": "goat"
+      },
+      {
+       "word": "boar",
+       "match": []
+      },
+      {
+       "word": "cattle",
+       "match": []
+      },
+      {
+       "word": "longhorn",
+       "match": []
+      },
+      {
+       "word": "ram",
+       "match": []
+      },
+      {
+       "word": "steer",
+       "match": []
       }
      ]
     },
@@ -133,13 +198,22 @@
      "name": "Dogs & Cats",
      "children": [
       {
-       "word": "dog"
+       "word": "dog",
+       "match": [
+        "dog",
+        "dogs",
+        "bow wow"
+       ]
       },
       {
        "word": "hound"
       },
       {
        "word": "cat"
+      },
+      {
+       "word": "puppy",
+       "match": []
       }
      ]
     },
@@ -211,18 +285,107 @@
         "rat",
         "rats"
        ]
+      },
+      {
+       "word": "beaver",
+       "match": []
+      },
+      {
+       "word": "camel",
+       "match": []
+      },
+      {
+       "word": "elephant",
+       "match": []
+      },
+      {
+       "word": "elk",
+       "match": []
+      },
+      {
+       "word": "lion",
+       "match": []
+      },
+      {
+       "word": "mole",
+       "match": []
+      },
+      {
+       "word": "muskrat",
+       "match": []
+      },
+      {
+       "word": "polecat",
+       "match": []
+      },
+      {
+       "word": "skunk",
+       "match": []
+      },
+      {
+       "word": "tiger",
+       "match": []
+      },
+      {
+       "word": "unicorn",
+       "match": []
+      },
+      {
+       "word": "weasel",
+       "match": []
+      },
+      {
+       "word": "wildcat",
+       "match": []
       }
      ]
     },
     {
-     "name": "Bugs, Fish & Frogs",
+     "name": "Bugs",
      "children": [
       {
-       "word": "frog"
+       "word": "bee"
       },
       {
-       "word": "snake"
+       "word": "grasshopper"
       },
+      {
+       "word": "boll weevil",
+       "match": []
+      },
+      {
+       "word": "butterfly",
+       "match": []
+      },
+      {
+       "word": "chigger",
+       "match": []
+      },
+      {
+       "word": "cricket",
+       "match": []
+      },
+      {
+       "word": "fly",
+       "match": []
+      },
+      {
+       "word": "fruit fly",
+       "match": []
+      },
+      {
+       "word": "spider",
+       "match": []
+      },
+      {
+       "word": "yellow jacket",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Fish, Frogs & Snakes",
+     "children": [
       {
        "word": "fish",
        "match": [
@@ -234,16 +397,28 @@
        "word": "catfish"
       },
       {
-       "word": "bee"
+       "word": "frog"
       },
       {
-       "word": "grasshopper"
+       "word": "snake"
+      },
+      {
+       "word": "choupique",
+       "match": []
+      },
+      {
+       "word": "crawdad",
+       "match": []
+      },
+      {
+       "word": "herring",
+       "match": []
+      },
+      {
+       "word": "mermaid",
+       "match": []
       }
      ]
-    },
-    {
-     "word": "other",
-     "match": []
     }
    ]
   },
@@ -252,452 +427,2235 @@
    "emoji": "🧑",
    "children": [
     {
-     "name": "Names",
+     "name": "Historical & Famous People",
      "children": [
       {
-       "name": "Women",
-       "children": [
-        {
-         "word": "jenny"
-        },
-        {
-         "word": "sal",
-         "match": [
-          "sal",
-          "sally"
-         ]
-        },
-        {
-         "word": "sally ann",
-         "match": [
-          "sally ann",
-          "sallie ann",
-          "sally anne"
-         ]
-        },
-        {
-         "word": "cindy"
-        },
-        {
-         "word": "liza",
-         "match": [
-          "liza",
-          "eliza",
-          "liza jane"
-         ]
-        },
-        {
-         "word": "molly"
-        },
-        {
-         "word": "polly"
-        },
-        {
-         "word": "betsy"
-        },
-        {
-         "word": "nancy"
-        },
-        {
-         "word": "susan",
-         "match": [
-          "susan",
-          "susanna",
-          "susannah",
-          "sue"
-         ]
-        },
-        {
-         "word": "mary"
-        },
-        {
-         "word": "kate",
-         "match": [
-          "kate",
-          "katy",
-          "katie"
-         ]
-        },
-        {
-         "word": "dinah"
-        },
-        {
-         "word": "lucy"
-        },
-        {
-         "word": "rosie",
-         "match": [
-          "rosie"
-         ]
-        },
-        {
-         "word": "jane"
-        },
-        {
-         "word": "nellie"
-        },
-        {
-         "word": "maggie"
-        },
-        {
-         "word": "betty"
-        },
-        {
-         "word": "kitty"
-        },
-        {
-         "word": "lulu"
-        },
-        {
-         "word": "dolly"
-        },
-        {
-         "word": "frankie"
-        },
-        {
-         "word": "lou"
-        },
-        {
-         "word": "ida"
-        },
-        {
-         "word": "sadie"
-        },
-        {
-         "word": "belle",
-         "match": [
-          "belle"
-         ]
-        },
-        {
-         "word": "annie",
-         "match": [
-          "annie",
-          "ann"
-         ]
-        },
-        {
-         "word": "emma"
-        },
-        {
-         "word": "hattie"
-        },
-        {
-         "word": "susie",
-         "match": [
-          "susie",
-          "suzie",
-          "susy"
-         ]
-        }
+       "word": "napoleon",
+       "match": [
+        "napoleon",
+        "bonaparte"
        ]
       },
       {
-       "name": "Men",
-       "children": [
-        {
-         "word": "johnny"
-        },
-        {
-         "word": "john"
-        },
-        {
-         "word": "joe"
-        },
-        {
-         "word": "billy"
-        },
-        {
-         "word": "jack"
-        },
-        {
-         "word": "jim"
-        },
-        {
-         "word": "bob"
-        },
-        {
-         "word": "tom"
-        },
-        {
-         "word": "sam"
-        },
-        {
-         "word": "dan"
-        },
-        {
-         "word": "charlie"
-        },
-        {
-         "word": "henry"
-        },
-        {
-         "word": "george"
-        },
-        {
-         "word": "jimmy",
-         "match": [
-          "jimmy",
-          "jimmie",
-          "jimmy's"
-         ]
-        },
-        {
-         "word": "bill"
-        },
-        {
-         "word": "peter"
-        },
-        {
-         "word": "mike"
-        },
-        {
-         "word": "jake"
-        },
-        {
-         "word": "willie",
-         "match": [
-          "willie",
-          "willy"
-         ]
-        },
-        {
-         "word": "paddy"
-        },
-        {
-         "word": "dick"
-        },
-        {
-         "word": "rufus"
-        }
+       "word": "lee"
+      },
+      {
+       "word": "jenny lind",
+       "match": [
+        "jenny lind"
        ]
       },
       {
-       "name": "Surnames",
-       "children": [
-        {
-         "word": "smith"
-        },
-        {
-         "word": "johnson"
-        },
-        {
-         "word": "parker"
-        },
-        {
-         "word": "callahan"
-        },
-        {
-         "word": "mccoy"
-        },
-        {
-         "word": "jones"
-        },
-        {
-         "word": "other",
-         "match": []
-        }
+       "word": "washington",
+       "match": []
+      },
+      {
+       "word": "president",
+       "match": [
+        "president",
+        "presidents"
        ]
       },
       {
-       "name": "Famous People",
-       "children": [
-        {
-         "word": "napoleon",
-         "match": [
-          "napoleon",
-          "bonaparte"
-         ]
-        },
-        {
-         "word": "lee"
-        },
-        {
-         "word": "jenny lind",
-         "match": [
-          "jenny lind"
-         ]
-        },
-        {
-         "word": "other",
-         "match": []
-        }
-       ]
+       "word": "andrew jackson",
+       "match": []
       },
       {
-       "word": "other",
+       "word": "beethoven",
+       "match": []
+      },
+      {
+       "word": "black hawk",
+       "match": []
+      },
+      {
+       "word": "bragg",
+       "match": []
+      },
+      {
+       "word": "charles guiteau",
+       "match": []
+      },
+      {
+       "word": "charles lindbergh",
+       "match": []
+      },
+      {
+       "word": "cole younger",
+       "match": []
+      },
+      {
+       "word": "columbus",
+       "match": []
+      },
+      {
+       "word": "cornwallis",
+       "match": []
+      },
+      {
+       "word": "custer",
+       "match": []
+      },
+      {
+       "word": "deford bailey",
+       "match": []
+      },
+      {
+       "word": "dennis mcgee",
+       "match": []
+      },
+      {
+       "word": "fillmore",
+       "match": []
+      },
+      {
+       "word": "garfield",
+       "match": []
+      },
+      {
+       "word": "gerald chapman",
+       "match": []
+      },
+      {
+       "word": "jeff davis",
+       "match": []
+      },
+      {
+       "word": "jesse james",
+       "match": []
+      },
+      {
+       "word": "kinnie wagner",
+       "match": []
+      },
+      {
+       "word": "lindy",
+       "match": []
+      },
+      {
+       "word": "mckinley",
+       "match": []
+      },
+      {
+       "word": "mildred doran",
+       "match": []
+      },
+      {
+       "word": "montcalm",
+       "match": []
+      },
+      {
+       "word": "ned kendall",
+       "match": []
+      },
+      {
+       "word": "nero",
+       "match": []
+      },
+      {
+       "word": "otto wood",
+       "match": []
+      },
+      {
+       "word": "perry",
+       "match": []
+      },
+      {
+       "word": "rip van winkle",
+       "match": []
+      },
+      {
+       "word": "santa anna",
+       "match": []
+      },
+      {
+       "word": "sherman",
+       "match": []
+      },
+      {
+       "word": "stagger lee",
+       "match": []
+      },
+      {
+       "word": "stonewall jackson",
+       "match": []
+      },
+      {
+       "word": "thomas watson",
+       "match": []
+      },
+      {
+       "word": "van buren",
+       "match": []
+      },
+      {
+       "word": "william jennings bryan",
+       "match": []
+      },
+      {
+       "word": "zack wheat",
        "match": []
       }
      ]
     },
     {
-     "name": "Characters",
+     "name": "First Names",
      "children": [
       {
-       "name": "Folks",
-       "children": [
-        {
-         "word": "girl",
-         "match": [
-          "girl",
-          "girls"
-         ]
-        },
-        {
-         "word": "boy",
-         "match": [
-          "boy",
-          "boys"
-         ]
-        },
-        {
-         "word": "lady",
-         "match": [
-          "lady",
-          "ladies"
-         ]
-        },
-        {
-         "word": "woman",
-         "match": [
-          "woman",
-          "women"
-         ]
-        },
-        {
-         "word": "man",
-         "match": [
-          "man",
-          "men"
-         ]
-        },
-        {
-         "word": "miss"
-        },
-        {
-         "word": "maid",
-         "match": [
-          "maid",
-          "maiden"
-         ]
-        },
-        {
-         "word": "folks",
-         "match": [
-          "folks",
-          "folk"
-         ]
-        },
-        {
-         "word": "friend",
-         "match": [
-          "friend",
-          "friends"
-         ]
-        },
-        {
-         "word": "buddy"
-        },
-        {
-         "word": "stranger"
-        }
+       "word": "jenny",
+       "exclude": [
+        "jenny lind"
        ]
       },
       {
-       "name": "Trades",
-       "children": [
-        {
-         "word": "cowboy"
-        },
-        {
-         "word": "fiddler"
-        },
-        {
-         "word": "sailor"
-        },
-        {
-         "word": "preacher"
-        },
-        {
-         "word": "farmer"
-        },
-        {
-         "word": "miner"
-        },
-        {
-         "word": "wagoner"
-        },
-        {
-         "word": "doctor"
-        },
-        {
-         "word": "judge"
-        },
-        {
-         "word": "miller"
-        }
+       "word": "cindy",
+       "match": [
+        "cindy",
+        "cinda"
        ]
       },
       {
-       "name": "Soldiers & Rulers",
-       "children": [
-        {
-         "word": "soldier"
-        },
-        {
-         "word": "captain"
-        },
-        {
-         "word": "colonel"
-        },
-        {
-         "word": "general"
-        },
-        {
-         "word": "king"
-        },
-        {
-         "word": "indian"
-        }
+       "word": "sal",
+       "match": [
+        "sal",
+        "sally"
        ]
       },
       {
-       "name": "Rounders & Drifters",
-       "children": [
-        {
-         "word": "hobo"
-        },
-        {
-         "word": "tramp"
-        },
-        {
-         "word": "rambler",
-         "match": [
-          "rambler",
-          "rambling",
-          "ramblin"
-         ]
-        },
-        {
-         "word": "gambler"
-        },
-        {
-         "word": "drunkard"
-        },
-        {
-         "word": "prisoner",
-         "match": [
-          "prisoner",
-          "prison"
-         ]
-        },
-        {
-         "word": "bully"
-        }
+       "word": "sally ann",
+       "match": [
+        "sally ann",
+        "sallie ann",
+        "sally anne"
        ]
       },
       {
-       "word": "other",
+       "word": "melinda"
+      },
+      {
+       "word": "rachel"
+      },
+      {
+       "word": "martha"
+      },
+      {
+       "word": "reuben"
+      },
+      {
+       "word": "liza",
+       "match": [
+        "liza",
+        "eliza",
+        "liza jane"
+       ]
+      },
+      {
+       "word": "molly"
+      },
+      {
+       "word": "polly"
+      },
+      {
+       "word": "betsy"
+      },
+      {
+       "word": "nancy"
+      },
+      {
+       "word": "susan",
+       "match": [
+        "susan",
+        "susanna",
+        "susannah",
+        "sue"
+       ]
+      },
+      {
+       "word": "mary"
+      },
+      {
+       "word": "kate",
+       "match": [
+        "kate",
+        "katy",
+        "katie"
+       ]
+      },
+      {
+       "word": "dinah"
+      },
+      {
+       "word": "lucy"
+      },
+      {
+       "word": "rosie",
+       "match": [
+        "rosie"
+       ]
+      },
+      {
+       "word": "jane"
+      },
+      {
+       "word": "nellie"
+      },
+      {
+       "word": "maggie"
+      },
+      {
+       "word": "betty"
+      },
+      {
+       "word": "kitty"
+      },
+      {
+       "word": "lulu"
+      },
+      {
+       "word": "dolly"
+      },
+      {
+       "word": "frankie"
+      },
+      {
+       "word": "lou"
+      },
+      {
+       "word": "ida"
+      },
+      {
+       "word": "sadie"
+      },
+      {
+       "word": "belle",
+       "match": [
+        "belle"
+       ]
+      },
+      {
+       "word": "annie",
+       "match": [
+        "annie",
+        "ann"
+       ]
+      },
+      {
+       "word": "emma"
+      },
+      {
+       "word": "hattie"
+      },
+      {
+       "word": "susie",
+       "match": [
+        "susie",
+        "suzie",
+        "susy"
+       ]
+      },
+      {
+       "word": "johnny"
+      },
+      {
+       "word": "john"
+      },
+      {
+       "word": "joe"
+      },
+      {
+       "word": "billy"
+      },
+      {
+       "word": "jack"
+      },
+      {
+       "word": "jim"
+      },
+      {
+       "word": "bob"
+      },
+      {
+       "word": "tom"
+      },
+      {
+       "word": "sam"
+      },
+      {
+       "word": "dan"
+      },
+      {
+       "word": "charlie"
+      },
+      {
+       "word": "henry"
+      },
+      {
+       "word": "george"
+      },
+      {
+       "word": "jimmy",
+       "match": [
+        "jimmy",
+        "jimmie",
+        "jimmy's"
+       ]
+      },
+      {
+       "word": "bill"
+      },
+      {
+       "word": "peter"
+      },
+      {
+       "word": "mike"
+      },
+      {
+       "word": "jake"
+      },
+      {
+       "word": "willie",
+       "match": [
+        "willie",
+        "willy"
+       ]
+      },
+      {
+       "word": "paddy"
+      },
+      {
+       "word": "dick"
+      },
+      {
+       "word": "rufus"
+      },
+      {
+       "word": "abe",
+       "match": []
+      },
+      {
+       "word": "addy",
+       "match": []
+      },
+      {
+       "word": "adeline",
+       "match": []
+      },
+      {
+       "word": "adrian",
+       "match": []
+      },
+      {
+       "word": "aldora",
+       "match": []
+      },
+      {
+       "word": "alexander",
+       "match": []
+      },
+      {
+       "word": "alice",
+       "match": []
+      },
+      {
+       "word": "allan",
+       "match": []
+      },
+      {
+       "word": "alma",
+       "match": []
+      },
+      {
+       "word": "aloma",
+       "match": []
+      },
+      {
+       "word": "amadie",
+       "match": []
+      },
+      {
+       "word": "amelia",
+       "match": []
+      },
+      {
+       "word": "andy",
+       "match": []
+      },
+      {
+       "word": "angeline",
+       "match": []
+      },
+      {
+       "word": "angus",
+       "match": []
+      },
+      {
+       "word": "anna",
+       "match": []
+      },
+      {
+       "word": "anna may",
+       "match": []
+      },
+      {
+       "word": "arabella",
+       "match": []
+      },
+      {
+       "word": "ariel",
+       "match": []
+      },
+      {
+       "word": "arthur",
+       "match": []
+      },
+      {
+       "word": "barbara",
+       "match": []
+      },
+      {
+       "word": "barbary ellen",
+       "match": []
+      },
+      {
+       "word": "ben",
+       "match": []
+      },
+      {
+       "word": "ben hur",
+       "match": []
+      },
+      {
+       "word": "bessie",
+       "match": []
+      },
+      {
+       "word": "biddy",
+       "match": []
+      },
+      {
+       "word": "bobby",
+       "match": []
+      },
+      {
+       "word": "brad",
+       "match": []
+      },
+      {
+       "word": "brenda",
+       "match": []
+      },
+      {
+       "word": "brownie",
+       "match": []
+      },
+      {
+       "word": "carlie",
+       "match": []
+      },
+      {
+       "word": "caroline",
+       "match": []
+      },
+      {
+       "word": "cedulie",
+       "match": []
+      },
+      {
+       "word": "chamaritza",
+       "match": []
+      },
+      {
+       "word": "charlotte",
+       "match": []
+      },
+      {
+       "word": "claude",
+       "match": []
+      },
+      {
+       "word": "colinda",
+       "match": []
+      },
+      {
+       "word": "corinna",
+       "match": []
+      },
+      {
+       "word": "corrina",
+       "match": []
+      },
+      {
+       "word": "corrine",
+       "match": []
+      },
+      {
+       "word": "cory",
+       "match": []
+      },
+      {
+       "word": "cuffey",
+       "match": []
+      },
+      {
+       "word": "cuffy",
+       "match": []
+      },
+      {
+       "word": "daniel",
+       "match": []
+      },
+      {
+       "word": "david",
+       "match": []
+      },
+      {
+       "word": "davy",
+       "match": []
+      },
+      {
+       "word": "delbert",
+       "match": []
+      },
+      {
+       "word": "donald",
+       "match": []
+      },
+      {
+       "word": "doney",
+       "match": []
+      },
+      {
+       "word": "donna",
+       "match": []
+      },
+      {
+       "word": "dora",
+       "match": []
+      },
+      {
+       "word": "doug",
+       "match": []
+      },
+      {
+       "word": "earl",
+       "match": []
+      },
+      {
+       "word": "ebenezer",
+       "match": []
+      },
+      {
+       "word": "edward",
+       "match": []
+      },
+      {
+       "word": "effie",
+       "match": []
+      },
+      {
+       "word": "elie",
+       "match": []
+      },
+      {
+       "word": "ella",
+       "match": []
+      },
+      {
+       "word": "emily",
+       "match": []
+      },
+      {
+       "word": "evalina",
+       "match": []
+      },
+      {
+       "word": "florella",
+       "match": []
+      },
+      {
+       "word": "georgie",
+       "match": []
+      },
+      {
+       "word": "gilbert",
+       "match": []
+      },
+      {
+       "word": "gilda",
+       "match": []
+      },
+      {
+       "word": "gracie",
+       "match": []
+      },
+      {
+       "word": "hannah",
+       "match": []
+      },
+      {
+       "word": "hazel",
+       "match": []
+      },
+      {
+       "word": "helen",
+       "match": []
+      },
+      {
+       "word": "herman",
+       "match": []
+      },
+      {
+       "word": "hiram",
+       "match": []
+      },
+      {
+       "word": "huldy",
+       "match": []
+      },
+      {
+       "word": "idy",
+       "match": []
+      },
+      {
+       "word": "iona",
+       "match": []
+      },
+      {
+       "word": "ione",
+       "match": []
+      },
+      {
+       "word": "irene",
+       "match": []
+      },
+      {
+       "word": "isabelle",
+       "match": []
+      },
+      {
+       "word": "jab",
+       "match": []
+      },
+      {
+       "word": "jacob",
+       "match": []
+      },
+      {
+       "word": "jesse",
+       "match": []
+      },
+      {
+       "word": "jesusita",
+       "match": []
+      },
+      {
+       "word": "jodie",
+       "match": []
+      },
+      {
+       "word": "josh",
+       "match": []
+      },
+      {
+       "word": "josie",
+       "match": []
+      },
+      {
+       "word": "julia",
+       "match": []
+      },
+      {
+       "word": "julie",
+       "match": []
+      },
+      {
+       "word": "junior",
+       "match": []
+      },
+      {
+       "word": "kathleen",
+       "match": []
+      },
+      {
+       "word": "katrina",
+       "match": []
+      },
+      {
+       "word": "kawliga",
+       "match": []
+      },
+      {
+       "word": "kay",
+       "match": []
+      },
+      {
+       "word": "len",
+       "match": []
+      },
+      {
+       "word": "lillie",
+       "match": []
+      },
+      {
+       "word": "lonnie",
+       "match": []
+      },
+      {
+       "word": "lorena",
+       "match": []
+      },
+      {
+       "word": "louisa",
+       "match": []
+      },
+      {
+       "word": "louise",
+       "match": []
+      },
+      {
+       "word": "lula",
+       "match": []
+      },
+      {
+       "word": "mabel",
+       "match": []
+      },
+      {
+       "word": "mabel claire",
+       "match": []
+      },
+      {
+       "word": "mack",
+       "match": []
+      },
+      {
+       "word": "madelan",
+       "match": []
+      },
+      {
+       "word": "madeline",
+       "match": []
+      },
+      {
+       "word": "malcolm",
+       "match": []
+      },
+      {
+       "word": "malindy",
+       "match": []
+      },
+      {
+       "word": "mamie",
+       "match": []
+      },
+      {
+       "word": "marcheta",
+       "match": []
+      },
+      {
+       "word": "margaret",
+       "match": []
+      },
+      {
+       "word": "margie",
+       "match": []
+      },
+      {
+       "word": "maria",
+       "match": []
+      },
+      {
+       "word": "mariechen",
+       "match": []
+      },
+      {
+       "word": "marion",
+       "match": []
+      },
+      {
+       "word": "marlin",
+       "match": []
+      },
+      {
+       "word": "marmaduke",
+       "match": []
+      },
+      {
+       "word": "martin",
+       "match": []
+      },
+      {
+       "word": "maude",
+       "match": []
+      },
+      {
+       "word": "maybel",
+       "match": []
+      },
+      {
+       "word": "maybelle",
+       "match": []
+      },
+      {
+       "word": "meg",
+       "match": []
+      },
+      {
+       "word": "minnie",
+       "match": []
+      },
+      {
+       "word": "monty",
+       "match": []
+      },
+      {
+       "word": "mose",
+       "match": []
+      },
+      {
+       "word": "nan",
+       "match": []
+      },
+      {
+       "word": "naomi",
+       "match": []
+      },
+      {
+       "word": "napper",
+       "match": []
+      },
+      {
+       "word": "nell",
+       "match": []
+      },
+      {
+       "word": "nelly",
+       "match": []
+      },
+      {
+       "word": "newt",
+       "match": []
+      },
+      {
+       "word": "nyen",
+       "match": []
+      },
+      {
+       "word": "odile",
+       "match": []
+      },
+      {
+       "word": "ola",
+       "match": []
+      },
+      {
+       "word": "omie",
+       "match": []
+      },
+      {
+       "word": "orvetta",
+       "match": []
+      },
+      {
+       "word": "oscar",
+       "match": []
+      },
+      {
+       "word": "osey",
+       "match": []
+      },
+      {
+       "word": "pat",
+       "match": []
+      },
+      {
+       "word": "patty",
+       "match": []
+      },
+      {
+       "word": "pauline",
+       "match": []
+      },
+      {
+       "word": "pearl",
+       "match": []
+      },
+      {
+       "word": "pete",
+       "match": []
+      },
+      {
+       "word": "phil",
+       "match": []
+      },
+      {
+       "word": "phoebe",
+       "match": []
+      },
+      {
+       "word": "phyllis",
+       "match": []
+      },
+      {
+       "word": "raymond",
+       "match": []
+      },
+      {
+       "word": "red",
+       "match": []
+      },
+      {
+       "word": "robert",
+       "match": []
+      },
+      {
+       "word": "roger",
+       "match": []
+      },
+      {
+       "word": "rosalee",
+       "match": []
+      },
+      {
+       "word": "rosalie",
+       "match": []
+      },
+      {
+       "word": "roscoe",
+       "match": []
+      },
+      {
+       "word": "roxanna",
+       "match": []
+      },
+      {
+       "word": "ruth",
+       "match": []
+      },
+      {
+       "word": "sallie",
+       "match": []
+      },
+      {
+       "word": "sambo",
+       "match": []
+      },
+      {
+       "word": "sammand",
+       "match": []
+      },
+      {
+       "word": "sammie",
+       "match": []
+      },
+      {
+       "word": "saro",
+       "match": []
+      },
+      {
+       "word": "selmer",
+       "match": []
+      },
+      {
+       "word": "seth",
+       "match": []
+      },
+      {
+       "word": "sid",
+       "match": []
+      },
+      {
+       "word": "solita",
+       "match": []
+      },
+      {
+       "word": "solly",
+       "match": []
+      },
+      {
+       "word": "tempie",
+       "match": []
+      },
+      {
+       "word": "thomas",
+       "match": []
+      },
+      {
+       "word": "tinka",
+       "match": []
+      },
+      {
+       "word": "tommy",
+       "match": []
+      },
+      {
+       "word": "topsy",
+       "match": []
+      },
+      {
+       "word": "trumpy",
+       "match": []
+      },
+      {
+       "word": "virge",
+       "match": []
+      },
+      {
+       "word": "waldo",
+       "match": []
+      },
+      {
+       "word": "william",
+       "match": []
+      },
+      {
+       "word": "winona",
+       "match": []
+      },
+      {
+       "word": "winston",
+       "match": []
+      },
+      {
+       "word": "woody",
+       "match": []
+      },
+      {
+       "word": "zelma",
+       "match": []
+      },
+      {
+       "word": "zenda",
+       "match": []
+      },
+      {
+       "word": "zitka",
+       "match": []
+      },
+      {
+       "word": "zollie",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Surnames",
+     "children": [
+      {
+       "word": "smith"
+      },
+      {
+       "word": "johnson"
+      },
+      {
+       "word": "parker"
+      },
+      {
+       "word": "callahan"
+      },
+      {
+       "word": "mccoy"
+      },
+      {
+       "word": "jones"
+      },
+      {
+       "word": "abbott",
+       "match": []
+      },
+      {
+       "word": "allen",
+       "match": []
+      },
+      {
+       "word": "anderson",
+       "match": []
+      },
+      {
+       "word": "arbrey",
+       "match": []
+      },
+      {
+       "word": "ardoin",
+       "match": []
+      },
+      {
+       "word": "arrington",
+       "match": []
+      },
+      {
+       "word": "ashby",
+       "match": []
+      },
+      {
+       "word": "bagot",
+       "match": []
+      },
+      {
+       "word": "bailey",
+       "match": []
+      },
+      {
+       "word": "baily",
+       "match": []
+      },
+      {
+       "word": "baker",
+       "match": []
+      },
+      {
+       "word": "ballenger",
+       "match": []
+      },
+      {
+       "word": "bamford",
+       "match": []
+      },
+      {
+       "word": "bankhead",
+       "match": []
+      },
+      {
+       "word": "barbee",
+       "match": []
+      },
+      {
+       "word": "batchelder",
+       "match": []
+      },
+      {
+       "word": "belair",
+       "match": []
+      },
+      {
+       "word": "blakeman",
+       "match": []
+      },
+      {
+       "word": "blanchard",
+       "match": []
+      },
+      {
+       "word": "bodard",
+       "match": []
+      },
+      {
+       "word": "boling",
+       "match": []
+      },
+      {
+       "word": "bolt",
+       "match": []
+      },
+      {
+       "word": "bondy",
+       "match": []
+      },
+      {
+       "word": "booker",
+       "match": []
+      },
+      {
+       "word": "booth",
+       "match": []
+      },
+      {
+       "word": "boyd",
+       "match": []
+      },
+      {
+       "word": "bradbury",
+       "match": []
+      },
+      {
+       "word": "brown",
+       "match": []
+      },
+      {
+       "word": "bryan",
+       "match": []
+      },
+      {
+       "word": "burton",
+       "match": []
+      },
+      {
+       "word": "bush",
+       "match": []
+      },
+      {
+       "word": "butz",
+       "match": []
+      },
+      {
+       "word": "bvarink",
+       "match": []
+      },
+      {
+       "word": "cain",
+       "match": []
+      },
+      {
+       "word": "calhoun",
+       "match": []
+      },
+      {
+       "word": "callis",
+       "match": []
+      },
+      {
+       "word": "campbell",
+       "match": []
+      },
+      {
+       "word": "carnes",
+       "match": []
+      },
+      {
+       "word": "carter",
+       "match": []
+      },
+      {
+       "word": "casey",
+       "match": []
+      },
+      {
+       "word": "chadwick",
+       "match": []
+      },
+      {
+       "word": "chancellor",
+       "match": []
+      },
+      {
+       "word": "chapman",
+       "match": []
+      },
+      {
+       "word": "clark",
+       "match": []
+      },
+      {
+       "word": "cleveland",
+       "match": []
+      },
+      {
+       "word": "cole",
+       "match": []
+      },
+      {
+       "word": "coleman",
+       "match": []
+      },
+      {
+       "word": "collins",
+       "match": []
+      },
+      {
+       "word": "comstock",
+       "match": []
+      },
+      {
+       "word": "courville",
+       "match": []
+      },
+      {
+       "word": "crafton",
+       "match": []
+      },
+      {
+       "word": "crawford",
+       "match": []
+      },
+      {
+       "word": "creduer",
+       "match": []
+      },
+      {
+       "word": "dailey",
+       "match": []
+      },
+      {
+       "word": "daily",
+       "match": []
+      },
+      {
+       "word": "darneo",
+       "match": []
+      },
+      {
+       "word": "dean",
+       "match": []
+      },
+      {
+       "word": "debusk",
+       "match": []
+      },
+      {
+       "word": "dickey",
+       "match": []
+      },
+      {
+       "word": "dixon",
+       "match": []
+      },
+      {
+       "word": "dooley",
+       "match": []
+      },
+      {
+       "word": "downey",
+       "match": []
+      },
+      {
+       "word": "droan",
+       "match": []
+      },
+      {
+       "word": "dunbar",
+       "match": []
+      },
+      {
+       "word": "duncan",
+       "match": []
+      },
+      {
+       "word": "dupree",
+       "match": []
+      },
+      {
+       "word": "durang",
+       "match": []
+      },
+      {
+       "word": "durant",
+       "match": []
+      },
+      {
+       "word": "durham",
+       "match": []
+      },
+      {
+       "word": "dye",
+       "match": []
+      },
+      {
+       "word": "elsmith",
+       "match": []
+      },
+      {
+       "word": "evans",
+       "match": []
+      },
+      {
+       "word": "fine",
+       "match": []
+      },
+      {
+       "word": "fisher",
+       "match": []
+      },
+      {
+       "word": "flanagan",
+       "match": []
+      },
+      {
+       "word": "flannigan",
+       "match": []
+      },
+      {
+       "word": "fleming",
+       "match": []
+      },
+      {
+       "word": "forbes",
+       "match": []
+      },
+      {
+       "word": "ford",
+       "match": []
+      },
+      {
+       "word": "forrester",
+       "match": []
+      },
+      {
+       "word": "franklin",
+       "match": []
+      },
+      {
+       "word": "fuller",
+       "match": []
+      },
+      {
+       "word": "gilderoy",
+       "match": []
+      },
+      {
+       "word": "gilsaw",
+       "match": []
+      },
+      {
+       "word": "glasscock",
+       "match": []
+      },
+      {
+       "word": "gray",
+       "match": []
+      },
+      {
+       "word": "greely",
+       "match": []
+      },
+      {
+       "word": "green",
+       "match": []
+      },
+      {
+       "word": "grigsby",
+       "match": []
+      },
+      {
+       "word": "grimes",
+       "match": []
+      },
+      {
+       "word": "grinnell",
+       "match": []
+      },
+      {
+       "word": "hale",
+       "match": []
+      },
+      {
+       "word": "haley",
+       "match": []
+      },
+      {
+       "word": "hall",
+       "match": []
+      },
+      {
+       "word": "hamilton",
+       "match": []
+      },
+      {
+       "word": "hanks",
+       "match": []
+      },
+      {
+       "word": "haram",
+       "match": []
+      },
+      {
+       "word": "harmon",
+       "match": []
+      },
+      {
+       "word": "harris",
+       "match": []
+      },
+      {
+       "word": "harrison",
+       "match": []
+      },
+      {
+       "word": "hately",
+       "match": []
+      },
+      {
+       "word": "hawkins",
+       "match": []
+      },
+      {
+       "word": "hayes",
+       "match": []
+      },
+      {
+       "word": "haywood",
+       "match": []
+      },
+      {
+       "word": "heath",
+       "match": []
+      },
+      {
+       "word": "herter",
+       "match": []
+      },
+      {
+       "word": "hiatt",
+       "match": []
+      },
+      {
+       "word": "hickman",
+       "match": []
+      },
+      {
+       "word": "hicks",
+       "match": []
+      },
+      {
+       "word": "hooker",
+       "match": []
+      },
+      {
+       "word": "hopp",
+       "match": []
+      },
+      {
+       "word": "hull",
+       "match": []
+      },
+      {
+       "word": "humphrey",
+       "match": []
+      },
+      {
+       "word": "huntingwood",
+       "match": []
+      },
+      {
+       "word": "jackson",
+       "match": []
+      },
+      {
+       "word": "jebarte",
+       "match": []
+      },
+      {
+       "word": "jessup",
+       "match": []
+      },
+      {
+       "word": "keller",
+       "match": []
+      },
+      {
+       "word": "kelley",
+       "match": []
+      },
+      {
+       "word": "kelly",
+       "match": []
+      },
+      {
+       "word": "kemp",
+       "match": []
+      },
+      {
+       "word": "kennedy",
+       "match": []
+      },
+      {
+       "word": "kidd",
+       "match": []
+      },
+      {
+       "word": "killian",
+       "match": []
+      },
+      {
+       "word": "kimmell",
+       "match": []
+      },
+      {
+       "word": "kvasor",
+       "match": []
+      },
+      {
+       "word": "lakey",
+       "match": []
+      },
+      {
+       "word": "langdaddle",
+       "match": []
+      },
+      {
+       "word": "lardner",
+       "match": []
+      },
+      {
+       "word": "lauterbach",
+       "match": []
+      },
+      {
+       "word": "leddy",
+       "match": []
+      },
+      {
+       "word": "lilly",
+       "match": []
+      },
+      {
+       "word": "llewellyn",
+       "match": []
+      },
+      {
+       "word": "lowe",
+       "match": []
+      },
+      {
+       "word": "lowery",
+       "match": []
+      },
+      {
+       "word": "macdonald",
+       "match": []
+      },
+      {
+       "word": "mackenzie",
+       "match": []
+      },
+      {
+       "word": "mackilmoyle",
+       "match": []
+      },
+      {
+       "word": "maple",
+       "match": []
+      },
+      {
+       "word": "martin",
+       "match": []
+      },
+      {
+       "word": "mason",
+       "match": []
+      },
+      {
+       "word": "mccarroll",
+       "match": []
+      },
+      {
+       "word": "mcclanahan",
+       "match": []
+      },
+      {
+       "word": "mccloud",
+       "match": []
+      },
+      {
+       "word": "mccraw",
+       "match": []
+      },
+      {
+       "word": "mcdowell",
+       "match": []
+      },
+      {
+       "word": "mceachern",
+       "match": []
+      },
+      {
+       "word": "mcgee",
+       "match": []
+      },
+      {
+       "word": "mchattie",
+       "match": []
+      },
+      {
+       "word": "mckinney",
+       "match": []
+      },
+      {
+       "word": "mclean",
+       "match": []
+      },
+      {
+       "word": "mcleod",
+       "match": []
+      },
+      {
+       "word": "mcmichen",
+       "match": []
+      },
+      {
+       "word": "mcquillen",
+       "match": []
+      },
+      {
+       "word": "meddler",
+       "match": []
+      },
+      {
+       "word": "meriweather",
+       "match": []
+      },
+      {
+       "word": "mitchell",
+       "match": []
+      },
+      {
+       "word": "mitton",
+       "match": []
+      },
+      {
+       "word": "monroe",
+       "match": []
+      },
+      {
+       "word": "montmarquette",
+       "match": []
+      },
+      {
+       "word": "moore",
+       "match": []
+      },
+      {
+       "word": "morris",
+       "match": []
+      },
+      {
+       "word": "nealski",
+       "match": []
+      },
+      {
+       "word": "nelms",
+       "match": []
+      },
+      {
+       "word": "nixion",
+       "match": []
+      },
+      {
+       "word": "obrien",
+       "match": []
+      },
+      {
+       "word": "odem",
+       "match": []
+      },
+      {
+       "word": "packett",
+       "match": []
+      },
+      {
+       "word": "padgett",
+       "match": []
+      },
+      {
+       "word": "parnell",
+       "match": []
+      },
+      {
+       "word": "penick",
+       "match": []
+      },
+      {
+       "word": "perrodin",
+       "match": []
+      },
+      {
+       "word": "pope",
+       "match": []
+      },
+      {
+       "word": "porter",
+       "match": []
+      },
+      {
+       "word": "postun",
+       "match": []
+      },
+      {
+       "word": "poulard",
+       "match": []
+      },
+      {
+       "word": "price",
+       "match": []
+      },
+      {
+       "word": "pruitt",
+       "match": []
+      },
+      {
+       "word": "puckett",
+       "match": []
+      },
+      {
+       "word": "purcell",
+       "match": []
+      },
+      {
+       "word": "pushee",
+       "match": []
+      },
+      {
+       "word": "radell",
+       "match": []
+      },
+      {
+       "word": "rae",
+       "match": []
+      },
+      {
+       "word": "ragan",
+       "match": []
+      },
+      {
+       "word": "randall",
+       "match": []
+      },
+      {
+       "word": "randel",
+       "match": []
+      },
+      {
+       "word": "randolph",
+       "match": []
+      },
+      {
+       "word": "reaves",
+       "match": []
+      },
+      {
+       "word": "reed",
+       "match": []
+      },
+      {
+       "word": "reefer",
+       "match": []
+      },
+      {
+       "word": "rickett",
+       "match": []
+      },
+      {
+       "word": "riley",
+       "match": []
+      },
+      {
+       "word": "robertson",
+       "match": []
+      },
+      {
+       "word": "ross",
+       "match": []
+      },
+      {
+       "word": "russell",
+       "match": []
+      },
+      {
+       "word": "rutland",
+       "match": []
+      },
+      {
+       "word": "ryan",
+       "match": []
+      },
+      {
+       "word": "ryman",
+       "match": []
+      },
+      {
+       "word": "rymer",
+       "match": []
+      },
+      {
+       "word": "scott",
+       "match": []
+      },
+      {
+       "word": "seabolt",
+       "match": []
+      },
+      {
+       "word": "sharp",
+       "match": []
+      },
+      {
+       "word": "sherburn",
+       "match": []
+      },
+      {
+       "word": "sherwood",
+       "match": []
+      },
+      {
+       "word": "short",
+       "match": []
+      },
+      {
+       "word": "sizemore",
+       "match": []
+      },
+      {
+       "word": "skidmore",
+       "match": []
+      },
+      {
+       "word": "slaton",
+       "match": []
+      },
+      {
+       "word": "spencer",
+       "match": []
+      },
+      {
+       "word": "spiecker",
+       "match": []
+      },
+      {
+       "word": "statler",
+       "match": []
+      },
+      {
+       "word": "steele",
+       "match": []
+      },
+      {
+       "word": "steeley",
+       "match": []
+      },
+      {
+       "word": "steerman",
+       "match": []
+      },
+      {
+       "word": "stevens",
+       "match": []
+      },
+      {
+       "word": "stratton",
+       "match": []
+      },
+      {
+       "word": "stuart",
+       "match": []
+      },
+      {
+       "word": "sturgeon",
+       "match": []
+      },
+      {
+       "word": "sumner",
+       "match": []
+      },
+      {
+       "word": "taylor",
+       "match": []
+      },
+      {
+       "word": "thom",
+       "match": []
+      },
+      {
+       "word": "thompson",
+       "match": []
+      },
+      {
+       "word": "tremaine",
+       "match": []
+      },
+      {
+       "word": "vance",
+       "match": []
+      },
+      {
+       "word": "wagner",
+       "match": []
+      },
+      {
+       "word": "walburn",
+       "match": []
+      },
+      {
+       "word": "waldorf",
+       "match": []
+      },
+      {
+       "word": "warfield",
+       "match": []
+      },
+      {
+       "word": "webster",
+       "match": []
+      },
+      {
+       "word": "weddington",
+       "match": []
+      },
+      {
+       "word": "whalen",
+       "match": []
+      },
+      {
+       "word": "white",
+       "match": []
+      },
+      {
+       "word": "willis",
+       "match": []
+      },
+      {
+       "word": "willott",
+       "match": []
+      },
+      {
+       "word": "wilson",
+       "match": []
+      },
+      {
+       "word": "wimbush",
+       "match": []
+      },
+      {
+       "word": "wood",
+       "match": []
+      },
+      {
+       "word": "woodard",
+       "match": []
+      },
+      {
+       "word": "wooten",
+       "match": []
+      },
+      {
+       "word": "wylie",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Folks",
+     "match": [
+      "folks",
+      "folk"
+     ],
+     "children": [
+      {
+       "word": "girl",
+       "match": [
+        "girl",
+        "girls"
+       ]
+      },
+      {
+       "word": "boy",
+       "match": [
+        "boy",
+        "boys"
+       ]
+      },
+      {
+       "word": "lady",
+       "match": [
+        "lady",
+        "ladies"
+       ]
+      },
+      {
+       "word": "woman",
+       "match": [
+        "woman",
+        "women"
+       ]
+      },
+      {
+       "word": "man",
+       "match": [
+        "man",
+        "men"
+       ]
+      },
+      {
+       "word": "miss"
+      },
+      {
+       "word": "maid",
+       "match": [
+        "maid",
+        "maiden"
+       ]
+      },
+      {
+       "word": "friend",
+       "match": [
+        "friend",
+        "friends"
+       ]
+      },
+      {
+       "word": "buddy"
+      },
+      {
+       "word": "stranger"
+      },
+      {
+       "word": "bachelor",
+       "match": []
+      },
+      {
+       "word": "boogerman",
+       "match": []
+      },
+      {
+       "word": "democrat",
+       "match": []
+      },
+      {
+       "word": "dude",
+       "match": []
+      },
+      {
+       "word": "feller",
+       "match": []
+      },
+      {
+       "word": "fellow",
+       "match": []
+      },
+      {
+       "word": "hanged man",
+       "match": []
+      },
+      {
+       "word": "hillbilly",
+       "match": []
+      },
+      {
+       "word": "lad",
+       "match": []
+      },
+      {
+       "word": "master",
+       "match": []
+      },
+      {
+       "word": "mountaineer",
+       "match": []
+      },
+      {
+       "word": "neighbor",
+       "match": []
+      },
+      {
+       "word": "pioneer",
+       "match": []
+      },
+      {
+       "word": "playboy",
+       "match": []
+      },
+      {
+       "word": "playmate",
+       "match": []
+      },
+      {
+       "word": "reveler",
+       "match": []
+      },
+      {
+       "word": "scatterbrain",
+       "match": []
+      },
+      {
+       "word": "slave",
        "match": []
       }
      ]
@@ -768,21 +2726,42 @@
        "word": "orphan"
       },
       {
-       "word": "other",
+       "word": "cousin",
+       "match": []
+      },
+      {
+       "word": "grandad",
+       "match": []
+      },
+      {
+       "word": "grandpappy",
+       "match": []
+      },
+      {
+       "word": "husband",
+       "match": []
+      },
+      {
+       "word": "loved one",
+       "match": []
+      },
+      {
+       "word": "sister",
+       "match": []
+      },
+      {
+       "word": "widow",
        "match": []
       }
      ]
     },
     {
      "name": "Sweethearts",
+     "match": [
+      "sweetheart",
+      "sweethearts"
+     ],
      "children": [
-      {
-       "word": "sweetheart",
-       "match": [
-        "sweetheart",
-        "sweethearts"
-       ]
-      },
       {
        "word": "darling",
        "match": [
@@ -809,7 +2788,442 @@
        ]
       },
       {
-       "word": "baby",
+       "word": "honey baby",
+       "match": []
+      },
+      {
+       "word": "beau",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Occupations",
+     "children": [
+      {
+       "word": "cowboy"
+      },
+      {
+       "word": "sailor"
+      },
+      {
+       "word": "preacher"
+      },
+      {
+       "word": "farmer"
+      },
+      {
+       "word": "miner"
+      },
+      {
+       "word": "wagoner"
+      },
+      {
+       "word": "doctor"
+      },
+      {
+       "word": "judge"
+      },
+      {
+       "word": "miller"
+      },
+      {
+       "word": "blacksmith",
+       "match": [
+        "blacksmith",
+        "blacksmiths"
+       ]
+      },
+      {
+       "word": "carpenter"
+      },
+      {
+       "word": "peddler"
+      },
+      {
+       "word": "tinker"
+      },
+      {
+       "word": "tailor"
+      },
+      {
+       "word": "sheriff"
+      },
+      {
+       "word": "engineer"
+      },
+      {
+       "word": "brakeman"
+      },
+      {
+       "word": "acrobat",
+       "match": []
+      },
+      {
+       "word": "barber",
+       "match": []
+      },
+      {
+       "word": "butcher",
+       "match": []
+      },
+      {
+       "word": "census taker",
+       "match": []
+      },
+      {
+       "word": "director",
+       "match": []
+      },
+      {
+       "word": "fisherman",
+       "match": []
+      },
+      {
+       "word": "hunter",
+       "match": []
+      },
+      {
+       "word": "jailer",
+       "match": []
+      },
+      {
+       "word": "jockey",
+       "match": []
+      },
+      {
+       "word": "lamplighter",
+       "match": []
+      },
+      {
+       "word": "lineman",
+       "match": []
+      },
+      {
+       "word": "logger",
+       "match": []
+      },
+      {
+       "word": "minstrel",
+       "match": []
+      },
+      {
+       "word": "organ grinder",
+       "match": []
+      },
+      {
+       "word": "ox driver",
+       "match": []
+      },
+      {
+       "word": "pipeliner",
+       "match": []
+      },
+      {
+       "word": "piper",
+       "match": []
+      },
+      {
+       "word": "policeman",
+       "match": []
+      },
+      {
+       "word": "ranger",
+       "match": []
+      },
+      {
+       "word": "roughneck",
+       "match": []
+      },
+      {
+       "word": "roustabout",
+       "match": []
+      },
+      {
+       "word": "sharecropper",
+       "match": []
+      },
+      {
+       "word": "stevedore",
+       "match": []
+      },
+      {
+       "word": "surveyor",
+       "match": []
+      },
+      {
+       "word": "tanner",
+       "match": []
+      },
+      {
+       "word": "teacher",
+       "match": []
+      },
+      {
+       "word": "tie hacker",
+       "match": []
+      },
+      {
+       "word": "trucker",
+       "match": []
+      },
+      {
+       "word": "washerwoman",
+       "match": []
+      },
+      {
+       "word": "weaver",
+       "match": []
+      },
+      {
+       "word": "woodchopper",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Soldiers",
+     "match": [
+      "soldier",
+      "soldiers"
+     ],
+     "children": [
+      {
+       "word": "captain"
+      },
+      {
+       "word": "colonel"
+      },
+      {
+       "word": "general"
+      },
+      {
+       "word": "army",
+       "match": []
+      },
+      {
+       "word": "troops",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Rulers",
+     "children": [
+      {
+       "word": "king"
+      },
+      {
+       "word": "queen"
+      },
+      {
+       "word": "prince",
+       "match": [
+        "prince",
+        "princes",
+        "princess"
+       ]
+      },
+      {
+       "word": "kaiser",
+       "match": []
+      },
+      {
+       "word": "sheik",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Nations & Peoples",
+     "children": [
+      {
+       "word": "indian",
+       "match": []
+      },
+      {
+       "word": "cherokee",
+       "match": []
+      },
+      {
+       "word": "irish",
+       "match": []
+      },
+      {
+       "word": "scotch",
+       "match": []
+      },
+      {
+       "word": "dutch",
+       "match": []
+      },
+      {
+       "word": "english",
+       "match": []
+      },
+      {
+       "word": "french",
+       "match": []
+      },
+      {
+       "word": "spanish",
+       "match": []
+      },
+      {
+       "word": "german",
+       "match": []
+      },
+      {
+       "word": "gaelic",
+       "match": []
+      },
+      {
+       "word": "hawaiian",
+       "match": []
+      },
+      {
+       "word": "portuguese",
+       "match": []
+      },
+      {
+       "word": "mexican",
+       "match": []
+      },
+      {
+       "word": "american",
+       "match": []
+      },
+      {
+       "word": "bohemian",
+       "match": []
+      },
+      {
+       "word": "british",
+       "match": []
+      },
+      {
+       "word": "chinese",
+       "match": []
+      },
+      {
+       "word": "choctaw",
+       "match": []
+      },
+      {
+       "word": "cuban",
+       "match": []
+      },
+      {
+       "word": "greek",
+       "match": []
+      },
+      {
+       "word": "gypsy",
+       "match": []
+      },
+      {
+       "word": "italian",
+       "match": []
+      },
+      {
+       "word": "japanese",
+       "match": []
+      },
+      {
+       "word": "norwegian",
+       "match": []
+      },
+      {
+       "word": "osage",
+       "match": []
+      },
+      {
+       "word": "scandinavian",
+       "match": []
+      },
+      {
+       "word": "sioux",
+       "match": []
+      },
+      {
+       "word": "swedish",
+       "match": []
+      },
+      {
+       "word": "yankee",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Slurs",
+     "children": [
+      {
+       "word": "cracker",
+       "match": []
+      },
+      {
+       "word": "dago",
+       "match": []
+      },
+      {
+       "word": "darkey",
+       "match": []
+      },
+      {
+       "word": "quadroon",
+       "match": []
+      },
+      {
+       "word": "squaw",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Rounders & Drifters",
+     "children": [
+      {
+       "word": "hobo"
+      },
+      {
+       "word": "tramp"
+      },
+      {
+       "word": "rambler",
+       "match": [
+        "rambler",
+        "rambling",
+        "ramblin"
+       ]
+      },
+      {
+       "word": "gambler"
+      },
+      {
+       "word": "drunkard"
+      },
+      {
+       "word": "bully"
+      },
+      {
+       "word": "bum",
+       "match": []
+      },
+      {
+       "word": "convict",
+       "match": []
+      },
+      {
+       "word": "gangster",
+       "match": []
+      },
+      {
+       "word": "outcast",
+       "match": []
+      },
+      {
+       "word": "wanderer",
        "match": []
       }
      ]
@@ -821,67 +3235,235 @@
    "emoji": "🗺️",
    "children": [
     {
-     "name": "Southern States",
+     "name": "States",
      "children": [
       {
-       "word": "kentucky"
+       "word": "alabama",
+       "match": [
+        "alabama"
+       ]
       },
       {
-       "word": "tennessee"
+       "word": "arizona",
+       "match": [
+        "arizona"
+       ]
       },
       {
-       "word": "virginia"
+       "word": "arkansas",
+       "match": [
+        "arkansas"
+       ]
       },
       {
-       "word": "west virginia"
+       "word": "california",
+       "match": [
+        "california"
+       ]
       },
       {
-       "word": "carolina"
+       "word": "carolina",
+       "match": [
+        "carolina",
+        "carolinas"
+       ]
       },
       {
-       "word": "georgia"
+       "word": "colorado",
+       "match": [
+        "colorado"
+       ]
       },
       {
-       "word": "alabama"
+       "word": "delaware",
+       "match": [
+        "delaware"
+       ]
       },
       {
-       "word": "mississippi"
+       "word": "florida",
+       "match": [
+        "florida"
+       ]
       },
       {
-       "word": "arkansas"
+       "word": "georgia",
+       "match": [
+        "georgia"
+       ]
       },
       {
-       "word": "louisiana"
-      }
-     ]
-    },
-    {
-     "name": "Other States",
-     "children": [
-      {
-       "word": "missouri"
+       "word": "hawaii",
+       "match": [
+        "hawaii"
+       ]
       },
       {
-       "word": "texas"
+       "word": "illinois",
+       "match": [
+        "illinois"
+       ]
       },
       {
-       "word": "ohio"
+       "word": "indiana",
+       "match": [
+        "indiana"
+       ]
       },
       {
-       "word": "indiana"
+       "word": "iowa",
+       "match": [
+        "iowa"
+       ]
       },
       {
-       "word": "oklahoma"
+       "word": "kansas",
+       "match": [
+        "kansas"
+       ]
       },
       {
-       "word": "california"
+       "word": "kentucky",
+       "match": [
+        "kentucky"
+       ]
       },
       {
-       "word": "arizona"
+       "word": "louisiana",
+       "match": [
+        "louisiana"
+       ]
       },
       {
-       "word": "other",
-       "match": []
+       "word": "maine",
+       "match": [
+        "maine"
+       ]
+      },
+      {
+       "word": "michigan",
+       "match": [
+        "michigan"
+       ]
+      },
+      {
+       "word": "mississippi",
+       "match": [
+        "mississippi"
+       ]
+      },
+      {
+       "word": "missouri",
+       "match": [
+        "missouri"
+       ]
+      },
+      {
+       "word": "montana",
+       "match": [
+        "montana"
+       ]
+      },
+      {
+       "word": "nevada",
+       "match": [
+        "nevada"
+       ]
+      },
+      {
+       "word": "new hampshire",
+       "match": [
+        "new hampshire"
+       ]
+      },
+      {
+       "word": "new mexico",
+       "match": [
+        "new mexico"
+       ]
+      },
+      {
+       "word": "new york",
+       "match": [
+        "new york"
+       ]
+      },
+      {
+       "word": "ohio",
+       "match": [
+        "ohio"
+       ]
+      },
+      {
+       "word": "oklahoma",
+       "match": [
+        "oklahoma"
+       ]
+      },
+      {
+       "word": "oregon",
+       "match": [
+        "oregon"
+       ]
+      },
+      {
+       "word": "pennsylvania",
+       "match": [
+        "pennsylvania"
+       ]
+      },
+      {
+       "word": "tennessee",
+       "match": [
+        "tennessee"
+       ]
+      },
+      {
+       "word": "texas",
+       "match": [
+        "texas"
+       ]
+      },
+      {
+       "word": "utah",
+       "match": [
+        "utah"
+       ]
+      },
+      {
+       "word": "vermont",
+       "match": [
+        "vermont"
+       ]
+      },
+      {
+       "word": "virginia",
+       "match": [
+        "virginia"
+       ],
+       "exclude": [
+        "west virginia"
+       ]
+      },
+      {
+       "word": "west virginia",
+       "match": [
+        "west virginia"
+       ]
+      },
+      {
+       "word": "dakota",
+       "match": [
+        "dakota",
+        "north dakota",
+        "south dakota"
+       ]
+      },
+      {
+       "word": "wyoming",
+       "match": [
+        "wyoming"
+       ]
       }
      ]
     },
@@ -898,37 +3480,90 @@
        "word": "shenandoah"
       },
       {
-       "word": "west",
+       "word": "blue ridge",
        "match": [
-        "west",
-        "western"
+        "blue ridge"
        ]
+      },
+      {
+       "word": "ozark",
+       "match": [
+        "ozark",
+        "ozarks"
+       ]
+      },
+      {
+       "word": "flatwoods",
+       "match": [
+        "flatwoods"
+       ]
+      },
+      {
+       "word": "everglades",
+       "match": [
+        "everglades"
+       ]
+      },
+      {
+       "word": "pacific slope",
+       "match": [
+        "pacific slope"
+       ]
+      },
+      {
+       "word": "cajun",
+       "match": [
+        "cajun"
+       ]
+      },
+      {
+       "word": "americas",
+       "match": []
+      },
+      {
+       "word": "bluegrass",
+       "match": []
+      },
+      {
+       "word": "gulf coast",
+       "match": []
+      },
+      {
+       "word": "highland",
+       "match": []
+      },
+      {
+       "word": "interlake",
+       "match": []
+      },
+      {
+       "word": "northwest",
+       "match": []
+      },
+      {
+       "word": "panhandle",
+       "match": []
+      },
+      {
+       "word": "piedmont",
+       "match": []
+      },
+      {
+       "word": "rockies",
+       "match": []
       },
       {
        "word": "south",
-       "match": [
-        "south",
-        "southern",
-        "southland"
-       ]
+       "match": []
       },
       {
-       "word": "country"
-      },
-      {
-       "word": "world"
-      },
-      {
-       "word": "land",
-       "match": [
-        "land",
-        "lands"
-       ]
+       "word": "west",
+       "match": []
       }
      ]
     },
     {
-     "name": "Cities",
+     "name": "Cities & Towns",
      "children": [
       {
        "word": "new orleans"
@@ -956,12 +3591,7 @@
       },
       {
        "word": "city"
-      }
-     ]
-    },
-    {
-     "name": "Towns & Counties",
-     "children": [
+      },
       {
        "word": "county"
       },
@@ -977,7 +3607,687 @@
        "word": "village"
       },
       {
-       "word": "other",
+       "word": "altamont",
+       "match": []
+      },
+      {
+       "word": "amarillo",
+       "match": []
+      },
+      {
+       "word": "ashland",
+       "match": []
+      },
+      {
+       "word": "avalon",
+       "match": []
+      },
+      {
+       "word": "baltimore",
+       "match": []
+      },
+      {
+       "word": "barnsdall",
+       "match": []
+      },
+      {
+       "word": "beaumont",
+       "match": []
+      },
+      {
+       "word": "beausoleil",
+       "match": []
+      },
+      {
+       "word": "beckley",
+       "match": []
+      },
+      {
+       "word": "bedford",
+       "match": []
+      },
+      {
+       "word": "belvedere",
+       "match": []
+      },
+      {
+       "word": "bisbee",
+       "match": []
+      },
+      {
+       "word": "bloomington",
+       "match": []
+      },
+      {
+       "word": "bogalusa",
+       "match": []
+      },
+      {
+       "word": "booneville",
+       "match": []
+      },
+      {
+       "word": "boscoville",
+       "match": []
+      },
+      {
+       "word": "boston",
+       "match": []
+      },
+      {
+       "word": "bowery",
+       "match": []
+      },
+      {
+       "word": "bowling green",
+       "match": []
+      },
+      {
+       "word": "branson",
+       "match": []
+      },
+      {
+       "word": "brasstown",
+       "match": []
+      },
+      {
+       "word": "breathitt",
+       "match": []
+      },
+      {
+       "word": "buncombe",
+       "match": []
+      },
+      {
+       "word": "callifax",
+       "match": []
+      },
+      {
+       "word": "camp chase",
+       "match": []
+      },
+      {
+       "word": "camp nelson",
+       "match": []
+      },
+      {
+       "word": "camptown",
+       "match": []
+      },
+      {
+       "word": "catlettsburg",
+       "match": []
+      },
+      {
+       "word": "centerville",
+       "match": []
+      },
+      {
+       "word": "charleytown",
+       "match": []
+      },
+      {
+       "word": "chattanooga",
+       "match": []
+      },
+      {
+       "word": "cheyenne",
+       "match": []
+      },
+      {
+       "word": "chillicothe",
+       "match": []
+      },
+      {
+       "word": "cincinnati",
+       "match": []
+      },
+      {
+       "word": "cleveland",
+       "match": []
+      },
+      {
+       "word": "concord",
+       "match": []
+      },
+      {
+       "word": "corbin",
+       "match": []
+      },
+      {
+       "word": "crab orchard",
+       "match": []
+      },
+      {
+       "word": "dallas",
+       "match": []
+      },
+      {
+       "word": "dalton",
+       "match": []
+      },
+      {
+       "word": "danville",
+       "match": []
+      },
+      {
+       "word": "deep elem",
+       "match": []
+      },
+      {
+       "word": "deep elm",
+       "match": []
+      },
+      {
+       "word": "denver",
+       "match": []
+      },
+      {
+       "word": "dublin",
+       "match": []
+      },
+      {
+       "word": "dubuque",
+       "match": []
+      },
+      {
+       "word": "dungannon",
+       "match": []
+      },
+      {
+       "word": "el paso",
+       "match": []
+      },
+      {
+       "word": "eminence",
+       "match": []
+      },
+      {
+       "word": "eunice",
+       "match": []
+      },
+      {
+       "word": "fairfield",
+       "match": []
+      },
+      {
+       "word": "faubourg",
+       "match": []
+      },
+      {
+       "word": "fort gibson",
+       "match": []
+      },
+      {
+       "word": "fort worth",
+       "match": []
+      },
+      {
+       "word": "fresno",
+       "match": []
+      },
+      {
+       "word": "fullerton",
+       "match": []
+      },
+      {
+       "word": "galesburg",
+       "match": []
+      },
+      {
+       "word": "galway",
+       "match": []
+      },
+      {
+       "word": "gaspe",
+       "match": []
+      },
+      {
+       "word": "gasport",
+       "match": []
+      },
+      {
+       "word": "gaston",
+       "match": []
+      },
+      {
+       "word": "goliad",
+       "match": []
+      },
+      {
+       "word": "grand marais",
+       "match": []
+      },
+      {
+       "word": "greenfield",
+       "match": []
+      },
+      {
+       "word": "gueydan",
+       "match": []
+      },
+      {
+       "word": "gulf breeze",
+       "match": []
+      },
+      {
+       "word": "halifax",
+       "match": []
+      },
+      {
+       "word": "harlan",
+       "match": []
+      },
+      {
+       "word": "harrisburg",
+       "match": []
+      },
+      {
+       "word": "hilo",
+       "match": []
+      },
+      {
+       "word": "honolulu",
+       "match": []
+      },
+      {
+       "word": "houston",
+       "match": []
+      },
+      {
+       "word": "humansville",
+       "match": []
+      },
+      {
+       "word": "iberia",
+       "match": []
+      },
+      {
+       "word": "isonville",
+       "match": []
+      },
+      {
+       "word": "kansas city",
+       "match": []
+      },
+      {
+       "word": "kilnamona",
+       "match": []
+      },
+      {
+       "word": "kinston",
+       "match": []
+      },
+      {
+       "word": "knoxville",
+       "match": []
+      },
+      {
+       "word": "kohala",
+       "match": []
+      },
+      {
+       "word": "lacassine",
+       "match": []
+      },
+      {
+       "word": "lake arthur",
+       "match": []
+      },
+      {
+       "word": "lake charles",
+       "match": []
+      },
+      {
+       "word": "lansing",
+       "match": []
+      },
+      {
+       "word": "leechburg",
+       "match": []
+      },
+      {
+       "word": "limehouse",
+       "match": []
+      },
+      {
+       "word": "liverpool",
+       "match": []
+      },
+      {
+       "word": "logan",
+       "match": []
+      },
+      {
+       "word": "londonderry",
+       "match": []
+      },
+      {
+       "word": "louisburg",
+       "match": []
+      },
+      {
+       "word": "lynchburg",
+       "match": []
+      },
+      {
+       "word": "mallow",
+       "match": []
+      },
+      {
+       "word": "mamou",
+       "match": []
+      },
+      {
+       "word": "manassas",
+       "match": []
+      },
+      {
+       "word": "maysville",
+       "match": []
+      },
+      {
+       "word": "miami",
+       "match": []
+      },
+      {
+       "word": "middleton",
+       "match": []
+      },
+      {
+       "word": "middletown",
+       "match": []
+      },
+      {
+       "word": "midland",
+       "match": []
+      },
+      {
+       "word": "millburn",
+       "match": []
+      },
+      {
+       "word": "milwaukee",
+       "match": []
+      },
+      {
+       "word": "mineola",
+       "match": []
+      },
+      {
+       "word": "minneapolis",
+       "match": []
+      },
+      {
+       "word": "missoula",
+       "match": []
+      },
+      {
+       "word": "moatsville",
+       "match": []
+      },
+      {
+       "word": "mobile",
+       "match": []
+      },
+      {
+       "word": "montgomery",
+       "match": []
+      },
+      {
+       "word": "montreal",
+       "match": []
+      },
+      {
+       "word": "morpeth",
+       "match": []
+      },
+      {
+       "word": "muscle shoals",
+       "match": []
+      },
+      {
+       "word": "naponee",
+       "match": []
+      },
+      {
+       "word": "nappanee",
+       "match": []
+      },
+      {
+       "word": "natchez",
+       "match": []
+      },
+      {
+       "word": "new castle",
+       "match": []
+      },
+      {
+       "word": "newcastle",
+       "match": []
+      },
+      {
+       "word": "newport",
+       "match": []
+      },
+      {
+       "word": "north sanger",
+       "match": []
+      },
+      {
+       "word": "oberlin",
+       "match": []
+      },
+      {
+       "word": "olympia",
+       "match": []
+      },
+      {
+       "word": "opelousas",
+       "match": []
+      },
+      {
+       "word": "oxford",
+       "match": []
+      },
+      {
+       "word": "paris",
+       "match": []
+      },
+      {
+       "word": "parkersburg",
+       "match": []
+      },
+      {
+       "word": "perth",
+       "match": []
+      },
+      {
+       "word": "pinedale",
+       "match": []
+      },
+      {
+       "word": "pointe noire",
+       "match": []
+      },
+      {
+       "word": "poplar bluff",
+       "match": []
+      },
+      {
+       "word": "portland",
+       "match": []
+      },
+      {
+       "word": "portneuf",
+       "match": []
+      },
+      {
+       "word": "portsmouth",
+       "match": []
+      },
+      {
+       "word": "reno",
+       "match": []
+      },
+      {
+       "word": "roanoke",
+       "match": []
+      },
+      {
+       "word": "rochester",
+       "match": []
+      },
+      {
+       "word": "rome",
+       "match": []
+      },
+      {
+       "word": "safe harbor",
+       "match": []
+      },
+      {
+       "word": "salem",
+       "match": []
+      },
+      {
+       "word": "san antonio",
+       "match": []
+      },
+      {
+       "word": "san francisco",
+       "match": []
+      },
+      {
+       "word": "santa barbara",
+       "match": []
+      },
+      {
+       "word": "saratoga",
+       "match": []
+      },
+      {
+       "word": "sebastopol",
+       "match": []
+      },
+      {
+       "word": "shady grove",
+       "match": []
+      },
+      {
+       "word": "shanghai",
+       "match": []
+      },
+      {
+       "word": "shawnee",
+       "match": []
+      },
+      {
+       "word": "shelburne",
+       "match": []
+      },
+      {
+       "word": "shiloh",
+       "match": []
+      },
+      {
+       "word": "shippensport",
+       "match": []
+      },
+      {
+       "word": "spokane",
+       "match": []
+      },
+      {
+       "word": "springdale",
+       "match": []
+      },
+      {
+       "word": "steptown",
+       "match": []
+      },
+      {
+       "word": "stony point",
+       "match": []
+      },
+      {
+       "word": "stumptown",
+       "match": []
+      },
+      {
+       "word": "tarbolton",
+       "match": []
+      },
+      {
+       "word": "tipperary",
+       "match": []
+      },
+      {
+       "word": "tokyo",
+       "match": []
+      },
+      {
+       "word": "topeka",
+       "match": []
+      },
+      {
+       "word": "tulsa",
+       "match": []
+      },
+      {
+       "word": "tupelo",
+       "match": []
+      },
+      {
+       "word": "tuscaloosa",
+       "match": []
+      },
+      {
+       "word": "van buren",
+       "match": []
+      },
+      {
+       "word": "ville platte",
+       "match": []
+      },
+      {
+       "word": "warsaw",
+       "match": []
+      },
+      {
+       "word": "washington courthouse",
+       "match": []
+      },
+      {
+       "word": "waverley",
+       "match": []
+      },
+      {
+       "word": "waynesboro",
+       "match": []
+      },
+      {
+       "word": "waynesburgh",
+       "match": []
+      },
+      {
+       "word": "west plains",
+       "match": []
+      },
+      {
+       "word": "westby",
+       "match": []
+      },
+      {
+       "word": "westphalia",
+       "match": []
+      },
+      {
+       "word": "winnipeg",
+       "match": []
+      },
+      {
+       "word": "zacatecas",
        "match": []
       }
      ]
@@ -1020,13 +4330,149 @@
        "word": "sandy"
       },
       {
-       "word": "other",
+       "word": "beach",
+       "match": []
+      },
+      {
+       "word": "big muddy",
+       "match": []
+      },
+      {
+       "word": "brazos",
+       "match": []
+      },
+      {
+       "word": "broad run",
+       "match": []
+      },
+      {
+       "word": "brook",
+       "match": []
+      },
+      {
+       "word": "brushy run",
+       "match": []
+      },
+      {
+       "word": "caney",
+       "match": []
+      },
+      {
+       "word": "chesapeake bay",
+       "match": []
+      },
+      {
+       "word": "coal harbor bend",
+       "match": []
+      },
+      {
+       "word": "deschutes",
+       "match": []
+      },
+      {
+       "word": "ford",
+       "match": []
+      },
+      {
+       "word": "horseshoe bend",
+       "match": []
+      },
+      {
+       "word": "juniata",
+       "match": []
+      },
+      {
+       "word": "kanawha",
+       "match": []
+      },
+      {
+       "word": "kaney",
+       "match": []
+      },
+      {
+       "word": "lake",
+       "match": []
+      },
+      {
+       "word": "lake erie",
+       "match": []
+      },
+      {
+       "word": "lehigh",
+       "match": []
+      },
+      {
+       "word": "maumee",
+       "match": []
+      },
+      {
+       "word": "moselle",
+       "match": []
+      },
+      {
+       "word": "pecos",
+       "match": []
+      },
+      {
+       "word": "plover",
+       "match": []
+      },
+      {
+       "word": "putners run",
+       "match": []
+      },
+      {
+       "word": "red lick",
+       "match": []
+      },
+      {
+       "word": "reedy",
+       "match": []
+      },
+      {
+       "word": "san saba",
+       "match": []
+      },
+      {
+       "word": "scioto",
+       "match": []
+      },
+      {
+       "word": "shannon",
+       "match": []
+      },
+      {
+       "word": "stillhouse branch",
+       "match": []
+      },
+      {
+       "word": "stinson",
+       "match": []
+      },
+      {
+       "word": "stoney fork",
+       "match": []
+      },
+      {
+       "word": "stream",
+       "match": []
+      },
+      {
+       "word": "tobique",
+       "match": []
+      },
+      {
+       "word": "tug",
+       "match": []
+      },
+      {
+       "word": "wabash",
        "match": []
       }
      ]
     },
     {
-     "name": "Hills & Hollows",
+     "name": "Mountains & Hollows",
      "children": [
       {
        "word": "mountain"
@@ -1045,11 +4491,62 @@
       },
       {
        "word": "prairie"
+      },
+      {
+       "word": "hollow",
+       "match": [
+        "hollow",
+        "holler"
+       ]
+      },
+      {
+       "word": "arthur seat",
+       "match": []
+      },
+      {
+       "word": "brae",
+       "match": []
+      },
+      {
+       "word": "cave",
+       "match": []
+      },
+      {
+       "word": "clayhole",
+       "match": []
+      },
+      {
+       "word": "cliff",
+       "match": []
+      },
+      {
+       "word": "knob",
+       "match": []
+      },
+      {
+       "word": "pikes peak",
+       "match": []
+      },
+      {
+       "word": "pisgah",
+       "match": []
+      },
+      {
+       "word": "shasta",
+       "match": []
+      },
+      {
+       "word": "shelving rock",
+       "match": []
+      },
+      {
+       "word": "smoky",
+       "match": []
       }
      ]
     },
     {
-     "name": "Roads & Buildings",
+     "name": "Farms, Roads & Buildings",
      "children": [
       {
        "word": "barn"
@@ -1067,7 +4564,75 @@
        "word": "farm"
       },
       {
-       "word": "other",
+       "word": "alley",
+       "match": []
+      },
+      {
+       "word": "avenue",
+       "match": []
+      },
+      {
+       "word": "barroom",
+       "match": []
+      },
+      {
+       "word": "bridge",
+       "match": []
+      },
+      {
+       "word": "castle",
+       "match": []
+      },
+      {
+       "word": "corral",
+       "match": []
+      },
+      {
+       "word": "fence",
+       "match": []
+      },
+      {
+       "word": "ferry",
+       "match": []
+      },
+      {
+       "word": "forge",
+       "match": []
+      },
+      {
+       "word": "honky tonk",
+       "match": []
+      },
+      {
+       "word": "ironworks",
+       "match": []
+      },
+      {
+       "word": "lighthouse",
+       "match": []
+      },
+      {
+       "word": "palace",
+       "match": []
+      },
+      {
+       "word": "plantation",
+       "match": []
+      },
+      {
+       "word": "plow",
+       "match": []
+      },
+      {
+       "word": "schoolhouse",
+       "match": []
+      },
+      {
+       "word": "sidewalk",
+       "match": []
+      },
+      {
+       "word": "stillhouse",
        "match": []
       }
      ]
@@ -1078,493 +4643,99 @@
       {
        "word": "ireland",
        "match": [
-        "ireland",
-        "irish"
+        "ireland"
        ]
       },
       {
        "word": "scotland",
        "match": [
-        "scotland",
-        "scotch",
-        "scottish"
+        "scotland"
        ]
       },
       {
        "word": "spain",
        "match": [
-        "spain",
-        "spanish"
+        "spain"
        ]
       },
       {
        "word": "mexico",
        "match": [
-        "mexico",
-        "mexican"
+        "mexico"
+       ],
+       "exclude": [
+        "new mexico"
        ]
       },
       {
-       "word": "other",
+       "word": "england",
+       "match": [
+        "england"
+       ]
+      },
+      {
+       "word": "italy",
+       "match": [
+        "italy"
+       ]
+      },
+      {
+       "word": "canada",
+       "match": [
+        "canada"
+       ]
+      },
+      {
+       "word": "germany",
+       "match": [
+        "germany"
+       ]
+      },
+      {
+       "word": "argentina",
+       "match": []
+      },
+      {
+       "word": "cuba",
+       "match": []
+      },
+      {
+       "word": "egypt",
+       "match": []
+      },
+      {
+       "word": "france",
+       "match": []
+      },
+      {
+       "word": "lebanon",
+       "match": []
+      },
+      {
+       "word": "madeira",
+       "match": []
+      },
+      {
+       "word": "nagasaki",
+       "match": []
+      },
+      {
+       "word": "nova scotia",
+       "match": []
+      },
+      {
+       "word": "portugal",
+       "match": []
+      },
+      {
+       "word": "puerto rico",
+       "match": []
+      },
+      {
+       "word": "russia",
        "match": []
       }
      ]
-    },
-    {
-     "word": "other",
-     "match": []
-    }
-   ]
-  },
-  {
-   "name": "Words",
-   "emoji": "🔤",
-   "children": [
-    {
-     "name": "Colors",
-     "children": [
-      {
-       "word": "blue",
-       "match": [
-        "blue"
-       ]
-      },
-      {
-       "word": "red"
-      },
-      {
-       "word": "black"
-      },
-      {
-       "word": "brown"
-      },
-      {
-       "word": "white"
-      },
-      {
-       "word": "green"
-      },
-      {
-       "word": "yellow"
-      },
-      {
-       "word": "golden",
-       "match": [
-        "golden",
-        "gold"
-       ]
-      },
-      {
-       "word": "grey",
-       "match": [
-        "grey",
-        "gray"
-       ]
-      },
-      {
-       "word": "silver"
-      }
-     ],
-     "kind": "modifier"
-    },
-    {
-     "name": "Descriptions",
-     "children": [
-      {
-       "word": "old",
-       "match": [
-        "old",
-        "olden"
-       ]
-      },
-      {
-       "word": "little",
-       "match": [
-        "little",
-        "lil"
-       ]
-      },
-      {
-       "word": "big"
-      },
-      {
-       "word": "great"
-      },
-      {
-       "word": "grand"
-      },
-      {
-       "word": "pretty"
-      },
-      {
-       "word": "beautiful"
-      },
-      {
-       "word": "young"
-      },
-      {
-       "word": "poor"
-      },
-      {
-       "word": "dark",
-       "match": [
-        "dark",
-        "darkness"
-       ]
-      },
-      {
-       "word": "light"
-      },
-      {
-       "word": "hot"
-      },
-      {
-       "word": "high"
-      },
-      {
-       "word": "good",
-       "match": [
-        "good",
-        "best",
-        "better"
-       ]
-      },
-      {
-       "word": "bad",
-       "match": [
-        "bad",
-        "wrong"
-       ]
-      },
-      {
-       "word": "other",
-       "match": []
-      }
-     ],
-     "kind": "modifier"
-    },
-    {
-     "name": "Numbers",
-     "children": [
-      {
-       "word": "one",
-       "match": [
-        "one"
-       ]
-      },
-      {
-       "word": "two",
-       "match": [
-        "two"
-       ]
-      },
-      {
-       "word": "three",
-       "match": [
-        "three"
-       ]
-      },
-      {
-       "word": "four",
-       "match": [
-        "four"
-       ]
-      },
-      {
-       "word": "five",
-       "match": [
-        "five"
-       ]
-      },
-      {
-       "word": "six",
-       "match": [
-        "six"
-       ]
-      },
-      {
-       "word": "seven",
-       "match": [
-        "seven"
-       ]
-      },
-      {
-       "word": "eight",
-       "match": [
-        "eight"
-       ]
-      },
-      {
-       "word": "nine",
-       "match": [
-        "nine"
-       ]
-      },
-      {
-       "word": "ten",
-       "match": [
-        "ten"
-       ]
-      },
-      {
-       "word": "twelve",
-       "match": [
-        "twelve"
-       ]
-      },
-      {
-       "word": "twenty",
-       "match": [
-        "twenty"
-       ]
-      },
-      {
-       "word": "forty",
-       "match": [
-        "forty"
-       ]
-      },
-      {
-       "word": "fifty",
-       "match": [
-        "fifty"
-       ]
-      },
-      {
-       "word": "hundred",
-       "match": [
-        "hundred"
-       ]
-      },
-      {
-       "word": "other",
-       "match": []
-      }
-     ],
-     "kind": "modifier"
-    },
-    {
-     "name": "Time",
-     "children": [
-      {
-       "word": "time",
-       "match": [
-        "time",
-        "times"
-       ]
-      },
-      {
-       "word": "day",
-       "match": [
-        "day",
-        "days"
-       ]
-      },
-      {
-       "word": "year",
-       "match": [
-        "year",
-        "years"
-       ]
-      },
-      {
-       "word": "ago"
-      },
-      {
-       "word": "forever",
-       "match": [
-        "forever",
-        "always"
-       ]
-      },
-      {
-       "word": "last"
-      },
-      {
-       "word": "new"
-      },
-      {
-       "word": "again"
-      },
-      {
-       "word": "other",
-       "match": []
-      }
-     ],
-     "kind": "modifier"
-    },
-    {
-     "name": "Languages",
-     "children": [
-      {
-       "word": "spanish",
-       "match": []
-      },
-      {
-       "word": "french",
-       "match": []
-      },
-      {
-       "word": "hawaiian",
-       "match": []
-      },
-      {
-       "word": "german",
-       "match": []
-      },
-      {
-       "word": "gaelic",
-       "match": []
-      },
-      {
-       "word": "portuguese",
-       "match": []
-      }
-     ]
-    },
-    {
-     "name": "Phrases",
-     "children": [
-      {
-       "word": "i",
-       "match": [
-        "i",
-        "i'm",
-        "i'll",
-        "i've",
-        "i'd"
-       ]
-      },
-      {
-       "word": "you",
-       "match": [
-        "you",
-        "you're",
-        "you'll",
-        "your",
-        "yours",
-        "ya"
-       ]
-      },
-      {
-       "word": "me",
-       "match": [
-        "me",
-        "my",
-        "mine"
-       ]
-      },
-      {
-       "word": "he",
-       "match": [
-        "he",
-        "he's",
-        "him",
-        "his"
-       ]
-      },
-      {
-       "word": "she",
-       "match": [
-        "she",
-        "she's",
-        "her",
-        "hers"
-       ]
-      },
-      {
-       "word": "we",
-       "match": [
-        "we",
-        "we're",
-        "we'll",
-        "us",
-        "our"
-       ]
-      },
-      {
-       "word": "they",
-       "match": [
-        "they",
-        "they're",
-        "them",
-        "their"
-       ]
-      },
-      {
-       "word": "it",
-       "match": [
-        "it",
-        "it's"
-       ]
-      },
-      {
-       "word": "don't",
-       "match": [
-        "don't",
-        "doesn't",
-        "didn't",
-        "ain't",
-        "can't",
-        "won't",
-        "wouldn't",
-        "couldn't",
-        "shouldn't",
-        "isn't",
-        "wasn't",
-        "not",
-        "never",
-        "no",
-        "nobody",
-        "nothing"
-       ]
-      },
-      {
-       "word": "questions",
-       "match": [
-        "why",
-        "what",
-        "when",
-        "where",
-        "how",
-        "who",
-        "which"
-       ]
-      },
-      {
-       "word": "let",
-       "match": [
-        "let",
-        "let's"
-       ]
-      },
-      {
-       "word": "somebody",
-       "match": [
-        "somebody",
-        "someone",
-        "anybody",
-        "everybody",
-        "everyone"
-       ]
-      },
-      {
-       "word": "there",
-       "match": [
-        "there",
-        "here",
-        "this",
-        "that",
-        "these",
-        "those"
-       ]
-      },
-      {
-       "word": "sayings",
-       "match": []
-      }
-     ],
-     "kind": "function"
     }
    ]
   },
@@ -1574,10 +4745,11 @@
    "children": [
     {
      "name": "Love",
+     "match": [
+      "love",
+      "loves"
+     ],
      "children": [
-      {
-       "word": "love"
-      },
       {
        "word": "sweet",
        "kind": "modifier"
@@ -1596,6 +4768,18 @@
         "hearts",
         "heartache"
        ]
+      },
+      {
+       "word": "jealous",
+       "match": []
+      },
+      {
+       "word": "longing",
+       "match": []
+      },
+      {
+       "word": "valentine",
+       "match": []
       }
      ]
     },
@@ -1657,6 +4841,18 @@
       {
        "word": "blind",
        "kind": "modifier"
+      },
+      {
+       "word": "tribulation",
+       "match": []
+      },
+      {
+       "word": "worried",
+       "match": []
+      },
+      {
+       "word": "worry",
+       "match": []
       }
      ]
     },
@@ -1689,6 +4885,10 @@
       {
        "word": "wild",
        "kind": "modifier"
+      },
+      {
+       "word": "laugh",
+       "match": []
       }
      ]
     },
@@ -1712,10 +4912,6 @@
        ]
       }
      ]
-    },
-    {
-     "word": "other",
-     "match": []
     }
    ]
   },
@@ -1730,7 +4926,9 @@
        "word": "heaven",
        "match": [
         "heaven",
-        "heavenly"
+        "heavenly",
+        "pearly gates",
+        "pearly gate"
        ]
       },
       {
@@ -1748,6 +4946,18 @@
       },
       {
        "word": "devil"
+      },
+      {
+       "word": "beulah land",
+       "match": []
+      },
+      {
+       "word": "judgement",
+       "match": []
+      },
+      {
+       "word": "paradise",
+       "match": []
       }
      ]
     },
@@ -1779,6 +4989,115 @@
         "saint",
         "st"
        ]
+      },
+      {
+       "word": "holy ghost",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Bible",
+     "children": [
+      {
+       "word": "moses"
+      },
+      {
+       "word": "noah"
+      },
+      {
+       "word": "zion"
+      },
+      {
+       "word": "jordan"
+      },
+      {
+       "word": "abraham",
+       "match": []
+      },
+      {
+       "word": "adam",
+       "match": []
+      },
+      {
+       "word": "ark",
+       "match": []
+      },
+      {
+       "word": "canaan",
+       "match": []
+      },
+      {
+       "word": "chariot",
+       "match": []
+      },
+      {
+       "word": "daniel",
+       "match": []
+      },
+      {
+       "word": "ezekiel",
+       "match": []
+      },
+      {
+       "word": "galilee",
+       "match": []
+      },
+      {
+       "word": "handwriting",
+       "match": []
+      },
+      {
+       "word": "holy land",
+       "match": []
+      },
+      {
+       "word": "jacob",
+       "match": []
+      },
+      {
+       "word": "jericho",
+       "match": []
+      },
+      {
+       "word": "jerusalem",
+       "match": []
+      },
+      {
+       "word": "job",
+       "match": []
+      },
+      {
+       "word": "jonah",
+       "match": []
+      },
+      {
+       "word": "manna",
+       "match": []
+      },
+      {
+       "word": "paul",
+       "match": []
+      },
+      {
+       "word": "pharaoh",
+       "match": []
+      },
+      {
+       "word": "prodigal son",
+       "match": []
+      },
+      {
+       "word": "reaper",
+       "match": []
+      },
+      {
+       "word": "rich young ruler",
+       "match": []
+      },
+      {
+       "word": "shadrach",
+       "match": []
       }
      ]
     },
@@ -1796,7 +5115,12 @@
        ]
       },
       {
-       "word": "hymn"
+       "word": "hymn",
+       "match": [
+        "hymn",
+        "hymns",
+        "rock of ages"
+       ]
       },
       {
        "word": "religion"
@@ -1813,12 +5137,60 @@
       },
       {
        "word": "christmas"
+      },
+      {
+       "word": "baptizing",
+       "match": []
+      },
+      {
+       "word": "bones",
+       "match": []
+      },
+      {
+       "word": "gospel",
+       "match": []
+      },
+      {
+       "word": "grace",
+       "match": []
+      },
+      {
+       "word": "meeting",
+       "match": []
+      },
+      {
+       "word": "mission",
+       "match": []
+      },
+      {
+       "word": "pilgrim",
+       "match": []
+      },
+      {
+       "word": "redemption",
+       "match": []
+      },
+      {
+       "word": "rejoicing",
+       "match": []
+      },
+      {
+       "word": "salvation",
+       "match": []
+      },
+      {
+       "word": "sin",
+       "match": []
+      },
+      {
+       "word": "sunday school",
+       "match": []
+      },
+      {
+       "word": "trinity",
+       "match": []
       }
      ]
-    },
-    {
-     "word": "other",
-     "match": []
     }
    ]
   },
@@ -1827,7 +5199,11 @@
    "emoji": "🌿",
    "children": [
     {
-     "name": "Sun, Moon & Stars",
+     "name": "Sky",
+     "match": [
+      "sky",
+      "skies"
+     ],
      "children": [
       {
        "word": "moon",
@@ -1855,14 +5231,11 @@
        "word": "sunset"
       },
       {
-       "word": "sky",
-       "match": [
-        "sky",
-        "skies"
-       ]
+       "word": "rainbow"
       },
       {
-       "word": "rainbow"
+       "word": "sunrise",
+       "match": []
       }
      ]
     },
@@ -1884,11 +5257,39 @@
         "cloud",
         "clouds"
        ]
+      },
+      {
+       "word": "drought",
+       "match": []
+      },
+      {
+       "word": "dust",
+       "match": []
+      },
+      {
+       "word": "flood",
+       "match": []
+      },
+      {
+       "word": "fog",
+       "match": []
+      },
+      {
+       "word": "lightning",
+       "match": []
+      },
+      {
+       "word": "tempest",
+       "match": []
+      },
+      {
+       "word": "thunder",
+       "match": []
       }
      ]
     },
     {
-     "name": "Night & Seasons",
+     "name": "Seasons & Times of Day",
      "children": [
       {
        "word": "night",
@@ -1910,6 +5311,66 @@
       },
       {
        "word": "spring"
+      },
+      {
+       "word": "afternoon",
+       "match": []
+      },
+      {
+       "word": "april",
+       "match": []
+      },
+      {
+       "word": "autumn",
+       "match": []
+      },
+      {
+       "word": "dawn",
+       "match": []
+      },
+      {
+       "word": "day",
+       "match": []
+      },
+      {
+       "word": "december",
+       "match": []
+      },
+      {
+       "word": "evening",
+       "match": []
+      },
+      {
+       "word": "fall",
+       "match": []
+      },
+      {
+       "word": "harvest",
+       "match": []
+      },
+      {
+       "word": "january",
+       "match": []
+      },
+      {
+       "word": "monday",
+       "match": []
+      },
+      {
+       "word": "new year",
+       "match": []
+      },
+      {
+       "word": "september",
+       "match": []
+      },
+      {
+       "word": "sunday",
+       "match": []
+      },
+      {
+       "word": "twilight",
+       "match": []
       }
      ]
     },
@@ -1993,14 +5454,150 @@
        ]
       },
       {
-       "word": "other",
+       "word": "bluebonnet",
+       "match": []
+      },
+      {
+       "word": "buckeye",
+       "match": []
+      },
+      {
+       "word": "buckthorn",
+       "match": []
+      },
+      {
+       "word": "bud",
+       "match": []
+      },
+      {
+       "word": "cactus",
+       "match": []
+      },
+      {
+       "word": "cane",
+       "match": []
+      },
+      {
+       "word": "cherry",
+       "match": []
+      },
+      {
+       "word": "chestnut",
+       "match": []
+      },
+      {
+       "word": "clover",
+       "match": []
+      },
+      {
+       "word": "cornflower",
+       "match": []
+      },
+      {
+       "word": "garden",
+       "match": []
+      },
+      {
+       "word": "gardenia",
+       "match": []
+      },
+      {
+       "word": "gourd",
+       "match": []
+      },
+      {
+       "word": "grapevine",
+       "match": []
+      },
+      {
+       "word": "grass",
+       "match": []
+      },
+      {
+       "word": "hay",
+       "match": []
+      },
+      {
+       "word": "hickory",
+       "match": []
+      },
+      {
+       "word": "honeysuckle",
+       "match": []
+      },
+      {
+       "word": "huckleberry",
+       "match": []
+      },
+      {
+       "word": "laurel",
+       "match": []
+      },
+      {
+       "word": "lily",
+       "match": []
+      },
+      {
+       "word": "magnolia",
+       "match": []
+      },
+      {
+       "word": "oak",
+       "match": []
+      },
+      {
+       "word": "palm",
+       "match": []
+      },
+      {
+       "word": "pink",
+       "match": []
+      },
+      {
+       "word": "rhubarb",
+       "match": []
+      },
+      {
+       "word": "rush",
+       "match": []
+      },
+      {
+       "word": "sage",
+       "match": []
+      },
+      {
+       "word": "shamrock",
+       "match": []
+      },
+      {
+       "word": "sheaf",
+       "match": []
+      },
+      {
+       "word": "straw",
+       "match": []
+      },
+      {
+       "word": "sunflower",
+       "match": []
+      },
+      {
+       "word": "tulip",
+       "match": []
+      },
+      {
+       "word": "tumbleweed",
+       "match": []
+      },
+      {
+       "word": "violet",
+       "match": []
+      },
+      {
+       "word": "wildflower",
        "match": []
       }
      ]
-    },
-    {
-     "word": "other",
-     "match": []
     }
    ]
   },
@@ -2080,7 +5677,135 @@
        "word": "beans"
       },
       {
-       "word": "other",
+       "word": "apricot",
+       "match": []
+      },
+      {
+       "word": "bacon",
+       "match": []
+      },
+      {
+       "word": "barbecue",
+       "match": []
+      },
+      {
+       "word": "berry",
+       "match": []
+      },
+      {
+       "word": "buckwheat",
+       "match": []
+      },
+      {
+       "word": "butter",
+       "match": []
+      },
+      {
+       "word": "cheese",
+       "match": []
+      },
+      {
+       "word": "chips",
+       "match": []
+      },
+      {
+       "word": "cranberry",
+       "match": []
+      },
+      {
+       "word": "dough",
+       "match": []
+      },
+      {
+       "word": "dumplings",
+       "match": []
+      },
+      {
+       "word": "fatback",
+       "match": []
+      },
+      {
+       "word": "gingerbread",
+       "match": []
+      },
+      {
+       "word": "gravy",
+       "match": []
+      },
+      {
+       "word": "gum",
+       "match": []
+      },
+      {
+       "word": "ham",
+       "match": []
+      },
+      {
+       "word": "hominy",
+       "match": []
+      },
+      {
+       "word": "jambalaya",
+       "match": []
+      },
+      {
+       "word": "jelly",
+       "match": []
+      },
+      {
+       "word": "meat",
+       "match": []
+      },
+      {
+       "word": "orange",
+       "match": []
+      },
+      {
+       "word": "oyster",
+       "match": []
+      },
+      {
+       "word": "peanut",
+       "match": []
+      },
+      {
+       "word": "peas",
+       "match": []
+      },
+      {
+       "word": "pepper",
+       "match": []
+      },
+      {
+       "word": "pickle",
+       "match": []
+      },
+      {
+       "word": "pork",
+       "match": []
+      },
+      {
+       "word": "sauerkraut",
+       "match": []
+      },
+      {
+       "word": "strawberry",
+       "match": []
+      },
+      {
+       "word": "supper",
+       "match": []
+      },
+      {
+       "word": "tobacco",
+       "match": []
+      },
+      {
+       "word": "turnip",
+       "match": []
+      },
+      {
+       "word": "wheat",
        "match": []
       }
      ]
@@ -2120,7 +5845,47 @@
        "word": "coffee"
       },
       {
-       "word": "other",
+       "word": "alcohol",
+       "match": []
+      },
+      {
+       "word": "bay rum",
+       "match": []
+      },
+      {
+       "word": "beer",
+       "match": []
+      },
+      {
+       "word": "buttermilk",
+       "match": []
+      },
+      {
+       "word": "cocaine",
+       "match": []
+      },
+      {
+       "word": "gin",
+       "match": []
+      },
+      {
+       "word": "moonshine",
+       "match": []
+      },
+      {
+       "word": "prohibition",
+       "match": []
+      },
+      {
+       "word": "tea",
+       "match": []
+      },
+      {
+       "word": "tequila",
+       "match": []
+      },
+      {
+       "word": "wine",
        "match": []
       }
      ]
@@ -2132,7 +5897,7 @@
    "emoji": "🚂",
    "children": [
     {
-     "name": "Rails",
+     "name": "Trains & Railroads",
      "children": [
       {
        "word": "train",
@@ -2150,11 +5915,35 @@
       },
       {
        "word": "wreck"
+      },
+      {
+       "word": "caboose",
+       "match": []
+      },
+      {
+       "word": "cannonball",
+       "match": []
+      },
+      {
+       "word": "engine",
+       "match": []
+      },
+      {
+       "word": "signal",
+       "match": []
+      },
+      {
+       "word": "station",
+       "match": []
+      },
+      {
+       "word": "switch",
+       "match": []
       }
      ]
     },
     {
-     "name": "Roads & Rivers",
+     "name": "Roads & Wagons",
      "children": [
       {
        "word": "road"
@@ -2169,17 +5958,63 @@
        "word": "wagon"
       },
       {
+       "word": "buggy",
+       "match": []
+      },
+      {
+       "word": "car",
+       "match": []
+      },
+      {
+       "word": "crossroad",
+       "match": []
+      },
+      {
+       "word": "tire",
+       "match": []
+      },
+      {
+       "word": "turnpike",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Boats",
+     "children": [
+      {
        "word": "ship",
        "match": [
         "ship",
         "ships",
         "sailing"
        ]
+      },
+      {
+       "word": "boat",
+       "match": [
+        "boat",
+        "boats",
+        "steamboat",
+        "steamboats"
+       ]
+      },
+      {
+       "word": "anchor",
+       "match": []
+      },
+      {
+       "word": "canoe",
+       "match": []
+      },
+      {
+       "word": "titanic",
+       "match": []
       }
      ]
     },
     {
-     "name": "On The Move",
+     "name": "Leaving & Rambling",
      "children": [
       {
        "word": "ride",
@@ -2225,18 +6060,26 @@
        ]
       },
       {
-       "word": "doing",
+       "word": "hitchhike",
        "match": []
       },
       {
-       "word": "work",
+       "word": "leave",
+       "match": []
+      },
+      {
+       "word": "roam",
+       "match": []
+      },
+      {
+       "word": "travel",
+       "match": []
+      },
+      {
+       "word": "traveling",
        "match": []
       }
      ]
-    },
-    {
-     "word": "other",
-     "match": []
     }
    ]
   },
@@ -2246,10 +6089,11 @@
    "children": [
     {
      "name": "Home",
+     "match": [
+      "home",
+      "homes"
+     ],
      "children": [
-      {
-       "word": "home"
-      },
       {
        "word": "house"
       },
@@ -2263,10 +6107,54 @@
        "word": "window"
       },
       {
-       "word": "gate"
+       "word": "gate",
+       "exclude": [
+        "pearly gates",
+        "pearly gate"
+       ]
       },
       {
-       "word": "other",
+       "word": "building",
+       "match": []
+      },
+      {
+       "word": "bungalow",
+       "match": []
+      },
+      {
+       "word": "cot",
+       "match": []
+      },
+      {
+       "word": "cottage",
+       "match": []
+      },
+      {
+       "word": "cradle",
+       "match": []
+      },
+      {
+       "word": "fireplace",
+       "match": []
+      },
+      {
+       "word": "hut",
+       "match": []
+      },
+      {
+       "word": "kitchen",
+       "match": []
+      },
+      {
+       "word": "puncheon",
+       "match": []
+      },
+      {
+       "word": "shack",
+       "match": []
+      },
+      {
+       "word": "shanty",
        "match": []
       }
      ]
@@ -2340,13 +6228,362 @@
        "word": "sand"
       },
       {
-       "word": "other",
+       "word": "alimony",
+       "match": []
+      },
+      {
+       "word": "awl",
+       "match": []
+      },
+      {
+       "word": "barber pole",
+       "match": []
+      },
+      {
+       "word": "bicycle",
+       "match": []
+      },
+      {
+       "word": "bonnet",
+       "match": []
+      },
+      {
+       "word": "boot",
+       "match": []
+      },
+      {
+       "word": "boots",
+       "match": []
+      },
+      {
+       "word": "bridle",
+       "match": []
+      },
+      {
+       "word": "britches",
+       "match": []
+      },
+      {
+       "word": "broom",
+       "match": []
+      },
+      {
+       "word": "bubble",
+       "match": []
+      },
+      {
+       "word": "bureau",
+       "match": []
+      },
+      {
+       "word": "calico",
+       "match": []
+      },
+      {
+       "word": "cap",
+       "match": []
+      },
+      {
+       "word": "card",
+       "match": []
+      },
+      {
+       "word": "casket",
+       "match": []
+      },
+      {
+       "word": "chain",
+       "match": []
+      },
+      {
+       "word": "cigarette",
+       "match": []
+      },
+      {
+       "word": "clarinet",
+       "match": []
+      },
+      {
+       "word": "coat",
+       "match": []
+      },
+      {
+       "word": "croquet",
+       "match": []
+      },
+      {
+       "word": "diamond",
+       "match": []
+      },
+      {
+       "word": "doll",
+       "match": []
+      },
+      {
+       "word": "domino",
+       "match": []
+      },
+      {
+       "word": "drawers",
+       "match": []
+      },
+      {
+       "word": "electricity",
+       "match": []
+      },
+      {
+       "word": "flag",
+       "match": []
+      },
+      {
+       "word": "flying saucer",
+       "match": []
+      },
+      {
+       "word": "football",
+       "match": []
+      },
+      {
+       "word": "frying pan",
+       "match": []
+      },
+      {
+       "word": "gingham",
+       "match": []
+      },
+      {
+       "word": "gold",
+       "match": []
+      },
+      {
+       "word": "gun",
+       "match": []
+      },
+      {
+       "word": "hammer",
+       "match": []
+      },
+      {
+       "word": "hat",
+       "match": []
+      },
+      {
+       "word": "hook",
+       "match": []
+      },
+      {
+       "word": "horn",
+       "match": []
+      },
+      {
+       "word": "jacket",
+       "match": []
+      },
+      {
+       "word": "jar",
+       "match": []
+      },
+      {
+       "word": "jewel",
+       "match": []
+      },
+      {
+       "word": "jug",
+       "match": []
+      },
+      {
+       "word": "key",
+       "match": []
+      },
+      {
+       "word": "keyhole",
+       "match": []
+      },
+      {
+       "word": "knife",
+       "match": []
+      },
+      {
+       "word": "lantern",
+       "match": []
+      },
+      {
+       "word": "lariat",
+       "match": []
+      },
+      {
+       "word": "lasso",
+       "match": []
+      },
+      {
+       "word": "light",
+       "match": []
+      },
+      {
+       "word": "locket",
+       "match": []
+      },
+      {
+       "word": "log",
+       "match": []
+      },
+      {
+       "word": "mail",
+       "match": []
+      },
+      {
+       "word": "mandolin",
+       "match": []
+      },
+      {
+       "word": "matchbox",
+       "match": []
+      },
+      {
+       "word": "needle",
+       "match": []
+      },
+      {
+       "word": "needlecase",
+       "match": []
+      },
+      {
+       "word": "nightgown",
+       "match": []
+      },
+      {
+       "word": "organ",
+       "match": []
+      },
+      {
+       "word": "pail",
+       "match": []
+      },
+      {
+       "word": "pan",
+       "match": []
+      },
+      {
+       "word": "pearl",
+       "match": []
+      },
+      {
+       "word": "petticoat",
+       "match": []
+      },
+      {
+       "word": "pin",
+       "match": []
+      },
+      {
+       "word": "pipe",
+       "match": []
+      },
+      {
+       "word": "pistol",
+       "match": []
+      },
+      {
+       "word": "radio",
+       "match": []
+      },
+      {
+       "word": "rawhide",
+       "match": []
+      },
+      {
+       "word": "ring",
+       "match": []
+      },
+      {
+       "word": "sack",
+       "match": []
+      },
+      {
+       "word": "satchel",
+       "match": []
+      },
+      {
+       "word": "settee",
+       "match": []
+      },
+      {
+       "word": "sewing machine",
+       "match": []
+      },
+      {
+       "word": "sheet",
+       "match": []
+      },
+      {
+       "word": "skillet",
+       "match": []
+      },
+      {
+       "word": "sleigh",
+       "match": []
+      },
+      {
+       "word": "slipper",
+       "match": []
+      },
+      {
+       "word": "soap",
+       "match": []
+      },
+      {
+       "word": "spinning wheel",
+       "match": []
+      },
+      {
+       "word": "stool",
+       "match": []
+      },
+      {
+       "word": "stovepipe",
+       "match": []
+      },
+      {
+       "word": "string",
+       "match": []
+      },
+      {
+       "word": "teakettle",
+       "match": []
+      },
+      {
+       "word": "telephone",
+       "match": []
+      },
+      {
+       "word": "ticket",
+       "match": []
+      },
+      {
+       "word": "tomahawk",
+       "match": []
+      },
+      {
+       "word": "watch",
+       "match": []
+      },
+      {
+       "word": "well",
+       "match": []
+      },
+      {
+       "word": "whistle",
+       "match": []
+      },
+      {
+       "word": "woodpile",
        "match": []
       }
      ]
     },
     {
      "name": "Body",
+     "kind": "modifier",
      "children": [
       {
        "word": "foot",
@@ -2381,11 +6618,38 @@
        ]
       },
       {
-       "word": "other",
+       "word": "chin",
+       "match": []
+      },
+      {
+       "word": "face",
+       "match": []
+      },
+      {
+       "word": "fingers",
+       "match": []
+      },
+      {
+       "word": "hair",
+       "match": []
+      },
+      {
+       "word": "jawbone",
+       "match": []
+      },
+      {
+       "word": "mouth",
+       "match": []
+      },
+      {
+       "word": "mustache",
+       "match": []
+      },
+      {
+       "word": "tongue",
        "match": []
       }
-     ],
-     "kind": "modifier"
+     ]
     }
    ]
   },
@@ -2397,7 +6661,14 @@
      "name": "Instruments",
      "children": [
       {
-       "word": "fiddle"
+       "word": "fiddle",
+       "match": [
+        "fiddle",
+        "fiddles",
+        "fiddler",
+        "fiddlers",
+        "fiddlin"
+       ]
       },
       {
        "word": "banjo"
@@ -2406,10 +6677,63 @@
        "word": "guitar"
       },
       {
-       "word": "bow"
+       "word": "band"
       },
       {
-       "word": "band"
+       "word": "accordion",
+       "match": []
+      },
+      {
+       "word": "autoharp",
+       "match": []
+      },
+      {
+       "word": "bazooka",
+       "match": []
+      },
+      {
+       "word": "bow",
+       "match": []
+      },
+      {
+       "word": "bugle",
+       "match": []
+      },
+      {
+       "word": "calliope",
+       "match": []
+      },
+      {
+       "word": "cornet",
+       "match": []
+      },
+      {
+       "word": "harmonica",
+       "match": []
+      },
+      {
+       "word": "harp",
+       "match": []
+      },
+      {
+       "word": "musician",
+       "match": []
+      },
+      {
+       "word": "piccolo",
+       "match": []
+      },
+      {
+       "word": "rosin",
+       "match": []
+      },
+      {
+       "word": "saxophone",
+       "match": []
+      },
+      {
+       "word": "tiple",
+       "match": []
       }
      ]
     },
@@ -2446,33 +6770,58 @@
         "tune",
         "tunes"
        ]
+      },
+      {
+       "word": "skits & stories",
+       "match": []
+      },
+      {
+       "word": "music",
+       "match": []
+      },
+      {
+       "word": "opera",
+       "match": []
       }
      ]
     },
     {
-     "name": "Rhythm",
+     "name": "Dancing",
      "children": [
       {
-       "word": "swing",
+       "word": "dance",
        "match": [
-        "swing"
-       ]
+        "dance",
+        "dances",
+        "dancing"
+       ],
+       "kind": "noun"
       },
       {
-       "word": "shuffle"
+       "word": "black bottom",
+       "match": []
       },
       {
-       "word": "rock",
-       "match": [
-        "rock",
-        "rocking",
-        "rockin"
-       ]
+       "word": "caller",
+       "match": []
+      },
+      {
+       "word": "cotillion",
+       "match": []
+      },
+      {
+       "word": "foxtrot",
+       "match": []
+      },
+      {
+       "word": "hula",
+       "match": []
       }
      ]
     },
     {
-     "name": "Dance Tunes",
+     "name": "Tune Forms",
+     "kind": "form",
      "children": [
       {
        "word": "reel",
@@ -2516,13 +6865,6 @@
        "word": "clog"
       },
       {
-       "word": "dance",
-       "match": [
-        "dance",
-        "dancing"
-       ]
-      },
-      {
        "word": "rag",
        "match": [
         "rag",
@@ -2535,13 +6877,7 @@
        "match": [
         "blues"
        ]
-      }
-     ],
-     "kind": "form"
-    },
-    {
-     "name": "Couple Dances",
-     "children": [
+      },
       {
        "word": "waltz",
        "match": [
@@ -2579,13 +6915,7 @@
       },
       {
        "word": "cotillion"
-      }
-     ],
-     "kind": "form"
-    },
-    {
-     "name": "Marches",
-     "children": [
+      },
       {
        "word": "march",
        "match": [
@@ -2594,13 +6924,7 @@
         "retreat",
         "quickstep"
        ]
-      }
-     ],
-     "kind": "form"
-    },
-    {
-     "name": "Songs & Pieces",
-     "children": [
+      },
       {
        "word": "song",
        "match": [
@@ -2633,25 +6957,8 @@
         "introduction",
         "theme"
        ]
-      },
-      {
-       "word": "unnamed",
-       "match": [
-        "unnamed",
-        "untitled",
-        "unknown"
-       ]
-      },
-      {
-       "word": "skits & stories",
-       "match": []
       }
-     ],
-     "kind": "form"
-    },
-    {
-     "word": "other",
-     "match": []
+     ]
     }
    ]
   },
@@ -2660,90 +6967,144 @@
    "emoji": "⚰️",
    "children": [
     {
-     "word": "death",
-     "match": [
-      "death",
-      "dead",
-      "die",
-      "dying"
+     "name": "Death & Graves",
+     "children": [
+      {
+       "word": "death",
+       "match": [
+        "death",
+        "dead",
+        "die",
+        "dying"
+       ]
+      },
+      {
+       "word": "grave",
+       "match": [
+        "grave",
+        "graves",
+        "graveyard"
+       ]
+      },
+      {
+       "word": "blood",
+       "match": [
+        "blood",
+        "bloody"
+       ]
+      },
+      {
+       "word": "old age",
+       "match": [
+        "old age",
+        "old and grey",
+        "growing old"
+       ]
+      },
+      {
+       "word": "life",
+       "match": [
+        "life",
+        "alive"
+       ]
+      },
+      {
+       "word": "ghost",
+       "match": []
+      }
      ]
     },
     {
-     "word": "grave",
-     "match": [
-      "grave",
-      "graves",
-      "graveyard"
+     "name": "Crime & Jail",
+     "children": [
+      {
+       "word": "jail",
+       "match": [
+        "jail",
+        "jailhouse"
+       ]
+      },
+      {
+       "word": "prisoner",
+       "match": [
+        "prisoner",
+        "prison"
+       ]
+      },
+      {
+       "word": "murder",
+       "match": [
+        "murder",
+        "murdered"
+       ]
+      },
+      {
+       "word": "outlaw"
+      },
+      {
+       "word": "hanging",
+       "match": []
+      },
+      {
+       "word": "kidnapping",
+       "match": []
+      },
+      {
+       "word": "moonshiner",
+       "match": []
+      }
      ]
     },
     {
-     "word": "murder",
-     "match": [
-      "murder",
-      "murdered"
+     "name": "Courting & Weddings",
+     "children": [
+      {
+       "word": "courting",
+       "match": [
+        "courting",
+        "courtin",
+        "court"
+       ]
+      },
+      {
+       "word": "wedding",
+       "match": [
+        "wedding",
+        "married",
+        "marry",
+        "marrying"
+       ]
+      },
+      {
+       "word": "anniversary",
+       "match": []
+      },
+      {
+       "word": "honeymoon",
+       "match": []
+      }
      ]
     },
     {
-     "word": "blood",
-     "match": [
-      "blood",
-      "bloody"
-     ]
-    },
-    {
-     "word": "jail",
-     "match": [
-      "jail",
-      "jailhouse"
-     ]
-    },
-    {
-     "word": "wedding",
-     "match": [
-      "wedding",
-      "married",
-      "marry",
-      "marrying"
-     ]
-    },
-    {
-     "word": "courting",
-     "match": [
-      "courting",
-      "courtin",
-      "court"
-     ]
-    },
-    {
-     "word": "born"
-    },
-    {
-     "word": "war",
+     "name": "War",
      "match": [
       "war",
       "battle"
-     ]
-    },
+     ],
+     "children": []
+    }
+   ]
+  },
+  {
+   "name": "Unsorted",
+   "emoji": "❔",
+   "children": [
     {
-     "word": "old age",
+     "word": "unnamed",
      "match": [
-      "old age",
-      "old and grey",
-      "growing old"
+      "unnamed",
+      "untitled"
      ]
-    },
-    {
-     "word": "life",
-     "match": [
-      "life",
-      "live",
-      "living",
-      "alive"
-     ]
-    },
-    {
-     "word": "other",
-     "match": []
     }
    ]
   }

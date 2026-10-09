@@ -1,15 +1,17 @@
 import { describe, expect, it } from "vitest";
+import aiPlacements from "../../data/ai-placements.json";
 import categoriesData from "../../data/categories.json";
-import curated from "../../data/curated.json";
 import recordings from "../../data/recordings.json";
-import { keywordEntries, matchTerms, titleWords, wordsMatch, type Group } from "./keywords";
+import { matchTerms, nodeLabel, taxonomyEntries, type Group } from "./keywords";
+import { placements } from "./placements";
 import { buildHierarchy, groupTunes, type BubbleNode } from "./tunes";
 import type { Recording } from "./types";
 
 const taxonomy = categoriesData.categories as Group[];
-const curatedPaths = curated as Record<string, string>;
+/** Subgroups only a person fills (rule 7). */
+const SENSITIVE = ["People/Nations & Peoples/", "People/Slurs/"];
 const tunes = groupTunes(recordings as Recording[]);
-const tree = buildHierarchy(tunes, taxonomy, curatedPaths);
+const tree = buildHierarchy(tunes, taxonomy, placements);
 
 /** "Group/…/keyword" bubble path each tune ends up under, after collapsing. */
 function bubblePaths(): Map<string, string> {
@@ -29,19 +31,17 @@ describe("categories.json", () => {
 
   it.each([
     ["Big Eyed Rabbit", "Animals/Wild Animals/rabbit"],
-    ["Kentucky Waltz", "Places/Southern States/kentucky"],
-    ["Blue Eyed Girl", "People/Characters/Folks/girl"],
-    ["Old Joe Clark", "People/Names/Men/joe"],
-    ["Sally Goodin", "People/Names/Women/sal"],
-    ["Soldier's Joy", "People/Characters/Soldiers & Rulers/soldier"],
-    ["Arkansas Traveler", "Places/Southern States/arkansas"],
-    ["Turkey In The Straw", "Animals/Barnyard Birds/turkey"],
-    ["Black Mountain Rag", "Places/Hills & Hollows/mountain"],
-    ["Grey Eagle", "Animals/Wild Birds/eagle"],
-    ["Blue Railroad Train", "Travel/Rails/train"],
-    ["Fruit Jar Blues", "Music & Dance/Dance Tunes/blues"],
+    ["Kentucky Waltz", "Places/States/kentucky"],
+    ["Blue Eyed Girl", "People/Folks/girl"],
+    ["Old Joe Clark", "People/First Names/joe"],
+    ["Sally Goodin", "People/First Names/sal"],
+    ["Soldier's Joy", "People/Soldiers"],
+    ["Turkey In The Straw", "Animals/Birds/turkey"],
+    ["Black Mountain Rag", "Places/Mountains & Hollows/mountain"],
+    ["Grey Eagle", "Animals/Birds/eagle"],
+    ["Blue Railroad Train", "Travel/Trains & Railroads/train"],
     ["Red June Apple", "Food & Drink/Food/apple"],
-    ["Back In Jail Again", "Life & Death/jail"],
+    ["Back In Jail Again", "Life & Death/Crime & Jail/jail"],
     ["Old Gray Mare", "Animals/Horses & Mules/mare"],
     ["Rose Of Sharon", "Nature/Plants/rose"],
     ["Sandy River Belle", "Places/Rivers & Waters/river"],
@@ -49,33 +49,77 @@ describe("categories.json", () => {
     expect(paths.get(title)).toBe(path);
   });
 
+  // Mistakes reported by a listener. Each fix stays fixed.
+  it.each([
+    ["Bow legged Irishman", "People/Nations & Peoples/irish"],
+    ["Cherokee Shuffle", "People/Nations & Peoples/cherokee"],
+    ["Dago March", "People/Slurs/dago"],
+    ["Darkie's Delight", "People/Slurs/darkey"],
+    ["Bow Wow Blues", "Animals/Dogs & Cats/dog"],
+    ["Rock Of Ages", "Faith/Church & Worship/hymn"],
+    ["On The Rock Where Moses Stood", "Faith/Bible/moses"],
+    ["Pearly Gates", "Faith/Heaven & Hell/heaven"],
+    ["Open Up Dem Pearly Gates For Me", "Faith/Heaven & Hell/heaven"],
+    ["Cinda", "People/First Names/cindy"],
+    ["Melinda", "People/First Names/melinda"],
+    ["Rachel", "People/First Names/rachel"],
+    ["Martha Campbell", "People/First Names/martha"],
+    ["Reuben", "People/First Names/reuben"],
+    ["Arkansas Traveler", "Places/States/arkansas"],
+    ["Flatwoods", "Places/Regions/flatwoods"],
+    ["Pacific Slope", "Places/Regions/pacific slope"],
+    ["Everglades", "Places/Regions/everglades"],
+    ["Jolly Blacksmith", "People/Occupations/blacksmith"],
+    ["Village Blacksmith, The", "People/Occupations/blacksmith"],
+    // Left for a reviewer to place.
+    ["Flunky Butt", "Unsorted"],
+    ["Chinchbug", "Unsorted"],
+    ["Snappin' Bug", "Unsorted"],
+    ["Thumping Bug", "Unsorted"],
+  ])("files %s under %s (from feedback)", (title, path) => {
+    expect(paths.get(title)).toBe(path);
+  });
+
+  it("files every state in one flat list", () => {
+    for (const title of ["Arkansas Traveler", "Virginia Reel", "Missouri Waltz", "West Virginia Hills"]) {
+      expect(paths.get(title)?.split("/").slice(0, 2).join("/"), title).toBe("Places/States");
+    }
+  });
+
   it("places every tune", () => {
     expect(paths.size).toBe(new Set(tunes.map((t) => t.name)).size);
   });
 
-  it("leaves under 15% of tunes to Words", () => {
-    const words = [...paths.values()].filter((p) => p.startsWith("Words/")).length;
-    expect(words / tunes.length).toBeLessThan(0.15);
+  it("has no grammar groups or catch-all keywords", () => {
+    expect(taxonomy.map((g) => g.name)).not.toContain("Words");
+    expect(taxonomyEntries(taxonomy).filter((e) => nodeLabel(e.node) === "other")).toEqual([]);
   });
 
-  it("curates only tunes that exist", () => {
+  it.each(SENSITIVE)("never auto-files %s: a person places them", (prefix) => {
+    const entries = taxonomyEntries(taxonomy).filter((e) => e.path.startsWith(prefix));
+    expect(entries.length).toBeGreaterThan(0);
+    expect(entries.filter((e) => matchTerms(e.node).length > 0)).toEqual([]);
+  });
+
+  it.each(SENSITIVE)("never lets the AI place %s", (prefix) => {
+    const placed = Object.entries(aiPlacements as Record<string, string>).filter(([, path]) => path.startsWith(prefix));
+    expect(placed).toEqual([]);
+  });
+
+  it("places only tunes that exist", () => {
     const slugs = new Set(tunes.map((t) => t.slug));
-    expect(Object.keys(curatedPaths).filter((slug) => !slugs.has(slug))).toEqual([]);
+    expect(Object.keys(placements).filter((slug) => !slugs.has(slug))).toEqual([]);
   });
 
-  it("gives every keyword a unique path", () => {
-    const all = keywordEntries(taxonomy).map((e) => e.path);
+  it("gives every group and keyword a unique path", () => {
+    const all = taxonomyEntries(taxonomy).map((e) => e.path);
     expect(all.filter((p, i) => all.indexOf(p) !== i)).toEqual([]);
   });
 
-  it("matches each term from one keyword only", () => {
+  it("matches each term from one group or keyword only", () => {
     const owners = new Map<string, string[]>();
-    for (const e of keywordEntries(taxonomy)) for (const term of matchTerms(e.keyword)) owners.set(term, [...(owners.get(term) ?? []), e.path]);
+    for (const e of taxonomyEntries(taxonomy)) for (const term of matchTerms(e.node)) owners.set(term, [...(owners.get(term) ?? []), e.path]);
     expect([...owners].filter(([, p]) => p.length > 1)).toEqual([]);
   });
 
-  it("keeps blue apart from blues", () => {
-    const blue = keywordEntries(taxonomy).find((e) => e.keyword.word === "blue")!.keyword;
-    expect(wordsMatch(titleWords("Fruit Jar Blues"), blue)).toBe(false);
-  });
 });

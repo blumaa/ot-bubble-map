@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useEffectEvent, useMemo, useRef, useState } from "react";
+import { useEffect, useEffectEvent, useMemo, useRef, useState, type ReactNode } from "react";
 import { select } from "d3-selection";
 import "d3-transition";
 import { zoom, zoomIdentity, type ZoomBehavior } from "d3-zoom";
@@ -69,7 +69,13 @@ function BubbleLabel({ circle, text, k, large }: { circle: Circle; text: string;
   );
 }
 
-export function BubbleMap({ nodes }: { nodes: LaidOutNode[] }) {
+interface Props {
+  nodes: LaidOutNode[];
+  /** Floats along the bottom edge, under the key on phones. */
+  footer?: ReactNode;
+}
+
+export function BubbleMap({ nodes, footer }: Props) {
   const byId = useMemo(() => new Map(nodes.map((n) => [n.id, n])), [nodes]);
   const children = useMemo(() => childrenIndex(nodes), [nodes]);
   const buckets = useMemo(() => sizeBuckets(nodes), [nodes]);
@@ -259,10 +265,11 @@ export function BubbleMap({ nodes }: { nodes: LaidOutNode[] }) {
         )}
       </svg>
 
-      <div className="absolute left-1/2 top-3 flex w-max max-w-[calc(100%-1.5rem)] -translate-x-1/2 flex-col items-center gap-2">
+      {/* On wide screens the key sits top left, so the breadcrumb centers in the space beside it. */}
+      <div className="pointer-events-none absolute inset-x-3 top-3 flex flex-col items-center gap-2 md:left-[21.5rem]">
         <nav
           aria-label="Breadcrumb"
-          className="glass flex flex-wrap items-center gap-0.5 rounded-full px-2 py-1 text-[15px]"
+          className="glass pointer-events-auto flex flex-wrap items-center gap-0.5 rounded-full px-2 py-1 text-[15px]"
         >
           {trail.map((n, i) => (
             <span key={n.id} className="flex items-center gap-1">
@@ -282,7 +289,7 @@ export function BubbleMap({ nodes }: { nodes: LaidOutNode[] }) {
         {focus.alsoIn && (
           <nav
             aria-label="Also under"
-            className="glass flex flex-wrap items-center gap-1 rounded-full px-3 py-1 text-sm"
+            className="glass pointer-events-auto flex flex-wrap items-center gap-1 rounded-full px-3 py-1 text-sm"
           >
             <span className="text-muted">Also under</span>
             {focus.alsoIn.map((id) => (
@@ -299,6 +306,8 @@ export function BubbleMap({ nodes }: { nodes: LaidOutNode[] }) {
         )}
       </div>
 
+      {/* Phones stack the key above the footer; wide screens lift the key out to the top left. */}
+      <div className="pointer-events-none absolute inset-x-3 bottom-3 flex flex-col gap-2">
       <CategoryKey
         nodes={nodes}
         childrenOf={children}
@@ -314,9 +323,13 @@ export function BubbleMap({ nodes }: { nodes: LaidOutNode[] }) {
         onToggle={toggle}
         onFocus={(id) => focusOn(id)}
       />
+      {footer}
+      </div>
 
       {selected && selectedCircle && view && (
         <RecordingPopover
+          // A new recording starts a new popover, so a dragged one does not stay off to the side.
+          key={recordingIndex}
           tune={focus}
           recording={selected}
           anchor={toScreen(selectedCircle, transform)}

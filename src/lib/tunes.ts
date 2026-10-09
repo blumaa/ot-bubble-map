@@ -1,5 +1,5 @@
 import { splitKeys } from "./keys";
-import { isKeyword, keywordEntries, KINDS, titleWords, wordsMatch, type Group, type TaxonomyNode } from "./keywords";
+import { isKeyword, KINDS, nodeLabel, taxonomyEntries, titleWords, wordsMatch, type Group, type TaxonomyNode } from "./keywords";
 import type { Recording } from "./types";
 
 const TUNE_URL = "https://www.slippery-hill.com/taxonomy/tune-title/";
@@ -26,11 +26,14 @@ export interface BubbleNode {
   alsoIn?: string[];
   /** Tune only, when any: words of the form keywords its title matches (reel, waltz…), in taxonomy order. */
   forms?: string[];
-  /** Keyword only: taxonomy path, e.g. "Animals/Wild Birds/eagle". */
+  /** Group or keyword: taxonomy path, e.g. "Animals/Wild Birds/eagle" or "Animals/Birds". */
   path?: string;
 }
 
 const ALSO_IN_MAX = 3;
+
+/** Group for tunes nothing matches and nobody has placed yet. Must exist in the taxonomy when any do. */
+export const UNSORTED_PATH = "Unsorted";
 
 export function groupTunes(recordings: Recording[]): Tune[] {
   const bySlug = new Map<string, Tune>();
@@ -86,15 +89,18 @@ function tuneLeaf(tune: Tune, { alsoIn, forms }: Links): BubbleNode {
 }
 
 /**
- * Groups > keywords > tunes, each tune filed exactly once: under its curated keyword path if it has one, else its
- * strongest matching keyword (see `KINDS`), the first in document order on a tie. Empty keywords and groups are
- * dropped; a group below the top level with a single child is replaced by that child.
- * Each tune also lists up to three other non-function keywords its title matches (`alsoIn`), for cross-links, and the
- * words of every form keyword it matches (`forms`), for the form filter.
- * Throws if a curated path names no keyword or if any tune matches nothing, so no tune silently falls off the map.
+ * Groups > keywords > tunes, each tune filed exactly once: under its curated path if it has one, else its strongest
+ * matching group or keyword (see `KINDS`), a keyword before its own group and the first in document order on a tie.
+ * Form keywords never file a tune: a form is a filter, not a subject. A group's own tunes sit beside its other
+ * children. Empty keywords and groups are dropped; a group below the top level with no tunes of its own and a single
+ * child is replaced by that child.
+ * Each tune also lists up to three other non-function groups or keywords its title matches (`alsoIn`), for
+ * cross-links, and the words of every form keyword it matches (`forms`), for the form filter.
+ * A tune nothing matches goes to `UNSORTED_PATH`. Throws if a curated path names no group or keyword, or if a tune
+ * needs Unsorted and the taxonomy lacks it, so no tune silently falls off the map.
  */
 export function buildHierarchy(tunes: Tune[], taxonomy: Group[], curated: Record<string, string> = {}): BubbleNode {
-  const entries = keywordEntries(taxonomy);
+  const entries = taxonomyEntries(taxonomy);
   const ranked = entries.toSorted((a, b) => KINDS.indexOf(a.kind) - KINDS.indexOf(b.kind));
   const filed = new Map<string, Tune[]>(entries.map((e) => [e.path, []]));
   const links = new Map<string, Links>();
@@ -102,28 +108,26 @@ export function buildHierarchy(tunes: Tune[], taxonomy: Group[], curated: Record
   const unmatched: string[] = [];
   for (const tune of tunes) {
     const words = titleWords(tune.name);
-    const matched = ranked.filter((e) => wordsMatch(words, e.keyword));
-    const path = curated[tune.slug] ?? matched[0]?.path;
-    if (!path) unmatched.push(tune.slug);
-    else if (!filed.has(path)) throw new Error(`Curated path "${path}" for tune "${tune.slug}" names no keyword`);
+    const matched = ranked.filter((e) => wordsMatch(words, e.node));
+    const path = curated[tune.slug] ?? matched.find((e) => e.kind !== "form")?.path ?? UNSORTED_PATH;
+    if (path === UNSORTED_PATH && !filed.has(path)) unmatched.push(tune.slug);
+    else if (!filed.has(path)) throw new Error(`Curated path "${path}" for tune "${tune.slug}" names no group or keyword`);
     else filed.get(path)!.push(tune);
     const others = matched.filter((e) => e.path !== path && e.kind !== "function").map((e) => e.path);
-    const forms = matched.filter((e) => e.kind === "form").map((e) => e.keyword.word);
+    const forms = matched.filter((e) => e.kind === "form").map((e) => nodeLabel(e.node));
     links.set(tune.slug, { alsoIn: others.slice(0, ALSO_IN_MAX), forms });
   }
-  if (unmatched.length > 0) throw new Error(`No keyword matches these tunes; curate them: ${unmatched.join(", ")}`);
+  if (unmatched.length > 0) throw new Error(`Nothing matches these tunes and the taxonomy has no "${UNSORTED_PATH}": ${unmatched.join(", ")}`);
 
   const build = (node: TaxonomyNode, prefix: string, top: boolean): BubbleNode | null => {
-    if (isKeyword(node)) {
-      const path = prefix + node.word;
-      const ts = filed.get(path)!;
-      if (ts.length === 0) return null;
-      return { kind: "keyword", name: node.word, path, children: ts.map((t) => tuneLeaf(t, links.get(t.slug)!)) };
-    }
-    const children = node.children.map((c) => build(c, `${prefix}${node.name}/`, false)).filter((c) => c !== null);
+    const path = prefix + nodeLabel(node);
+    const leaves = filed.get(path)!.map((t) => tuneLeaf(t, links.get(t.slug)!));
+    if (isKeyword(node)) return leaves.length > 0 ? { kind: "keyword", name: node.word, path, children: leaves } : null;
+    const built = node.children.map((c) => build(c, `${path}/`, false)).filter((c) => c !== null);
+    const children = [...built, ...leaves];
     if (children.length === 0) return null;
-    if (children.length === 1 && !top) return children[0];
-    return { kind: "group", name: node.name, children };
+    if (built.length === 1 && leaves.length === 0 && !top) return built[0];
+    return { kind: "group", name: node.name, path, children };
   };
 
   return { kind: "root", name: "Old-Time Tunes", children: taxonomy.map((g) => build(g, "", true)).filter((g) => g !== null) };
