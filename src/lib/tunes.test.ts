@@ -71,20 +71,13 @@ describe("buildHierarchy", () => {
     expect(tree(root.children![0])).toEqual([
       "Animals",
       "group",
-      [["Birds", "group", [["duck", "keyword", ["Duck River", "Ducks On The Millpond"]], ["goose", "keyword", ["Wild Goose Chase"]]]]],
+      [["Birds", "group", [["duck", "keyword", ["Duck River", "Ducks On The Millpond"]], "Wild Goose Chase"]]],
     ]);
     expect(root.children!.map((c) => c.name)).toEqual(["Animals", "People", "Words"]);
   });
 
   it("replaces a group below the top level that has one child with that child", () => {
-    expect(tree(root.children![2])).toEqual([
-      "Words",
-      "group",
-      [
-        ["year", "keyword", ["12 Year"]],
-        ["the", "keyword", ["'Neath The Palms"]],
-      ],
-    ]);
+    expect(tree(root.children![2])).toEqual(["Words", "group", ["12 Year", "'Neath The Palms"]]);
   });
 
   it("leaves emoji off the map", () => {
@@ -93,7 +86,7 @@ describe("buildHierarchy", () => {
 
   it("makes tunes leaves with their slug, value = recording count, and keys", () => {
     const duckRiver = root.children![0].children![0].children![0].children![0];
-    expect(duckRiver).toEqual({ kind: "tune", name: "Duck River", slug: "duck-river", value: 2, keys: {} });
+    expect(duckRiver).toEqual({ kind: "tune", name: "Duck River", slug: "duck-river", value: 2, keys: {}, filedIn: "Animals/Birds/duck" });
   });
 
   it("counts each tune's recordings per key, a multi-key recording counting toward each", () => {
@@ -102,7 +95,7 @@ describe("buildHierarchy", () => {
       { ...rec("Duck River", "duck-river", "https://s/2"), key: "D" },
       rec("Duck River", "duck-river", "https://s/3"),
     ];
-    const tune = buildHierarchy(groupTunes(keyed), [{ name: "Animals", children: [{ word: "duck" }] }]).children![0].children![0].children![0];
+    const tune = buildHierarchy(groupTunes(keyed), [{ name: "Animals", children: [{ word: "duck" }] }]).children![0].children![0];
     expect(tune.keys).toEqual({ D: 2, G: 1 });
   });
 
@@ -124,7 +117,7 @@ describe("buildHierarchy", () => {
     expect(tree(filed)).toEqual([
       "Old-Time Tunes",
       "root",
-      [["Animals", "group", [["goose", "keyword", ["The Duck And Goose"]], ["rabbit", "keyword", ["Big Eyed Rabbit"]]]]],
+      [["Animals", "group", ["The Duck And Goose", "Big Eyed Rabbit"]]],
     ]);
   });
 
@@ -173,7 +166,7 @@ describe("buildHierarchy", () => {
       "Old-Time Tunes",
       "root",
       [
-        ["Animals", "group", [["duck", "keyword", ["Duck Reel"]]]],
+        ["Animals", "group", ["Duck Reel"]],
         ["Unsorted", "group", ["Abbott's Reel"]],
       ],
     ]);
@@ -193,21 +186,47 @@ describe("buildHierarchy", () => {
   it("files a tune in a group whose match terms it fits, as a tune beside the keyword bubbles", () => {
     const birds: Group[] = [{ name: "Animals", children: [{ name: "Birds", match: ["bird"], children: [{ word: "duck" }, { word: "owl" }] }] }];
     const filed = buildHierarchy(groupTunes([rec("Bird Song", "bird-song", "https://s/1"), rec("Duck River", "duck-river", "https://s/2")]), birds);
-    expect(tree(filed.children![0])).toEqual(["Animals", "group", [["Birds", "group", [["duck", "keyword", ["Duck River"]], "Bird Song"]]]]);
+    expect(tree(filed.children![0])).toEqual(["Animals", "group", [["Birds", "group", ["Duck River", "Bird Song"]]]]);
     expect(filed.children![0].children![0]).toMatchObject({ path: "Animals/Birds" });
   });
 
   it("prefers a keyword over its group when a title fits both: specific beats general", () => {
     const birds: Group[] = [{ name: "Animals", children: [{ name: "Birds", match: ["bird"], children: [{ word: "owl" }] }] }];
     const filed = buildHierarchy(groupTunes([rec("Owl Bird", "owl-bird", "https://s/1")]), birds);
-    expect(tree(filed.children![0])).toEqual(["Animals", "group", [["owl", "keyword", ["Owl Bird"]]]]);
-    expect(filed.children![0].children![0].children![0].alsoIn).toEqual(["Animals/Birds"]);
+    expect(filed.children![0].children![0]).toMatchObject({ name: "Owl Bird", filedIn: "Animals/Birds/owl", alsoIn: ["Animals/Birds"] });
   });
 
   it("keeps a group that holds tunes of its own even when it has one other child", () => {
     const birds: Group[] = [{ name: "Animals", children: [{ name: "Birds", match: ["bird"], children: [{ word: "owl" }] }] }];
-    const filed = buildHierarchy(groupTunes([rec("Bird Song", "bird-song", "https://s/1"), rec("Hoot Owl", "hoot", "https://s/2")]), birds);
-    expect(tree(filed.children![0])).toEqual(["Animals", "group", [["Birds", "group", [["owl", "keyword", ["Hoot Owl"]], "Bird Song"]]]]);
+    const filed = buildHierarchy(
+      groupTunes([rec("Bird Song", "bird-song", "https://s/1"), rec("Hoot Owl", "hoot", "https://s/2"), rec("Owl Feather", "owl-feather", "https://s/3")]),
+      birds,
+    );
+    expect(tree(filed.children![0])).toEqual(["Animals", "group", [["Birds", "group", [["owl", "keyword", ["Hoot Owl", "Owl Feather"]], "Bird Song"]]]]);
+  });
+
+  it("lifts a keyword's only tune into the group above, so a single tune gets no bubble of its own", () => {
+    const food: Group[] = [{ name: "Food", children: [{ name: "Farm Food", children: [{ word: "chips" }, { word: "corn" }, { word: "beans" }] }] }];
+    const filed = buildHierarchy(
+      groupTunes([rec("Chips And Gravy", "chips", "https://s/1"), rec("Shuck The Corn", "corn-1", "https://s/2"), rec("Corn Likker", "corn-2", "https://s/3"), rec("Bean Soup", "beans", "https://s/4")]),
+      [...food, { name: "Unsorted", children: [] }],
+    );
+    expect(tree(filed.children![0])).toEqual(["Food", "group", [["Farm Food", "group", ["Chips And Gravy", ["corn", "keyword", ["Corn Likker", "Shuck The Corn"]]]]]]);
+  });
+
+  it("keeps lifting a lone tune while its group holds nothing else, stopping at the top-level category", () => {
+    const animals: Group[] = [{ name: "Animals", children: [{ name: "Birds", children: [{ name: "Owls", children: [{ word: "owl" }] }] }] }];
+    const filed = buildHierarchy(groupTunes([rec("Hoot Owl", "hoot", "https://s/1")]), animals);
+    expect(tree(filed)).toEqual(["Old-Time Tunes", "root", [["Animals", "group", ["Hoot Owl"]]]]);
+  });
+
+  it("tags each tune with the path it is filed in, even after it is lifted out of its keyword", () => {
+    const animals: Group[] = [{ name: "Animals", children: [{ name: "Birds", children: [{ word: "owl" }, { word: "duck" }] }] }];
+    const filed = buildHierarchy(groupTunes([rec("Hoot Owl", "hoot", "https://s/1"), rec("Duck River", "duck-1", "https://s/2"), rec("Duck Pond", "duck-2", "https://s/3")]), animals);
+    const leaves: BubbleNode[] = [];
+    const walk = (n: BubbleNode) => (n.slug ? leaves.push(n) : n.children?.forEach(walk));
+    walk(filed);
+    expect(Object.fromEntries(leaves.map((t) => [t.slug, t.filedIn]))).toEqual({ hoot: "Animals/Birds/owl", "duck-1": "Animals/Birds/duck", "duck-2": "Animals/Birds/duck" });
   });
 
   it("refuses an unmatched tune when the taxonomy has no Unsorted keyword, naming the tune", () => {

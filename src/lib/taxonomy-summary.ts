@@ -7,7 +7,7 @@ export function tunePaths(root: BubbleNode): Map<string, string> {
   const paths = new Map<string, string>();
   const walk = (node: BubbleNode) => {
     for (const child of node.children ?? []) {
-      if (child.kind === "tune") paths.set(child.slug!, node.path!);
+      if (child.kind === "tune") paths.set(child.slug!, child.filedIn!);
       else walk(child);
     }
   };

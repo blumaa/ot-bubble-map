@@ -26,6 +26,8 @@ export interface BubbleNode {
   alsoIn?: string[];
   /** Tune only, when any: words of the form keywords its title matches (reel, waltz…), in taxonomy order. */
   forms?: string[];
+  /** Tune only: taxonomy path of the group or keyword it is filed in. A lifted tune sits in a bubble above it. */
+  filedIn?: string;
   /** Group or keyword: taxonomy path, e.g. "Animals/Wild Birds/eagle" or "Animals/Birds". */
   path?: string;
 }
@@ -74,7 +76,7 @@ interface Links {
   forms: string[];
 }
 
-function tuneLeaf(tune: Tune, { alsoIn, forms }: Links): BubbleNode {
+function tuneLeaf(tune: Tune, filedIn: string, { alsoIn, forms }: Links): BubbleNode {
   const keys: Record<string, number> = {};
   for (const key of tune.recordings.flatMap((r) => splitKeys(r.key)).toSorted()) keys[key] = (keys[key] ?? 0) + 1;
   return {
@@ -83,6 +85,7 @@ function tuneLeaf(tune: Tune, { alsoIn, forms }: Links): BubbleNode {
     slug: tune.slug,
     value: tune.recordings.length,
     keys,
+    filedIn,
     ...(alsoIn.length > 0 ? { alsoIn } : {}),
     ...(forms.length > 0 ? { forms } : {}),
   };
@@ -92,8 +95,9 @@ function tuneLeaf(tune: Tune, { alsoIn, forms }: Links): BubbleNode {
  * Groups > keywords > tunes, each tune filed exactly once: under its curated path if it has one, else its strongest
  * matching group or keyword (see `KINDS`), a keyword before its own group and the first in document order on a tie.
  * Form keywords never file a tune: a form is a filter, not a subject. A group's own tunes sit beside its other
- * children. Empty keywords and groups are dropped; a group below the top level with no tunes of its own and a single
- * child is replaced by that child.
+ * children. Empty keywords and groups are dropped; a keyword holding a single tune is replaced by that tune, and a
+ * group below the top level with no tunes of its own and a single child is replaced by that child, so a lone tune
+ * rises to the nearest bubble holding something else. Every tune records where it is filed (`filedIn`).
  * Each tune also lists up to three other non-function groups or keywords its title matches (`alsoIn`), for
  * cross-links, and the words of every form keyword it matches (`forms`), for the form filter.
  * A tune nothing matches goes to `UNSORTED_PATH`. Throws if a curated path names no group or keyword, or if a tune
@@ -121,8 +125,11 @@ export function buildHierarchy(tunes: Tune[], taxonomy: Group[], curated: Record
 
   const build = (node: TaxonomyNode, prefix: string, top: boolean): BubbleNode | null => {
     const path = prefix + nodeLabel(node);
-    const leaves = filed.get(path)!.map((t) => tuneLeaf(t, links.get(t.slug)!));
-    if (isKeyword(node)) return leaves.length > 0 ? { kind: "keyword", name: node.word, path, children: leaves } : null;
+    const leaves = filed.get(path)!.map((t) => tuneLeaf(t, path, links.get(t.slug)!));
+    if (isKeyword(node)) {
+      if (leaves.length === 0) return null;
+      return leaves.length === 1 ? leaves[0] : { kind: "keyword", name: node.word, path, children: leaves };
+    }
     const built = node.children.map((c) => build(c, `${path}/`, false)).filter((c) => c !== null);
     const children = [...built, ...leaves];
     if (children.length === 0) return null;

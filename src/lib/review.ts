@@ -21,22 +21,25 @@ export interface Decision {
 
 /**
  * Tunes a person has not reviewed yet: AI placements and Unsorted tunes not in curated, grouped by the group or keyword
- * path the map shows them under. Unsorted first, then by path.
+ * path each is filed in (a lifted tune shows in a bubble above it). Unsorted first, then by path.
  */
 export function reviewQueue(root: BubbleNode, ai: Placements, curated: Placements): QueueGroup[] {
-  const groups: QueueGroup[] = [];
+  const byPath = new Map<string, QueueTune[]>();
   const walk = (node: BubbleNode) => {
-    const children = node.children ?? [];
-    children.filter((c) => c.kind !== "tune").forEach(walk);
-    const path = node.path;
-    if (!path) return;
-    const tunes = children
-      .filter((t) => t.kind === "tune" && !(t.slug! in curated) && (path === UNSORTED_PATH || ai[t.slug!] === path))
-      .map((t) => ({ slug: t.slug!, title: t.name }));
-    if (tunes.length > 0) groups.push({ path, tunes });
+    for (const child of node.children ?? []) {
+      if (child.kind !== "tune") {
+        walk(child);
+        continue;
+      }
+      const { slug, name, filedIn } = child as Required<BubbleNode>;
+      if (slug in curated || (filedIn !== UNSORTED_PATH && ai[slug] !== filedIn)) continue;
+      byPath.set(filedIn, [...(byPath.get(filedIn) ?? []), { slug, title: name }]);
+    }
   };
   walk(root);
-  return groups.toSorted((a, b) => Number(b.path === UNSORTED_PATH) - Number(a.path === UNSORTED_PATH) || a.path.localeCompare(b.path));
+  return [...byPath]
+    .map(([path, tunes]) => ({ path, tunes }))
+    .toSorted((a, b) => Number(b.path === UNSORTED_PATH) - Number(a.path === UNSORTED_PATH) || a.path.localeCompare(b.path));
 }
 
 /**

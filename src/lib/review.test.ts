@@ -3,8 +3,13 @@ import type { Group } from "./keywords";
 import { applyDecisions, reviewQueue } from "./review";
 import { UNSORTED_PATH, type BubbleNode } from "./tunes";
 
-const tune = (slug: string, name: string): BubbleNode => ({ kind: "tune", name, slug, value: 1 });
-const keyword = (path: string, tunes: BubbleNode[]): BubbleNode => ({ kind: "keyword", name: path.split("/").pop()!, path, children: tunes });
+const tune = (slug: string, name: string, filedIn: string): BubbleNode => ({ kind: "tune", name, slug, value: 1, filedIn });
+const keyword = (path: string, tunes: [string, string][]): BubbleNode => ({
+  kind: "keyword",
+  name: path.split("/").pop()!,
+  path,
+  children: tunes.map(([slug, name]) => tune(slug, name, path)),
+});
 
 const root: BubbleNode = {
   kind: "root",
@@ -14,23 +19,31 @@ const root: BubbleNode = {
       kind: "group",
       name: "Animals",
       children: [
-        keyword("Animals/Birds/duck", [tune("duck-river", "Duck River"), tune("ducks-millpond", "Ducks On The Millpond")]),
-        keyword("Animals/Birds/owl", [tune("hoot", "Hoot Owl"), tune("night-bird", "Night Bird")]),
-        { kind: "group", name: "Birds", path: "Animals/Birds", children: [tune("bird-song", "Bird Song")] },
+        keyword("Animals/Birds/duck", [["duck-river", "Duck River"], ["ducks-millpond", "Ducks On The Millpond"]]),
+        keyword("Animals/Birds/owl", [["hoot", "Hoot Owl"], ["night-bird", "Night Bird"]]),
+        // A keyword's only tune, lifted out of its keyword bubble.
+        tune("wild-goose", "Wild Goose", "Animals/Birds/goose"),
+        { kind: "group", name: "Birds", path: "Animals/Birds", children: [tune("bird-song", "Bird Song", "Animals/Birds")] },
       ],
     },
-    { kind: "group", name: "Unsorted", path: UNSORTED_PATH, children: [tune("flunky", "Flunky Butt"), tune("sorted-already", "Sorted Already")] },
+    {
+      kind: "group",
+      name: "Unsorted",
+      path: UNSORTED_PATH,
+      children: [tune("flunky", "Flunky Butt", UNSORTED_PATH), tune("sorted-already", "Sorted Already", UNSORTED_PATH)],
+    },
   ],
 };
 
 describe("reviewQueue", () => {
   it("lists unreviewed AI placements and Unsorted tunes by group or keyword path, Unsorted first", () => {
-    const ai = { "ducks-millpond": "Animals/Birds/duck", "night-bird": "Animals/Birds/owl", "hoot": "Animals/Birds/owl", "bird-song": "Animals/Birds" };
+    const ai = { "wild-goose": "Animals/Birds/goose", "ducks-millpond": "Animals/Birds/duck", "night-bird": "Animals/Birds/owl", "hoot": "Animals/Birds/owl", "bird-song": "Animals/Birds" };
     const curated = { hoot: "Animals/Birds/owl", "sorted-already": UNSORTED_PATH };
     expect(reviewQueue(root, ai, curated)).toEqual([
       { path: UNSORTED_PATH, tunes: [{ slug: "flunky", title: "Flunky Butt" }] },
       { path: "Animals/Birds", tunes: [{ slug: "bird-song", title: "Bird Song" }] },
       { path: "Animals/Birds/duck", tunes: [{ slug: "ducks-millpond", title: "Ducks On The Millpond" }] },
+      { path: "Animals/Birds/goose", tunes: [{ slug: "wild-goose", title: "Wild Goose" }] },
       { path: "Animals/Birds/owl", tunes: [{ slug: "night-bird", title: "Night Bird" }] },
     ]);
   });

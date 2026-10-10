@@ -3,7 +3,7 @@ import type { Group } from "./keywords";
 import { groupSummaries, placementCounts, tunePaths } from "./taxonomy-summary";
 import { UNSORTED_PATH, type BubbleNode } from "./tunes";
 
-const tune = (slug: string): BubbleNode => ({ kind: "tune", name: slug, slug, value: 1 });
+const tune = (slug: string, filedIn: string): BubbleNode => ({ kind: "tune", name: slug, slug, value: 1, filedIn });
 
 const root: BubbleNode = {
   kind: "root",
@@ -19,16 +19,17 @@ const root: BubbleNode = {
           name: "Birds",
           path: "Animals/Birds",
           children: [
-            { kind: "keyword", name: "owl", path: "Animals/Birds/owl", children: [tune("hoot"), tune("owl-song")] },
-            { kind: "keyword", name: "duck", path: "Animals/Birds/duck", children: [tune("duck-river")] },
-            tune("bird-song"),
+            { kind: "keyword", name: "owl", path: "Animals/Birds/owl", children: [tune("hoot", "Animals/Birds/owl"), tune("owl-song", "Animals/Birds/owl")] },
+            // A keyword's only tune is lifted into the group above, so its bubble is not where it is filed.
+            tune("duck-river", "Animals/Birds/duck"),
+            tune("bird-song", "Animals/Birds"),
           ],
         },
-        // A collapsed single-child group: the keyword sits straight under Animals but its path keeps its group.
-        { kind: "keyword", name: "dog", path: "Animals/Dogs/dog", children: [tune("old-dog")] },
+        // Lifted twice: out of its keyword, then out of the group left holding only it.
+        tune("old-dog", "Animals/Dogs/dog"),
       ],
     },
-    { kind: "group", name: "Unsorted", path: UNSORTED_PATH, children: [tune("flunky"), tune("kept")] },
+    { kind: "group", name: "Unsorted", path: UNSORTED_PATH, children: [tune("flunky", UNSORTED_PATH), tune("kept", UNSORTED_PATH)] },
   ],
 };
 
