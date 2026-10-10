@@ -98,6 +98,10 @@ describe("packRecordings", () => {
     expect(c.y).toBeCloseTo(200);
     expect(c.r).toBeLessThan(30);
   });
+
+  it("leaves a rim band free for the tune's own label when given an inset", () => {
+    for (const c of packRecordings(tune, 6, 0.2)) expect(Math.hypot(c.x - tune.x, c.y - tune.y) + c.r).toBeLessThanOrEqual(24 + 1e-9);
+  });
 });
 
 describe("toScreen", () => {

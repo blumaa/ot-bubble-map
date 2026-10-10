@@ -107,15 +107,16 @@ export function childrenIndex(nodes: LaidOutNode[]): Map<string, LaidOutNode[]> 
   return index;
 }
 
-/** `count` equal circles packed inside `parent`. */
-export function packRecordings(parent: Circle, count: number): Circle[] {
-  const size = 2 * parent.r;
-  const packed = pack<{ value?: number }>().size([size, size]).padding(parent.r * 0.04)(
+/** `count` equal circles packed inside `parent`, keeping `inset` × its radius free around the edge. */
+export function packRecordings(parent: Circle, count: number, inset = 0): Circle[] {
+  const r = parent.r * (1 - inset);
+  const size = 2 * r;
+  const packed = pack<{ value?: number }>().size([size, size]).padding(r * 0.04)(
     hierarchy<{ value?: number; children?: { value: number }[] }>({
       children: Array.from({ length: count }, () => ({ value: 1 })),
     }).sum((d) => d.value ?? 0),
   );
-  return (packed.children ?? []).map((c) => ({ x: parent.x - parent.r + c.x, y: parent.y - parent.r + c.y, r: c.r }));
+  return (packed.children ?? []).map((c) => ({ x: parent.x - r + c.x, y: parent.y - r + c.y, r: c.r }));
 }
 
 /** Layout circle to screen pixels under a d3-zoom transform. */

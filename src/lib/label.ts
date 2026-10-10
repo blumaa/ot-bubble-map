@@ -1,4 +1,4 @@
-import { ancestors, type LaidOutNode } from "./layout";
+import { ancestors, type Circle, type LaidOutNode } from "./layout";
 
 /** Greedy word wrap into at most `maxLines` lines of `maxChars`; overflow ends in an ellipsis. */
 export function wrapLabel(text: string, maxChars: number, maxLines: number): string[] {
@@ -42,4 +42,10 @@ export function countLabel(node: LaidOutNode, matches: Map<string, number> | nul
 /** Groups between the root and a node, e.g. "Animals › duck". */
 export function contextPath(byId: Map<string, LaidOutNode>, id: string): string {
   return ancestors(byId, id).slice(1, -1).map((n) => n.name).join(" › ");
+}
+
+/** Half-circle path of radius `r` around `circle`'s center, left to right over the top or under the bottom, for textPath. */
+export function rimArc(circle: Circle, r: number, side: "top" | "bottom"): string {
+  const sweep = side === "top" ? 1 : 0;
+  return `M ${circle.x - r} ${circle.y} A ${r} ${r} 0 0 ${sweep} ${circle.x + r} ${circle.y}`;
 }

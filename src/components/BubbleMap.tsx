@@ -1,13 +1,13 @@
 "use client";
 
-import { useEffect, useEffectEvent, useMemo, useRef, useState, type ReactNode } from "react";
+import { useEffect, useEffectEvent, useId, useMemo, useRef, useState, type ReactNode } from "react";
 import { select } from "d3-selection";
 import "d3-transition";
 import { zoom, zoomIdentity, type ZoomBehavior } from "d3-zoom";
 import useSWR from "swr";
 import { filterMatches, formOptions, keyOptions, NO_FILTER, type Filter } from "@/lib/filter";
 import { splitKeys } from "@/lib/keys";
-import { contextPath, countLabel, wrapLabel } from "@/lib/label";
+import { contextPath, countLabel, rimArc, wrapLabel } from "@/lib/label";
 import { ancestors, childrenIndex, packRecordings, toScreen, zoomTo, type Circle, type LaidOutNode, type View } from "@/lib/layout";
 import { bucketShown, sizeBuckets } from "@/lib/lod";
 import { clickTarget, viewFocus, type ViewTransform } from "@/lib/navigation";
@@ -26,6 +26,8 @@ const CHAR_WIDTH = 0.55;
 const MIN_LABEL_RADIUS = 22;
 /** Smallest on-screen radius, in px, worth drawing. Most tunes are far below it when zoomed out. */
 const MIN_CIRCLE_RADIUS = 1;
+/** Share of a focused tune's radius kept free of recordings, for its title and category around the rim. */
+const RIM_INSET = 0.14;
 
 const fetchJson = async (url: string) => {
   const res = await fetch(url);
@@ -69,6 +71,27 @@ function BubbleLabel({ circle, text, k, large }: { circle: Circle; text: string;
   );
 }
 
+/** One line of text curved along the free band inside a focused tune's edge, over the top or under the bottom. */
+function RimText({ circle, text, k, side, className }: { circle: Circle; text: string; k: number; side: "top" | "bottom"; className: string }) {
+  const id = useId();
+  const band = circle.r * RIM_INSET;
+  const fontSize = Math.min(18, Math.max(11, band * k * 0.45)) / k;
+  // Glyphs rise away from the path: outward over the top, inward under the bottom. Shift so each line sits mid-band.
+  const r = circle.r - band / 2 + (side === "top" ? -0.35 : 0.35) * fontSize;
+  const [line] = wrapLabel(text, Math.floor((Math.PI * r * 0.7) / (fontSize * CHAR_WIDTH)), 1);
+  if (!line) return null;
+  return (
+    <>
+      <path id={id} d={rimArc(circle, r, side)} className="fill-none" />
+      <text fontSize={fontSize} className={`stroke-paper/80 [paint-order:stroke] ${className}`} style={{ strokeWidth: 4 / k, strokeLinejoin: "round" }}>
+        <textPath href={`#${id}`} startOffset="50%" textAnchor="middle">
+          {line}
+        </textPath>
+      </text>
+    </>
+  );
+}
+
 interface Props {
   nodes: LaidOutNode[];
   /** Floats along the bottom edge, under the key on phones. */
@@ -104,7 +127,7 @@ export function BubbleMap({ nodes, footer }: Props) {
     fetchJson,
   );
   const recordingCircles = useMemo(
-    () => (focus.slug && recordings ? packRecordings(focus, recordings.length) : []),
+    () => (focus.slug && recordings ? packRecordings(focus, recordings.length, RIM_INSET) : []),
     [focus, recordings],
   );
 
@@ -253,6 +276,12 @@ export function BubbleMap({ nodes, footer }: Props) {
               />
             )}
             <g className="pointer-events-none">
+              {focus.slug && (
+                <>
+                  <RimText circle={focus} text={focus.name} k={k} side="top" className="fill-ink font-display font-semibold" />
+                  <RimText circle={focus} text={contextPath(byId, focusId)} k={k} side="bottom" className="fill-muted font-medium" />
+                </>
+              )}
               {focus.slug
                 ? recordings
                   ? recordingCircles.map((c, i) => <BubbleLabel key={i} circle={c} text={recordingLabel(recordings[i])} k={k} large={false} />)

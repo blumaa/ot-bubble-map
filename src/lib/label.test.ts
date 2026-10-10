@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { at, byId, nodes } from "./__fixtures__/tree";
 import { filterMatches } from "./filter";
-import { contextPath, countLabel, wrapLabel } from "./label";
+import { contextPath, countLabel, rimArc, wrapLabel } from "./label";
 
 describe("wrapLabel", () => {
   it("keeps short text on one line", () => {
@@ -51,5 +51,17 @@ describe("contextPath", () => {
 
   it("is empty for a category", () => {
     expect(contextPath(byId, at("Places").id)).toBe("");
+  });
+});
+
+describe("rimArc", () => {
+  const circle = { x: 100, y: 200, r: 50 };
+
+  it("runs left to right over the top, so text along it reads upright", () => {
+    expect(rimArc(circle, 40, "top")).toBe("M 60 200 A 40 40 0 0 1 140 200");
+  });
+
+  it("runs left to right under the bottom, so text along it reads upright", () => {
+    expect(rimArc(circle, 40, "bottom")).toBe("M 60 200 A 40 40 0 0 0 140 200");
   });
 });
