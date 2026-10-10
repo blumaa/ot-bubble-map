@@ -9,25 +9,25 @@ import type { Recording } from "./types";
 
 const taxonomy = categoriesData.categories as Group[];
 /** Subgroups only a person fills (rule 7). */
-const SENSITIVE = ["People/Nations & Peoples/", "People/Slurs/"];
+const SENSITIVE = ["People/Nations/", "People/Peoples/", "People/Slurs/"];
 const tunes = groupTunes(recordings as Recording[]);
 const tree = buildHierarchy(tunes, taxonomy, placements);
 
-/** "Group/…/keyword" bubble path each tune ends up under, after collapsing. */
-function bubblePaths(): Map<string, string> {
+/** Title -> taxonomy path of the group or keyword each tune is filed in. */
+function filedPaths(): Map<string, string> {
   const paths = new Map<string, string>();
-  const walk = (node: BubbleNode, prefix: string) => {
+  const walk = (node: BubbleNode) => {
     for (const child of node.children ?? []) {
-      if (child.kind === "tune") paths.set(child.name, prefix.slice(0, -1));
-      else walk(child, `${prefix}${child.name}/`);
+      if (child.kind === "tune") paths.set(child.name, child.filedIn!);
+      else walk(child);
     }
   };
-  walk(tree, "");
+  walk(tree);
   return paths;
 }
 
 describe("categories.json", () => {
-  const paths = bubblePaths();
+  const paths = filedPaths();
 
   it.each([
     ["Big Eyed Rabbit", "Animals/Wild Animals/rabbit"],
@@ -37,29 +37,29 @@ describe("categories.json", () => {
     ["Sally Goodin", "People/First Names/sal"],
     ["Soldier's Joy", "People/Soldiers"],
     ["Turkey In The Straw", "Animals/Birds/turkey"],
-    ["Black Mountain Rag", "Places/Mountains & Hollows/mountain"],
+    ["Black Mountain Rag", "Places/Mountains/mountain"],
     ["Grey Eagle", "Animals/Birds/eagle"],
     ["Blue Railroad Train", "Travel/Trains & Railroads/train"],
-    ["Red June Apple", "Food & Drink/Food/apple"],
-    ["Back In Jail Again", "Life & Death/Crime & Jail/jail"],
-    ["Old Gray Mare", "Animals/Horses & Mules/mare"],
+    ["Red June Apple", "Food/apple"],
+    ["Back In Jail Again", "Crime/jail"],
+    ["Old Gray Mare", "Animals/Horses/mare"],
     ["Rose Of Sharon", "Nature/Plants/rose"],
-    ["Sandy River Belle", "Places/Rivers & Waters/river"],
+    ["Sandy River Belle", "Places/Rivers/river"],
   ])("files %s under %s", (title, path) => {
     expect(paths.get(title)).toBe(path);
   });
 
   // Mistakes reported by a listener. Each fix stays fixed.
   it.each([
-    ["Bow legged Irishman", "People/Nations & Peoples/irish"],
-    ["Cherokee Shuffle", "People/Nations & Peoples/cherokee"],
+    ["Bow legged Irishman", "People/Nations/irish"],
+    ["Cherokee Shuffle", "People/Peoples/cherokee"],
     ["Dago March", "People/Slurs/dago"],
     ["Darkie's Delight", "People/Slurs/darkey"],
-    ["Bow Wow Blues", "Animals/Dogs & Cats/dog"],
+    ["Bow Wow Blues", "Animals/Dogs/dog"],
     ["Rock Of Ages", "Faith/Church & Worship/hymn"],
     ["On The Rock Where Moses Stood", "Faith/Bible/moses"],
-    ["Pearly Gates", "Faith/Heaven & Hell/heaven"],
-    ["Open Up Dem Pearly Gates For Me", "Faith/Heaven & Hell/heaven"],
+    ["Pearly Gates", "Faith/Heaven/heaven"],
+    ["Open Up Dem Pearly Gates For Me", "Faith/Heaven/heaven"],
     ["Cinda", "People/First Names/cindy"],
     ["Melinda", "People/First Names/melinda"],
     ["Rachel", "People/First Names/rachel"],
@@ -77,6 +77,32 @@ describe("categories.json", () => {
     ["Snappin' Bug", "Unsorted"],
     ["Thumping Bug", "Unsorted"],
   ])("files %s under %s (from feedback)", (title, path) => {
+    expect(paths.get(title)).toBe(path);
+  });
+
+  // Titles that sat in Unsorted until their subject got a keyword.
+  it.each([
+    ["Waiting On The Golden Shore", "Faith/Heaven/heaven"],
+    ["Sign Of Judgement, The", "Faith/judgement"],
+    ["Sinner, You Better Get Ready", "Faith/Church & Worship/sin"],
+    ["Cheatin' On Me", "Feelings/Love/cheating"],
+    ["Think Of Me", "Feelings/Love"],
+    ["Worrying Blues", "Feelings/Sorrow/worried"],
+    ["Am I Blue", "Feelings/Sorrow/sad"],
+    ["Twenty One Years", "Crime/prison term"],
+    ["T.B. Blues", "Life/sickness"],
+    ["Old And In The Way", "Life/old age"],
+    ["Weave Room Blues", "Work"],
+    ["Hard Luck Blues", "Money/hard times"],
+    ["Song Hit Millionaire", "Money/rich"],
+    ["Fourth Of July", "Nature/Seasons/holiday"],
+    ["Moving Day", "Travel/Leaving & Rambling/moving"],
+    ["Flyin' Airplane Blues", "Travel/airplane"],
+    ["Shift Gears Truck And Go", "Travel/Cars/truck"],
+    ["Gippy Get Your Hair Cut", "Body/hair"],
+    ["Shack No. 9", "Home/shack"],
+    ["Benny Eat A Woodchuck", "Animals/Wild Animals/woodchuck"],
+  ])("files %s under %s (was Unsorted)", (title, path) => {
     expect(paths.get(title)).toBe(path);
   });
 
@@ -109,6 +135,22 @@ describe("categories.json", () => {
   it("places only tunes that exist", () => {
     const slugs = new Set(tunes.map((t) => t.slug));
     expect(Object.keys(placements).filter((slug) => !slugs.has(slug))).toEqual([]);
+  });
+
+  it("files every placement under a group or keyword that exists", () => {
+    const known = new Set(taxonomyEntries(taxonomy).map((e) => e.path));
+    expect(Object.entries(placements).filter(([, path]) => !known.has(path))).toEqual([]);
+  });
+
+  it("keeps a lone keyword in its parent instead of a group of one", () => {
+    const groupsOfOne = taxonomyEntries(taxonomy).filter(
+      (e) => e.path.includes("/") && "children" in e.node && e.node.children.length === 1,
+    );
+    expect(groupsOfOne.map((e) => e.path)).toEqual([]);
+  });
+
+  it("names one thing per top-level category, not two joined by &", () => {
+    expect(taxonomy.map((g) => g.name).filter((name) => name.includes("&"))).toEqual([]);
   });
 
   it("gives every group and keyword a unique path", () => {

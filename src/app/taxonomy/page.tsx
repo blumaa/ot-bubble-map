@@ -26,7 +26,8 @@ const PRINCIPLES: [string, string][] = [
   ["A category is what the title is about.", "Its subject: a person, place, animal, feeling or event. Not just a word in it."],
   ["No grammar categories.", "Colors, numbers, pronouns and adjectives never decide a category alone. “Blue Eyed Girl” is about a girl."],
   ["No “other” buckets.", "A list that misses a name gets the name added. A title with no clear subject goes to Unsorted, where it can be seen and reviewed."],
-  ["Forms are a filter, not a subject.", "Reel, waltz and breakdown are in the form filter. A tune sits under Music & Dance only if the title is about music or dancing."],
+  ["One subject per category.", "Food and Drink are two categories, not one. A name that says one thing twice stays, like Cities & Towns. A lone keyword sits in its parent instead of a group of one."],
+  ["Forms are a filter, not a subject.", "Reel, waltz and breakdown are in the form filter. A tune sits under Music or Dance only if the title is about music or dancing."],
   ["Sensitive names are placed by a person.", "Nationalities, ethnic groups and slurs never file automatically. Slurs are kept in their own group so the map names them honestly."],
   ["Every fixed mistake becomes a test.", "When a tune is found in the wrong place, the title and its right category are added to the test suite, so the fix can't quietly come undone."],
 ];

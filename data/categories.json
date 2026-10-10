@@ -112,11 +112,8 @@
      ]
     },
     {
-     "name": "Horses & Mules",
+     "name": "Horses",
      "children": [
-      {
-       "word": "mule"
-      },
       {
        "word": "horse"
       },
@@ -134,6 +131,9 @@
        "word": "yearling"
       }
      ]
+    },
+    {
+     "word": "mule"
     },
     {
      "name": "Livestock",
@@ -158,7 +158,16 @@
        "word": "pig"
       },
       {
-       "word": "hog"
+       "word": "hog",
+       "match": [
+        "hog",
+        "hogs",
+        "shoat",
+        "shoats"
+       ],
+       "exclude": [
+        "ground hog"
+       ]
       },
       {
        "word": "sow"
@@ -195,7 +204,7 @@
      ]
     },
     {
-     "name": "Dogs & Cats",
+     "name": "Dogs",
      "children": [
       {
        "word": "dog",
@@ -209,13 +218,13 @@
        "word": "hound"
       },
       {
-       "word": "cat"
-      },
-      {
        "word": "puppy",
        "match": []
       }
      ]
+    },
+    {
+     "word": "cat"
     },
     {
      "name": "Wild Animals",
@@ -337,6 +346,15 @@
       {
        "word": "wildcat",
        "match": []
+      },
+      {
+       "word": "woodchuck",
+       "match": [
+        "woodchuck",
+        "woodchucks",
+        "groundhog",
+        "ground hog"
+       ]
       }
      ]
     },
@@ -384,7 +402,7 @@
      ]
     },
     {
-     "name": "Fish, Frogs & Snakes",
+     "name": "Fish",
      "children": [
       {
        "word": "fish",
@@ -397,28 +415,28 @@
        "word": "catfish"
       },
       {
-       "word": "frog"
-      },
-      {
-       "word": "snake"
-      },
-      {
-       "word": "choupique",
-       "match": []
-      },
-      {
-       "word": "crawdad",
-       "match": []
-      },
-      {
        "word": "herring",
        "match": []
       },
       {
-       "word": "mermaid",
+       "word": "choupique",
        "match": []
       }
      ]
+    },
+    {
+     "word": "frog"
+    },
+    {
+     "word": "snake"
+    },
+    {
+     "word": "crawdad",
+     "match": []
+    },
+    {
+     "word": "mermaid",
+     "match": []
     }
    ]
   },
@@ -2587,8 +2605,7 @@
        "word": "stranger"
       },
       {
-       "word": "bachelor",
-       "match": []
+       "word": "bachelor"
       },
       {
        "word": "boogerman",
@@ -2603,8 +2620,7 @@
        "match": []
       },
       {
-       "word": "feller",
-       "match": []
+       "word": "feller"
       },
       {
        "word": "fellow",
@@ -3035,16 +3051,8 @@
      ]
     },
     {
-     "name": "Nations & Peoples",
+     "name": "Nations",
      "children": [
-      {
-       "word": "indian",
-       "match": []
-      },
-      {
-       "word": "cherokee",
-       "match": []
-      },
       {
        "word": "irish",
        "match": []
@@ -3074,14 +3082,6 @@
        "match": []
       },
       {
-       "word": "gaelic",
-       "match": []
-      },
-      {
-       "word": "hawaiian",
-       "match": []
-      },
-      {
        "word": "portuguese",
        "match": []
       },
@@ -3094,10 +3094,6 @@
        "match": []
       },
       {
-       "word": "bohemian",
-       "match": []
-      },
-      {
        "word": "british",
        "match": []
       },
@@ -3106,19 +3102,11 @@
        "match": []
       },
       {
-       "word": "choctaw",
-       "match": []
-      },
-      {
        "word": "cuban",
        "match": []
       },
       {
        "word": "greek",
-       "match": []
-      },
-      {
-       "word": "gypsy",
        "match": []
       },
       {
@@ -3134,15 +3122,7 @@
        "match": []
       },
       {
-       "word": "osage",
-       "match": []
-      },
-      {
        "word": "scandinavian",
-       "match": []
-      },
-      {
-       "word": "sioux",
        "match": []
       },
       {
@@ -3150,7 +3130,48 @@
        "match": []
       },
       {
+       "word": "bohemian",
+       "match": []
+      },
+      {
+       "word": "hawaiian",
+       "match": []
+      },
+      {
        "word": "yankee",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Peoples",
+     "children": [
+      {
+       "word": "indian",
+       "match": []
+      },
+      {
+       "word": "cherokee",
+       "match": []
+      },
+      {
+       "word": "choctaw",
+       "match": []
+      },
+      {
+       "word": "osage",
+       "match": []
+      },
+      {
+       "word": "sioux",
+       "match": []
+      },
+      {
+       "word": "gaelic",
+       "match": []
+      },
+      {
+       "word": "gypsy",
        "match": []
       }
      ]
@@ -3181,7 +3202,28 @@
      ]
     },
     {
-     "name": "Rounders & Drifters",
+     "name": "Rounders",
+     "children": [
+      {
+       "word": "gambler"
+      },
+      {
+       "word": "drunkard"
+      },
+      {
+       "word": "bully"
+      },
+      {
+       "word": "bum"
+      },
+      {
+       "word": "gangster",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Drifters",
      "children": [
       {
        "word": "hobo"
@@ -3198,32 +3240,11 @@
        ]
       },
       {
-       "word": "gambler"
-      },
-      {
-       "word": "drunkard"
-      },
-      {
-       "word": "bully"
-      },
-      {
-       "word": "bum",
-       "match": []
-      },
-      {
-       "word": "convict",
-       "match": []
-      },
-      {
-       "word": "gangster",
+       "word": "wanderer",
        "match": []
       },
       {
        "word": "outcast",
-       "match": []
-      },
-      {
-       "word": "wanderer",
        "match": []
       }
      ]
@@ -4293,7 +4314,7 @@
      ]
     },
     {
-     "name": "Rivers & Waters",
+     "name": "Rivers",
      "children": [
       {
        "word": "river"
@@ -4302,36 +4323,21 @@
        "word": "creek"
       },
       {
-       "word": "sea",
-       "match": [
-        "sea",
-        "seas",
-        "ocean",
-        "waves",
-        "water",
-        "waters",
-        "waterfall"
-       ]
-      },
-      {
-       "word": "island",
-       "match": [
-        "island",
-        "isle"
-       ]
-      },
-      {
        "word": "bayou"
       },
       {
        "word": "rio"
       },
       {
-       "word": "sandy"
+       "word": "brook",
+       "match": []
       },
       {
-       "word": "beach",
+       "word": "stream",
        "match": []
+      },
+      {
+       "word": "sandy"
       },
       {
        "word": "big muddy",
@@ -4346,19 +4352,11 @@
        "match": []
       },
       {
-       "word": "brook",
-       "match": []
-      },
-      {
        "word": "brushy run",
        "match": []
       },
       {
        "word": "caney",
-       "match": []
-      },
-      {
-       "word": "chesapeake bay",
        "match": []
       },
       {
@@ -4387,14 +4385,6 @@
       },
       {
        "word": "kaney",
-       "match": []
-      },
-      {
-       "word": "lake",
-       "match": []
-      },
-      {
-       "word": "lake erie",
        "match": []
       },
       {
@@ -4454,10 +4444,6 @@
        "match": []
       },
       {
-       "word": "stream",
-       "match": []
-      },
-      {
        "word": "tobique",
        "match": []
       },
@@ -4472,7 +4458,47 @@
      ]
     },
     {
-     "name": "Mountains & Hollows",
+     "name": "Waters",
+     "children": [
+      {
+       "word": "sea",
+       "match": [
+        "sea",
+        "seas",
+        "ocean",
+        "waves",
+        "water",
+        "waters",
+        "waterfall"
+       ]
+      },
+      {
+       "word": "lake",
+       "match": []
+      },
+      {
+       "word": "lake erie",
+       "match": []
+      },
+      {
+       "word": "chesapeake bay",
+       "match": []
+      },
+      {
+       "word": "beach",
+       "match": []
+      },
+      {
+       "word": "island",
+       "match": [
+        "island",
+        "isle"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Mountains",
      "children": [
       {
        "word": "mountain"
@@ -4481,30 +4507,17 @@
        "word": "hill"
       },
       {
-       "word": "valley"
+       "word": "ridge"
       },
       {
        "word": "gap"
       },
       {
-       "word": "ridge"
-      },
-      {
-       "word": "prairie"
-      },
-      {
-       "word": "hollow",
-       "match": [
-        "hollow",
-        "holler"
-       ]
-      },
-      {
-       "word": "arthur seat",
+       "word": "knob",
        "match": []
       },
       {
-       "word": "brae",
+       "word": "cliff",
        "match": []
       },
       {
@@ -4516,11 +4529,11 @@
        "match": []
       },
       {
-       "word": "cliff",
+       "word": "brae",
        "match": []
       },
       {
-       "word": "knob",
+       "word": "arthur seat",
        "match": []
       },
       {
@@ -4546,74 +4559,26 @@
      ]
     },
     {
-     "name": "Farms, Roads & Buildings",
+     "word": "hollow",
+     "match": [
+      "hollow",
+      "holler"
+     ]
+    },
+    {
+     "word": "valley"
+    },
+    {
+     "word": "prairie"
+    },
+    {
+     "name": "Farms",
      "children": [
-      {
-       "word": "barn"
-      },
-      {
-       "word": "mill"
-      },
-      {
-       "word": "lane"
-      },
-      {
-       "word": "street"
-      },
       {
        "word": "farm"
       },
       {
-       "word": "alley",
-       "match": []
-      },
-      {
-       "word": "avenue",
-       "match": []
-      },
-      {
-       "word": "barroom",
-       "match": []
-      },
-      {
-       "word": "bridge",
-       "match": []
-      },
-      {
-       "word": "castle",
-       "match": []
-      },
-      {
-       "word": "corral",
-       "match": []
-      },
-      {
-       "word": "fence",
-       "match": []
-      },
-      {
-       "word": "ferry",
-       "match": []
-      },
-      {
-       "word": "forge",
-       "match": []
-      },
-      {
-       "word": "honky tonk",
-       "match": []
-      },
-      {
-       "word": "ironworks",
-       "match": []
-      },
-      {
-       "word": "lighthouse",
-       "match": []
-      },
-      {
-       "word": "palace",
-       "match": []
+       "word": "barn"
       },
       {
        "word": "plantation",
@@ -4624,15 +4589,55 @@
        "match": []
       },
       {
+       "word": "corral",
+       "match": []
+      },
+      {
+       "word": "fence",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Buildings",
+     "children": [
+      {
+       "word": "mill"
+      },
+      {
+       "word": "castle",
+       "match": []
+      },
+      {
+       "word": "palace",
+       "match": []
+      },
+      {
+       "word": "lighthouse",
+       "match": []
+      },
+      {
        "word": "schoolhouse",
        "match": []
       },
       {
-       "word": "sidewalk",
+       "word": "barroom",
+       "match": []
+      },
+      {
+       "word": "honky tonk",
        "match": []
       },
       {
        "word": "stillhouse",
+       "match": []
+      },
+      {
+       "word": "forge",
+       "match": []
+      },
+      {
+       "word": "ironworks",
        "match": []
       }
      ]
@@ -4747,7 +4752,17 @@
      "name": "Love",
      "match": [
       "love",
-      "loves"
+      "loves",
+      "loving",
+      "lovin",
+      "loved",
+      "call you mine",
+      "be mine",
+      "think of me",
+      "come back to me",
+      "forget you",
+      "miss you",
+      "missing you"
      ],
      "children": [
       {
@@ -4771,16 +4786,76 @@
       },
       {
        "word": "jealous",
-       "match": []
+       "match": [
+        "jealous",
+        "jealousy"
+       ]
       },
       {
-       "word": "longing",
-       "match": []
+       "word": "longing"
       },
       {
        "word": "valentine",
        "match": []
+      },
+      {
+       "word": "courting",
+       "match": [
+        "courting",
+        "courtin",
+        "court"
+       ],
+       "exclude": [
+        "court street"
+       ]
+      },
+      {
+       "word": "wedding",
+       "match": [
+        "wedding",
+        "married",
+        "marry",
+        "marrying"
+       ]
+      },
+      {
+       "word": "anniversary",
+       "match": []
+      },
+      {
+       "word": "honeymoon"
+      },
+      {
+       "word": "faithful",
+       "match": [
+        "be true",
+        "be faithful"
+       ]
+      },
+      {
+       "word": "cheating",
+       "match": [
+        "cheatin",
+        "cheating",
+        "cheat",
+        "cheater",
+        "two timing",
+        "two timin",
+        "unfaithful"
+       ]
+      },
+      {
+       "word": "flirting",
+       "match": [
+        "flirt",
+        "flirting",
+        "flirtin",
+        "when i was single"
+       ]
       }
+     ],
+     "exclude": [
+      "loved my old guitar"
      ]
     },
     {
@@ -4848,16 +4923,39 @@
       },
       {
        "word": "worried",
-       "match": []
+       "match": [
+        "worried",
+        "worry",
+        "worrying",
+        "worryin"
+       ],
+       "kind": "modifier"
       },
       {
        "word": "worry",
        "match": []
+      },
+      {
+       "word": "sad",
+       "match": [
+        "sad",
+        "feel so blue",
+        "felt so blue",
+        "am i blue",
+        "blue days",
+        "black and blue",
+        "grieve",
+        "grief",
+        "weeping blues",
+        "misery",
+        "mean old world"
+       ],
+       "kind": "modifier"
       }
      ]
     },
     {
-     "name": "Joy & Wildness",
+     "name": "Joy",
      "children": [
       {
        "word": "happy",
@@ -4872,12 +4970,21 @@
        ]
       },
       {
+       "word": "laugh",
+       "match": []
+      },
+      {
        "word": "wonder",
        "match": [
         "wonder",
         "wonderful"
        ]
-      },
+      }
+     ]
+    },
+    {
+     "name": "Wildness",
+     "children": [
       {
        "word": "crazy",
        "kind": "modifier"
@@ -4885,42 +4992,37 @@
       {
        "word": "wild",
        "kind": "modifier"
-      },
-      {
-       "word": "laugh",
-       "match": []
-      }
-     ]
-    },
-    {
-     "name": "Dreams & Memories",
-     "children": [
-      {
-       "word": "dream",
-       "match": [
-        "dream",
-        "dreams",
-        "dreaming"
-       ]
-      },
-      {
-       "word": "memories",
-       "match": [
-        "memory",
-        "memories",
-        "remember"
-       ]
       }
      ]
     }
    ]
   },
   {
+   "name": "Dreams",
+   "emoji": "🌙",
+   "match": [
+    "dream",
+    "dreams",
+    "dreaming"
+   ],
+   "children": []
+  },
+  {
+   "name": "Memories",
+   "emoji": "🕰️",
+   "match": [
+    "memory",
+    "memories",
+    "remember"
+   ],
+   "children": []
+  },
+  {
    "name": "Faith",
    "emoji": "⛪",
    "children": [
     {
-     "name": "Heaven & Hell",
+     "name": "Heaven",
      "children": [
       {
        "word": "heaven",
@@ -4928,7 +5030,29 @@
         "heaven",
         "heavenly",
         "pearly gates",
-        "pearly gate"
+        "pearly gate",
+        "golden shore",
+        "golden stair",
+        "golden stairs",
+        "beautiful land",
+        "beautiful shore",
+        "land beyond the blue",
+        "never grow old",
+        "crowning day",
+        "glad day",
+        "bright mansions",
+        "over yonder",
+        "that home",
+        "home above",
+        "home on high",
+        "promised land",
+        "kingdom",
+        "great beyond",
+        "other shore",
+        "happy land",
+        "sweet bye and bye",
+        "bye and bye",
+        "circle be unbroken"
        ]
       },
       {
@@ -4942,23 +5066,35 @@
        ]
       },
       {
-       "word": "hell"
-      },
-      {
-       "word": "devil"
-      },
-      {
        "word": "beulah land",
-       "match": []
-      },
-      {
-       "word": "judgement",
        "match": []
       },
       {
        "word": "paradise",
        "match": []
       }
+     ]
+    },
+    {
+     "name": "Hell",
+     "children": [
+      {
+       "word": "hell"
+      },
+      {
+       "word": "devil"
+      }
+     ]
+    },
+    {
+     "word": "judgement",
+     "match": [
+      "judgement",
+      "judgment",
+      "judgment day",
+      "mighty trumpet",
+      "trumpet sound",
+      "reaping"
      ]
     },
     {
@@ -5143,8 +5279,7 @@
        "match": []
       },
       {
-       "word": "bones",
-       "match": []
+       "word": "bones"
       },
       {
        "word": "gospel",
@@ -5163,8 +5298,7 @@
        "match": []
       },
       {
-       "word": "pilgrim",
-       "match": []
+       "word": "pilgrim"
       },
       {
        "word": "redemption",
@@ -5180,7 +5314,13 @@
       },
       {
        "word": "sin",
-       "match": []
+       "match": [
+        "sin",
+        "sins",
+        "sinner",
+        "sinners",
+        "sinful"
+       ]
       },
       {
        "word": "sunday school",
@@ -5285,11 +5425,81 @@
       {
        "word": "thunder",
        "match": []
+      },
+      {
+       "word": "storm",
+       "match": [
+        "storm",
+        "storms",
+        "hurricane",
+        "cyclone",
+        "tornado",
+        "earthquake"
+       ]
       }
      ]
     },
     {
-     "name": "Seasons & Times of Day",
+     "name": "Seasons",
+     "children": [
+      {
+       "word": "summer"
+      },
+      {
+       "word": "winter"
+      },
+      {
+       "word": "spring"
+      },
+      {
+       "word": "autumn",
+       "match": []
+      },
+      {
+       "word": "fall",
+       "match": []
+      },
+      {
+       "word": "harvest",
+       "match": []
+      },
+      {
+       "word": "april",
+       "match": []
+      },
+      {
+       "word": "september",
+       "match": []
+      },
+      {
+       "word": "december",
+       "match": []
+      },
+      {
+       "word": "january"
+      },
+      {
+       "word": "new year",
+       "match": []
+      },
+      {
+       "word": "holiday",
+       "match": [
+        "fourth of july",
+        "third of july",
+        "mardi gras",
+        "centennial",
+        "thanksgiving",
+        "easter",
+        "holiday",
+        "holidays",
+        "jubilee"
+       ]
+      }
+     ]
+    },
+    {
+     "name": "Times of Day",
      "children": [
       {
        "word": "night",
@@ -5304,24 +5514,11 @@
        "word": "morning"
       },
       {
-       "word": "summer"
-      },
-      {
-       "word": "winter"
-      },
-      {
-       "word": "spring"
+       "word": "evening",
+       "match": []
       },
       {
        "word": "afternoon",
-       "match": []
-      },
-      {
-       "word": "april",
-       "match": []
-      },
-      {
-       "word": "autumn",
        "match": []
       },
       {
@@ -5329,50 +5526,22 @@
        "match": []
       },
       {
-       "word": "day",
-       "match": []
-      },
-      {
-       "word": "december",
-       "match": []
-      },
-      {
-       "word": "evening",
-       "match": []
-      },
-      {
-       "word": "fall",
-       "match": []
-      },
-      {
-       "word": "harvest",
-       "match": []
-      },
-      {
-       "word": "january",
-       "match": []
-      },
-      {
-       "word": "monday",
-       "match": []
-      },
-      {
-       "word": "new year",
-       "match": []
-      },
-      {
-       "word": "september",
-       "match": []
-      },
-      {
-       "word": "sunday",
-       "match": []
-      },
-      {
        "word": "twilight",
        "match": []
       }
      ]
+    },
+    {
+     "word": "day",
+     "match": []
+    },
+    {
+     "word": "monday",
+     "match": []
+    },
+    {
+     "word": "sunday",
+     "match": []
     },
     {
      "name": "Plants",
@@ -5602,293 +5771,298 @@
    ]
   },
   {
-   "name": "Food & Drink",
+   "name": "Food",
    "emoji": "🥧",
    "children": [
     {
-     "name": "Food",
-     "children": [
-      {
-       "word": "apple",
-       "match": [
-        "apple",
-        "apples"
-       ]
-      },
-      {
-       "word": "tater",
-       "match": [
-        "tater",
-        "taters",
-        "potato",
-        "potatoes"
-       ]
-      },
-      {
-       "word": "sugar"
-      },
-      {
-       "word": "honey"
-      },
-      {
-       "word": "pie"
-      },
-      {
-       "word": "candy"
-      },
-      {
-       "word": "blackberry",
-       "match": [
-        "blackberry",
-        "blackberries"
-       ]
-      },
-      {
-       "word": "cabbage"
-      },
-      {
-       "word": "bread"
-      },
-      {
-       "word": "biscuit",
-       "match": [
-        "biscuit",
-        "biscuits"
-       ]
-      },
-      {
-       "word": "cake",
-       "match": [
-        "cake",
-        "cakes"
-       ]
-      },
-      {
-       "word": "peach",
-       "match": [
-        "peach",
-        "peaches"
-       ]
-      },
-      {
-       "word": "molasses"
-      },
-      {
-       "word": "beans"
-      },
-      {
-       "word": "apricot",
-       "match": []
-      },
-      {
-       "word": "bacon",
-       "match": []
-      },
-      {
-       "word": "barbecue",
-       "match": []
-      },
-      {
-       "word": "berry",
-       "match": []
-      },
-      {
-       "word": "buckwheat",
-       "match": []
-      },
-      {
-       "word": "butter",
-       "match": []
-      },
-      {
-       "word": "cheese",
-       "match": []
-      },
-      {
-       "word": "chips",
-       "match": []
-      },
-      {
-       "word": "cranberry",
-       "match": []
-      },
-      {
-       "word": "dough",
-       "match": []
-      },
-      {
-       "word": "dumplings",
-       "match": []
-      },
-      {
-       "word": "fatback",
-       "match": []
-      },
-      {
-       "word": "gingerbread",
-       "match": []
-      },
-      {
-       "word": "gravy",
-       "match": []
-      },
-      {
-       "word": "gum",
-       "match": []
-      },
-      {
-       "word": "ham",
-       "match": []
-      },
-      {
-       "word": "hominy",
-       "match": []
-      },
-      {
-       "word": "jambalaya",
-       "match": []
-      },
-      {
-       "word": "jelly",
-       "match": []
-      },
-      {
-       "word": "meat",
-       "match": []
-      },
-      {
-       "word": "orange",
-       "match": []
-      },
-      {
-       "word": "oyster",
-       "match": []
-      },
-      {
-       "word": "peanut",
-       "match": []
-      },
-      {
-       "word": "peas",
-       "match": []
-      },
-      {
-       "word": "pepper",
-       "match": []
-      },
-      {
-       "word": "pickle",
-       "match": []
-      },
-      {
-       "word": "pork",
-       "match": []
-      },
-      {
-       "word": "sauerkraut",
-       "match": []
-      },
-      {
-       "word": "strawberry",
-       "match": []
-      },
-      {
-       "word": "supper",
-       "match": []
-      },
-      {
-       "word": "tobacco",
-       "match": []
-      },
-      {
-       "word": "turnip",
-       "match": []
-      },
-      {
-       "word": "wheat",
-       "match": []
-      }
+     "word": "apple",
+     "match": [
+      "apple",
+      "apples"
      ]
     },
     {
-     "name": "Drink",
-     "children": [
-      {
-       "word": "whiskey",
-       "match": [
-        "whiskey",
-        "whisky"
-       ]
-      },
-      {
-       "word": "licker",
-       "match": [
-        "licker",
-        "liquor"
-       ]
-      },
-      {
-       "word": "cider"
-      },
-      {
-       "word": "rye"
-      },
-      {
-       "word": "drunk",
-       "match": [
-        "drunk",
-        "drink",
-        "drinking"
-       ]
-      },
-      {
-       "word": "coffee"
-      },
-      {
-       "word": "alcohol",
-       "match": []
-      },
-      {
-       "word": "bay rum",
-       "match": []
-      },
-      {
-       "word": "beer",
-       "match": []
-      },
-      {
-       "word": "buttermilk",
-       "match": []
-      },
-      {
-       "word": "cocaine",
-       "match": []
-      },
-      {
-       "word": "gin",
-       "match": []
-      },
-      {
-       "word": "moonshine",
-       "match": []
-      },
-      {
-       "word": "prohibition",
-       "match": []
-      },
-      {
-       "word": "tea",
-       "match": []
-      },
-      {
-       "word": "tequila",
-       "match": []
-      },
-      {
-       "word": "wine",
-       "match": []
-      }
+     "word": "tater",
+     "match": [
+      "tater",
+      "taters",
+      "potato",
+      "potatoes"
      ]
+    },
+    {
+     "word": "sugar"
+    },
+    {
+     "word": "honey"
+    },
+    {
+     "word": "pie"
+    },
+    {
+     "word": "candy"
+    },
+    {
+     "word": "blackberry",
+     "match": [
+      "blackberry",
+      "blackberries"
+     ]
+    },
+    {
+     "word": "cabbage"
+    },
+    {
+     "word": "bread"
+    },
+    {
+     "word": "biscuit",
+     "match": [
+      "biscuit",
+      "biscuits"
+     ]
+    },
+    {
+     "word": "cake",
+     "match": [
+      "cake",
+      "cakes"
+     ]
+    },
+    {
+     "word": "peach",
+     "match": [
+      "peach",
+      "peaches"
+     ]
+    },
+    {
+     "word": "molasses"
+    },
+    {
+     "word": "beans"
+    },
+    {
+     "word": "apricot",
+     "match": []
+    },
+    {
+     "word": "bacon",
+     "match": []
+    },
+    {
+     "word": "barbecue",
+     "match": []
+    },
+    {
+     "word": "berry",
+     "match": []
+    },
+    {
+     "word": "buckwheat",
+     "match": []
+    },
+    {
+     "word": "butter",
+     "match": []
+    },
+    {
+     "word": "cheese",
+     "match": []
+    },
+    {
+     "word": "chips",
+     "match": []
+    },
+    {
+     "word": "cranberry",
+     "match": []
+    },
+    {
+     "word": "dough",
+     "match": []
+    },
+    {
+     "word": "dumplings",
+     "match": []
+    },
+    {
+     "word": "fatback",
+     "match": []
+    },
+    {
+     "word": "gingerbread",
+     "match": []
+    },
+    {
+     "word": "gravy",
+     "match": []
+    },
+    {
+     "word": "gum"
+    },
+    {
+     "word": "ham",
+     "match": []
+    },
+    {
+     "word": "hominy",
+     "match": []
+    },
+    {
+     "word": "jambalaya",
+     "match": []
+    },
+    {
+     "word": "jelly",
+     "match": []
+    },
+    {
+     "word": "meat",
+     "match": []
+    },
+    {
+     "word": "orange",
+     "match": []
+    },
+    {
+     "word": "oyster",
+     "match": []
+    },
+    {
+     "word": "peanut"
+    },
+    {
+     "word": "peas",
+     "match": []
+    },
+    {
+     "word": "pepper",
+     "match": []
+    },
+    {
+     "word": "pickle",
+     "match": []
+    },
+    {
+     "word": "pork",
+     "match": []
+    },
+    {
+     "word": "sauerkraut",
+     "match": []
+    },
+    {
+     "word": "strawberry",
+     "match": []
+    },
+    {
+     "word": "supper",
+     "match": []
+    },
+    {
+     "word": "tobacco",
+     "match": []
+    },
+    {
+     "word": "turnip",
+     "match": []
+    },
+    {
+     "word": "wheat",
+     "match": []
+    },
+    {
+     "word": "chitlins",
+     "match": [
+      "chittlin",
+      "chitlin",
+      "chitlins",
+      "chittlins",
+      "ruckus juice",
+      "rukus juice"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Drink",
+   "emoji": "🥃",
+   "children": [
+    {
+     "word": "whiskey",
+     "match": [
+      "whiskey",
+      "whisky"
+     ]
+    },
+    {
+     "word": "licker",
+     "match": [
+      "licker",
+      "liquor"
+     ]
+    },
+    {
+     "word": "cider"
+    },
+    {
+     "word": "rye"
+    },
+    {
+     "word": "drunk",
+     "match": [
+      "drunk",
+      "drink",
+      "drinking"
+     ]
+    },
+    {
+     "word": "coffee"
+    },
+    {
+     "word": "alcohol",
+     "match": []
+    },
+    {
+     "word": "bay rum",
+     "match": []
+    },
+    {
+     "word": "beer",
+     "match": []
+    },
+    {
+     "word": "buttermilk",
+     "match": []
+    },
+    {
+     "word": "cocaine",
+     "match": []
+    },
+    {
+     "word": "gin",
+     "match": []
+    },
+    {
+     "word": "moonshine",
+     "match": []
+    },
+    {
+     "word": "prohibition",
+     "match": []
+    },
+    {
+     "word": "tea",
+     "match": []
+    },
+    {
+     "word": "tequila",
+     "match": []
+    },
+    {
+     "word": "wine",
+     "match": []
     }
    ]
   },
@@ -5943,7 +6117,7 @@
      ]
     },
     {
-     "name": "Roads & Wagons",
+     "name": "Roads",
      "children": [
       {
        "word": "road"
@@ -5955,18 +6129,58 @@
        "word": "trail"
       },
       {
+       "word": "crossroad",
+       "match": []
+      },
+      {
+       "word": "turnpike",
+       "match": []
+      },
+      {
+       "word": "street"
+      },
+      {
+       "word": "lane"
+      },
+      {
+       "word": "alley",
+       "match": []
+      },
+      {
+       "word": "avenue",
+       "match": []
+      },
+      {
+       "word": "sidewalk",
+       "match": []
+      },
+      {
+       "word": "bridge",
+       "match": []
+      },
+      {
+       "word": "ferry",
+       "match": []
+      }
+     ]
+    },
+    {
+     "name": "Wagons",
+     "children": [
+      {
        "word": "wagon"
       },
       {
        "word": "buggy",
        "match": []
-      },
+      }
+     ]
+    },
+    {
+     "name": "Cars",
+     "children": [
       {
        "word": "car",
-       "match": []
-      },
-      {
-       "word": "crossroad",
        "match": []
       },
       {
@@ -5974,8 +6188,16 @@
        "match": []
       },
       {
-       "word": "turnpike",
-       "match": []
+       "word": "truck",
+       "match": [
+        "truck",
+        "trucks",
+        "truckin",
+        "trucking",
+        "driving",
+        "drivin",
+        "automobile"
+       ]
       }
      ]
     },
@@ -6065,596 +6287,659 @@
       },
       {
        "word": "leave",
-       "match": []
+       "match": [
+        "leave"
+       ]
       },
       {
-       "word": "roam",
-       "match": []
+       "word": "roam"
       },
       {
-       "word": "travel",
-       "match": []
+       "word": "travel"
       },
       {
        "word": "traveling",
        "match": []
+      },
+      {
+       "word": "moving",
+       "match": [
+        "moving",
+        "movin",
+        "moving day"
+       ]
       }
+     ]
+    },
+    {
+     "word": "airplane",
+     "match": [
+      "airplane",
+      "aeroplane",
+      "airship",
+      "flight",
+      "akron",
+      "zeppelin"
+     ],
+     "exclude": [
+      "flying saucer"
      ]
     }
    ]
   },
   {
-   "name": "Home & Things",
+   "name": "Home",
+   "match": [
+    "home",
+    "homes"
+   ],
    "emoji": "🏠",
    "children": [
     {
-     "name": "Home",
+     "word": "house"
+    },
+    {
+     "word": "cabin"
+    },
+    {
+     "word": "door"
+    },
+    {
+     "word": "window"
+    },
+    {
+     "word": "gate",
+     "exclude": [
+      "pearly gates",
+      "pearly gate"
+     ]
+    },
+    {
+     "word": "building"
+    },
+    {
+     "word": "bungalow",
+     "match": []
+    },
+    {
+     "word": "cot",
+     "match": []
+    },
+    {
+     "word": "cottage",
+     "match": []
+    },
+    {
+     "word": "cradle",
+     "match": []
+    },
+    {
+     "word": "fireplace",
+     "match": []
+    },
+    {
+     "word": "hut",
+     "match": []
+    },
+    {
+     "word": "kitchen",
+     "match": []
+    },
+    {
+     "word": "puncheon",
+     "match": []
+    },
+    {
+     "word": "shack",
      "match": [
-      "home",
-      "homes"
-     ],
-     "children": [
-      {
-       "word": "house"
-      },
-      {
-       "word": "cabin"
-      },
-      {
-       "word": "door"
-      },
-      {
-       "word": "window"
-      },
-      {
-       "word": "gate",
-       "exclude": [
-        "pearly gates",
-        "pearly gate"
-       ]
-      },
-      {
-       "word": "building",
-       "match": []
-      },
-      {
-       "word": "bungalow",
-       "match": []
-      },
-      {
-       "word": "cot",
-       "match": []
-      },
-      {
-       "word": "cottage",
-       "match": []
-      },
-      {
-       "word": "cradle",
-       "match": []
-      },
-      {
-       "word": "fireplace",
-       "match": []
-      },
-      {
-       "word": "hut",
-       "match": []
-      },
-      {
-       "word": "kitchen",
-       "match": []
-      },
-      {
-       "word": "puncheon",
-       "match": []
-      },
-      {
-       "word": "shack",
-       "match": []
-      },
-      {
-       "word": "shanty",
-       "match": []
-      }
+      "shack",
+      "shanty"
      ]
     },
     {
-     "name": "Things",
-     "children": [
-      {
-       "word": "shoe",
-       "match": [
-        "shoe",
-        "shoes"
-       ]
-      },
-      {
-       "word": "bell",
-       "match": [
-        "bell",
-        "bells"
-       ]
-      },
-      {
-       "word": "letter",
-       "match": [
-        "letter",
-        "letters"
-       ]
-      },
-      {
-       "word": "chair"
-      },
-      {
-       "word": "bottle"
-      },
-      {
-       "word": "picture"
-      },
-      {
-       "word": "saddle"
-      },
-      {
-       "word": "money",
-       "match": [
-        "money",
-        "dollar",
-        "dollars",
-        "cent",
-        "cents"
-       ]
-      },
-      {
-       "word": "ball"
-      },
-      {
-       "word": "paint"
-      },
-      {
-       "word": "bed"
-      },
-      {
-       "word": "fire"
-      },
-      {
-       "word": "stone",
-       "match": [
-        "stone",
-        "stones"
-       ]
-      },
-      {
-       "word": "sand"
-      },
-      {
-       "word": "alimony",
-       "match": []
-      },
-      {
-       "word": "awl",
-       "match": []
-      },
-      {
-       "word": "barber pole",
-       "match": []
-      },
-      {
-       "word": "bicycle",
-       "match": []
-      },
-      {
-       "word": "bonnet",
-       "match": []
-      },
-      {
-       "word": "boot",
-       "match": []
-      },
-      {
-       "word": "boots",
-       "match": []
-      },
-      {
-       "word": "bridle",
-       "match": []
-      },
-      {
-       "word": "britches",
-       "match": []
-      },
-      {
-       "word": "broom",
-       "match": []
-      },
-      {
-       "word": "bubble",
-       "match": []
-      },
-      {
-       "word": "bureau",
-       "match": []
-      },
-      {
-       "word": "calico",
-       "match": []
-      },
-      {
-       "word": "cap",
-       "match": []
-      },
-      {
-       "word": "card",
-       "match": []
-      },
-      {
-       "word": "casket",
-       "match": []
-      },
-      {
-       "word": "chain",
-       "match": []
-      },
-      {
-       "word": "cigarette",
-       "match": []
-      },
-      {
-       "word": "clarinet",
-       "match": []
-      },
-      {
-       "word": "coat",
-       "match": []
-      },
-      {
-       "word": "croquet",
-       "match": []
-      },
-      {
-       "word": "diamond",
-       "match": []
-      },
-      {
-       "word": "doll",
-       "match": []
-      },
-      {
-       "word": "domino",
-       "match": []
-      },
-      {
-       "word": "drawers",
-       "match": []
-      },
-      {
-       "word": "electricity",
-       "match": []
-      },
-      {
-       "word": "flag",
-       "match": []
-      },
-      {
-       "word": "flying saucer",
-       "match": []
-      },
-      {
-       "word": "football",
-       "match": []
-      },
-      {
-       "word": "frying pan",
-       "match": []
-      },
-      {
-       "word": "gingham",
-       "match": []
-      },
-      {
-       "word": "gold",
-       "match": []
-      },
-      {
-       "word": "gun",
-       "match": []
-      },
-      {
-       "word": "hammer",
-       "match": []
-      },
-      {
-       "word": "hat",
-       "match": []
-      },
-      {
-       "word": "hook",
-       "match": []
-      },
-      {
-       "word": "horn",
-       "match": []
-      },
-      {
-       "word": "jacket",
-       "match": []
-      },
-      {
-       "word": "jar",
-       "match": []
-      },
-      {
-       "word": "jewel",
-       "match": []
-      },
-      {
-       "word": "jug",
-       "match": []
-      },
-      {
-       "word": "key",
-       "match": []
-      },
-      {
-       "word": "keyhole",
-       "match": []
-      },
-      {
-       "word": "knife",
-       "match": []
-      },
-      {
-       "word": "lantern",
-       "match": []
-      },
-      {
-       "word": "lariat",
-       "match": []
-      },
-      {
-       "word": "lasso",
-       "match": []
-      },
-      {
-       "word": "light",
-       "match": []
-      },
-      {
-       "word": "locket",
-       "match": []
-      },
-      {
-       "word": "log",
-       "match": []
-      },
-      {
-       "word": "mail",
-       "match": []
-      },
-      {
-       "word": "mandolin",
-       "match": []
-      },
-      {
-       "word": "matchbox",
-       "match": []
-      },
-      {
-       "word": "needle",
-       "match": []
-      },
-      {
-       "word": "needlecase",
-       "match": []
-      },
-      {
-       "word": "nightgown",
-       "match": []
-      },
-      {
-       "word": "organ",
-       "match": []
-      },
-      {
-       "word": "pail",
-       "match": []
-      },
-      {
-       "word": "pan",
-       "match": []
-      },
-      {
-       "word": "pearl",
-       "match": []
-      },
-      {
-       "word": "petticoat",
-       "match": []
-      },
-      {
-       "word": "pin",
-       "match": []
-      },
-      {
-       "word": "pipe",
-       "match": []
-      },
-      {
-       "word": "pistol",
-       "match": []
-      },
-      {
-       "word": "radio",
-       "match": []
-      },
-      {
-       "word": "rawhide",
-       "match": []
-      },
-      {
-       "word": "ring",
-       "match": []
-      },
-      {
-       "word": "sack",
-       "match": []
-      },
-      {
-       "word": "satchel",
-       "match": []
-      },
-      {
-       "word": "settee",
-       "match": []
-      },
-      {
-       "word": "sewing machine",
-       "match": []
-      },
-      {
-       "word": "sheet",
-       "match": []
-      },
-      {
-       "word": "skillet",
-       "match": []
-      },
-      {
-       "word": "sleigh",
-       "match": []
-      },
-      {
-       "word": "slipper",
-       "match": []
-      },
-      {
-       "word": "soap",
-       "match": []
-      },
-      {
-       "word": "spinning wheel",
-       "match": []
-      },
-      {
-       "word": "stool",
-       "match": []
-      },
-      {
-       "word": "stovepipe",
-       "match": []
-      },
-      {
-       "word": "string",
-       "match": []
-      },
-      {
-       "word": "teakettle",
-       "match": []
-      },
-      {
-       "word": "telephone",
-       "match": []
-      },
-      {
-       "word": "ticket",
-       "match": []
-      },
-      {
-       "word": "tomahawk",
-       "match": []
-      },
-      {
-       "word": "watch",
-       "match": []
-      },
-      {
-       "word": "well",
-       "match": []
-      },
-      {
-       "word": "whistle",
-       "match": []
-      },
-      {
-       "word": "woodpile",
-       "match": []
-      }
+     "word": "shanty",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "Things",
+   "emoji": "🧰",
+   "children": [
+    {
+     "word": "shoe",
+     "match": [
+      "shoe",
+      "shoes"
      ]
     },
     {
-     "name": "Body",
-     "kind": "modifier",
-     "children": [
-      {
-       "word": "foot",
-       "match": [
-        "foot",
-        "feet"
-       ]
-      },
-      {
-       "word": "head"
-      },
-      {
-       "word": "eyes",
-       "match": [
-        "eye",
-        "eyes",
-        "eyed"
-       ]
-      },
-      {
-       "word": "hand",
-       "match": [
-        "hand",
-        "hands"
-       ]
-      },
-      {
-       "word": "arms",
-       "match": [
-        "arm",
-        "arms"
-       ]
-      },
-      {
-       "word": "chin",
-       "match": []
-      },
-      {
-       "word": "face",
-       "match": []
-      },
-      {
-       "word": "fingers",
-       "match": []
-      },
-      {
-       "word": "hair",
-       "match": []
-      },
-      {
-       "word": "jawbone",
-       "match": []
-      },
-      {
-       "word": "mouth",
-       "match": []
-      },
-      {
-       "word": "mustache",
-       "match": []
-      },
-      {
-       "word": "tongue",
-       "match": []
-      }
+     "word": "bell",
+     "match": [
+      "bell",
+      "bells"
+     ]
+    },
+    {
+     "word": "letter",
+     "match": [
+      "letter",
+      "letters"
+     ]
+    },
+    {
+     "word": "chair"
+    },
+    {
+     "word": "bottle"
+    },
+    {
+     "word": "picture"
+    },
+    {
+     "word": "saddle"
+    },
+    {
+     "word": "money",
+     "match": [
+      "money",
+      "dollar",
+      "dollars",
+      "cent",
+      "cents"
+     ]
+    },
+    {
+     "word": "ball"
+    },
+    {
+     "word": "paint"
+    },
+    {
+     "word": "bed"
+    },
+    {
+     "word": "fire"
+    },
+    {
+     "word": "stone",
+     "match": [
+      "stone",
+      "stones"
+     ]
+    },
+    {
+     "word": "sand"
+    },
+    {
+     "word": "alimony"
+    },
+    {
+     "word": "awl",
+     "match": []
+    },
+    {
+     "word": "barber pole",
+     "match": []
+    },
+    {
+     "word": "bicycle",
+     "match": []
+    },
+    {
+     "word": "bonnet"
+    },
+    {
+     "word": "boot",
+     "match": []
+    },
+    {
+     "word": "boots",
+     "match": []
+    },
+    {
+     "word": "bridle",
+     "match": []
+    },
+    {
+     "word": "britches",
+     "match": []
+    },
+    {
+     "word": "broom"
+    },
+    {
+     "word": "bubble",
+     "match": []
+    },
+    {
+     "word": "bureau",
+     "match": []
+    },
+    {
+     "word": "calico"
+    },
+    {
+     "word": "cap"
+    },
+    {
+     "word": "card",
+     "match": []
+    },
+    {
+     "word": "casket",
+     "match": []
+    },
+    {
+     "word": "chain",
+     "match": []
+    },
+    {
+     "word": "cigarette",
+     "match": []
+    },
+    {
+     "word": "clarinet",
+     "match": []
+    },
+    {
+     "word": "coat",
+     "match": []
+    },
+    {
+     "word": "croquet",
+     "match": []
+    },
+    {
+     "word": "diamond",
+     "match": []
+    },
+    {
+     "word": "doll",
+     "match": []
+    },
+    {
+     "word": "domino",
+     "match": []
+    },
+    {
+     "word": "drawers",
+     "match": []
+    },
+    {
+     "word": "electricity",
+     "match": []
+    },
+    {
+     "word": "flag",
+     "match": []
+    },
+    {
+     "word": "flying saucer",
+     "match": []
+    },
+    {
+     "word": "football",
+     "match": []
+    },
+    {
+     "word": "frying pan",
+     "match": []
+    },
+    {
+     "word": "gingham",
+     "match": []
+    },
+    {
+     "word": "gold",
+     "match": []
+    },
+    {
+     "word": "gun",
+     "match": []
+    },
+    {
+     "word": "hammer",
+     "match": []
+    },
+    {
+     "word": "hat",
+     "match": []
+    },
+    {
+     "word": "hook",
+     "match": []
+    },
+    {
+     "word": "horn",
+     "match": []
+    },
+    {
+     "word": "jacket",
+     "match": []
+    },
+    {
+     "word": "jar",
+     "match": []
+    },
+    {
+     "word": "jewel",
+     "match": []
+    },
+    {
+     "word": "jug",
+     "match": []
+    },
+    {
+     "word": "key",
+     "match": []
+    },
+    {
+     "word": "keyhole",
+     "match": []
+    },
+    {
+     "word": "knife",
+     "match": []
+    },
+    {
+     "word": "lantern",
+     "match": []
+    },
+    {
+     "word": "lariat",
+     "match": []
+    },
+    {
+     "word": "lasso",
+     "match": []
+    },
+    {
+     "word": "light",
+     "match": []
+    },
+    {
+     "word": "locket",
+     "match": []
+    },
+    {
+     "word": "log",
+     "match": []
+    },
+    {
+     "word": "mail",
+     "match": []
+    },
+    {
+     "word": "mandolin",
+     "match": []
+    },
+    {
+     "word": "matchbox",
+     "match": []
+    },
+    {
+     "word": "needle",
+     "match": []
+    },
+    {
+     "word": "needlecase",
+     "match": []
+    },
+    {
+     "word": "nightgown",
+     "match": []
+    },
+    {
+     "word": "organ",
+     "match": []
+    },
+    {
+     "word": "pail",
+     "match": []
+    },
+    {
+     "word": "pan",
+     "match": []
+    },
+    {
+     "word": "pearl",
+     "match": []
+    },
+    {
+     "word": "petticoat",
+     "match": []
+    },
+    {
+     "word": "pin",
+     "match": []
+    },
+    {
+     "word": "pipe",
+     "match": []
+    },
+    {
+     "word": "pistol",
+     "match": []
+    },
+    {
+     "word": "radio",
+     "match": []
+    },
+    {
+     "word": "rawhide",
+     "match": []
+    },
+    {
+     "word": "ring",
+     "match": []
+    },
+    {
+     "word": "sack",
+     "match": []
+    },
+    {
+     "word": "satchel",
+     "match": []
+    },
+    {
+     "word": "settee",
+     "match": []
+    },
+    {
+     "word": "sewing machine",
+     "match": []
+    },
+    {
+     "word": "sheet",
+     "match": []
+    },
+    {
+     "word": "skillet",
+     "match": []
+    },
+    {
+     "word": "sleigh",
+     "match": []
+    },
+    {
+     "word": "slipper",
+     "match": []
+    },
+    {
+     "word": "soap",
+     "match": []
+    },
+    {
+     "word": "spinning wheel",
+     "match": []
+    },
+    {
+     "word": "stool",
+     "match": []
+    },
+    {
+     "word": "stovepipe",
+     "match": []
+    },
+    {
+     "word": "string",
+     "match": []
+    },
+    {
+     "word": "teakettle",
+     "match": []
+    },
+    {
+     "word": "telephone",
+     "match": []
+    },
+    {
+     "word": "ticket",
+     "match": []
+    },
+    {
+     "word": "tomahawk",
+     "match": []
+    },
+    {
+     "word": "watch",
+     "match": []
+    },
+    {
+     "word": "well",
+     "match": []
+    },
+    {
+     "word": "whistle"
+    },
+    {
+     "word": "woodpile",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "Body",
+   "kind": "modifier",
+   "emoji": "✋",
+   "children": [
+    {
+     "word": "foot",
+     "match": [
+      "foot",
+      "feet"
+     ]
+    },
+    {
+     "word": "head"
+    },
+    {
+     "word": "eyes",
+     "match": [
+      "eye",
+      "eyes",
+      "eyed"
+     ]
+    },
+    {
+     "word": "hand",
+     "match": [
+      "hand",
+      "hands"
+     ]
+    },
+    {
+     "word": "arms",
+     "match": [
+      "arm",
+      "arms"
+     ]
+    },
+    {
+     "word": "chin",
+     "match": []
+    },
+    {
+     "word": "face",
+     "match": []
+    },
+    {
+     "word": "fingers"
+    },
+    {
+     "word": "hair",
+     "match": [
+      "hair",
+      "haircut",
+      "whiskers",
+      "shaved",
+      "shaven",
+      "beard"
+     ]
+    },
+    {
+     "word": "jawbone",
+     "match": []
+    },
+    {
+     "word": "mouth"
+    },
+    {
+     "word": "mustache"
+    },
+    {
+     "word": "tongue",
+     "match": []
+    }
+   ]
+  },
+  {
+   "name": "Work",
+   "emoji": "⚒️",
+   "children": [],
+   "match": [
+    "work",
+    "working",
+    "workin",
+    "labor",
+    "weave room",
+    "factory",
+    "job",
+    "boss",
+    "payday",
+    "pay day"
+   ]
+  },
+  {
+   "name": "Money",
+   "emoji": "💰",
+   "children": [
+    {
+     "word": "hard times",
+     "match": [
+      "hard times",
+      "hard luck",
+      "down and out",
+      "bad luck",
+      "pay the rent",
+      "depression"
+     ]
+    },
+    {
+     "word": "rich",
+     "match": [
+      "rich",
+      "millionaire",
+      "wealthy",
+      "coupon",
+      "coupons"
      ]
     }
    ]
   },
   {
-   "name": "Music & Dance",
+   "name": "Music",
    "emoji": "🎻",
    "children": [
     {
@@ -6738,16 +7023,8 @@
      ]
     },
     {
-     "name": "Singing & Talk",
+     "name": "Singing",
      "children": [
-      {
-       "word": "yodel",
-       "match": [
-        "yodel",
-        "yodeling",
-        "yodelling"
-       ]
-      },
       {
        "word": "sing",
        "match": [
@@ -6757,12 +7034,16 @@
        ]
       },
       {
-       "word": "talk",
+       "word": "yodel",
        "match": [
-        "talk",
-        "talking",
-        "talkin"
+        "yodel",
+        "yodeling",
+        "yodelling"
        ]
+      },
+      {
+       "word": "opera",
+       "match": []
       },
       {
        "word": "tune",
@@ -6772,49 +7053,23 @@
        ]
       },
       {
-       "word": "skits & stories",
-       "match": []
-      },
-      {
-       "word": "music",
-       "match": []
-      },
-      {
-       "word": "opera",
-       "match": []
+       "word": "music"
       }
      ]
     },
     {
-     "name": "Dancing",
+     "name": "Talk",
      "children": [
       {
-       "word": "dance",
+       "word": "talk",
        "match": [
-        "dance",
-        "dances",
-        "dancing"
-       ],
-       "kind": "noun"
+        "talk",
+        "talking",
+        "talkin"
+       ]
       },
       {
-       "word": "black bottom",
-       "match": []
-      },
-      {
-       "word": "caller",
-       "match": []
-      },
-      {
-       "word": "cotillion",
-       "match": []
-      },
-      {
-       "word": "foxtrot",
-       "match": []
-      },
-      {
-       "word": "hula",
+       "word": "skits & stories",
        "match": []
       }
      ]
@@ -6963,137 +7218,182 @@
    ]
   },
   {
-   "name": "Life & Death",
+   "name": "Dance",
+   "emoji": "💃",
+   "children": [
+    {
+     "word": "dance",
+     "match": [
+      "dance",
+      "dances",
+      "dancing"
+     ],
+     "kind": "noun"
+    },
+    {
+     "word": "black bottom",
+     "match": []
+    },
+    {
+     "word": "caller",
+     "match": []
+    },
+    {
+     "word": "cotillion",
+     "match": []
+    },
+    {
+     "word": "foxtrot",
+     "match": []
+    },
+    {
+     "word": "hula"
+    }
+   ]
+  },
+  {
+   "name": "Life",
+   "emoji": "🌱",
+   "children": [
+    {
+     "word": "life",
+     "match": [
+      "life",
+      "alive"
+     ]
+    },
+    {
+     "word": "old age",
+     "match": [
+      "old age",
+      "old and grey",
+      "growing old",
+      "old and gray",
+      "old and in the way",
+      "over sixty",
+      "silver threads",
+      "gray hair",
+      "grey hair"
+     ]
+    },
+    {
+     "word": "sickness",
+     "match": [
+      "t b",
+      "tb",
+      "tuberculosis",
+      "sick",
+      "fever",
+      "ailment",
+      "medicine",
+      "pain",
+      "pains",
+      "hospital"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "Death",
    "emoji": "⚰️",
    "children": [
     {
-     "name": "Death & Graves",
-     "children": [
-      {
-       "word": "death",
-       "match": [
-        "death",
-        "dead",
-        "die",
-        "dying"
-       ]
-      },
-      {
-       "word": "grave",
-       "match": [
-        "grave",
-        "graves",
-        "graveyard"
-       ]
-      },
-      {
-       "word": "blood",
-       "match": [
-        "blood",
-        "bloody"
-       ]
-      },
-      {
-       "word": "old age",
-       "match": [
-        "old age",
-        "old and grey",
-        "growing old"
-       ]
-      },
-      {
-       "word": "life",
-       "match": [
-        "life",
-        "alive"
-       ]
-      },
-      {
-       "word": "ghost",
-       "match": []
-      }
-     ]
-    },
-    {
-     "name": "Crime & Jail",
-     "children": [
-      {
-       "word": "jail",
-       "match": [
-        "jail",
-        "jailhouse"
-       ]
-      },
-      {
-       "word": "prisoner",
-       "match": [
-        "prisoner",
-        "prison"
-       ]
-      },
-      {
-       "word": "murder",
-       "match": [
-        "murder",
-        "murdered"
-       ]
-      },
-      {
-       "word": "outlaw"
-      },
-      {
-       "word": "hanging",
-       "match": []
-      },
-      {
-       "word": "kidnapping",
-       "match": []
-      },
-      {
-       "word": "moonshiner",
-       "match": []
-      }
-     ]
-    },
-    {
-     "name": "Courting & Weddings",
-     "children": [
-      {
-       "word": "courting",
-       "match": [
-        "courting",
-        "courtin",
-        "court"
-       ]
-      },
-      {
-       "word": "wedding",
-       "match": [
-        "wedding",
-        "married",
-        "marry",
-        "marrying"
-       ]
-      },
-      {
-       "word": "anniversary",
-       "match": []
-      },
-      {
-       "word": "honeymoon",
-       "match": []
-      }
-     ]
-    },
-    {
-     "name": "War",
+     "word": "death",
      "match": [
-      "war",
-      "battle"
-     ],
-     "children": []
+      "death",
+      "dead",
+      "die",
+      "dying"
+     ]
+    },
+    {
+     "word": "grave",
+     "match": [
+      "grave",
+      "graves",
+      "graveyard"
+     ]
+    },
+    {
+     "word": "blood",
+     "match": [
+      "blood",
+      "bloody"
+     ]
+    },
+    {
+     "word": "ghost"
     }
    ]
+  },
+  {
+   "name": "Crime",
+   "emoji": "⛓️",
+   "children": [
+    {
+     "word": "jail",
+     "match": [
+      "jail",
+      "jailhouse"
+     ]
+    },
+    {
+     "word": "prisoner",
+     "match": [
+      "prisoner",
+      "prison"
+     ]
+    },
+    {
+     "word": "murder",
+     "match": [
+      "murder",
+      "murdered"
+     ]
+    },
+    {
+     "word": "outlaw"
+    },
+    {
+     "word": "hanging",
+     "match": []
+    },
+    {
+     "word": "kidnapping",
+     "match": []
+    },
+    {
+     "word": "moonshiner",
+     "match": []
+    },
+    {
+     "word": "convict",
+     "match": []
+    },
+    {
+     "word": "prison term",
+     "match": [
+      "twenty one years",
+      "ninety nine years",
+      "six months",
+      "eleven months",
+      "eleven more months",
+      "stretch of",
+      "penitentiary",
+      "chain gang",
+      "name to a number"
+     ]
+    }
+   ]
+  },
+  {
+   "name": "War",
+   "emoji": "⚔️",
+   "match": [
+    "war",
+    "battle"
+   ],
+   "children": []
   },
   {
    "name": "Unsorted",
